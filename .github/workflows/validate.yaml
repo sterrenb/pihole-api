@@ -1,0 +1,57 @@
+name: Validate
+
+# Inspired by https://github.com/rydmike/flex_color_scheme
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    timeout-minutes: 15
+    name: "Analyze"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: "Install Flutter"
+        run: .github/workflows/scripts/install_flutter.sh stable
+      - name: "Install Tools"
+        run: .github/workflows/scripts/install_tools.sh
+      - name: "Show Dart SDK version"
+        run: dart --version
+      - name: "Show Flutter SDK version"
+        run: flutter --version
+      - name: "Install Flutter package dependencies"
+        run: flutter pub get
+      - name: "Show outdated packages"
+        run: flutter pub outdated
+      - name: "Build models"
+        run: flutter pub run build_runner build
+      - name: "Dart Analyzer"
+        run: dart analyze . --fatal-infos
+  test:
+    runs-on: ubuntu-latest
+    name: "Tests and coverage"
+    needs: analyze
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: "Install Flutter"
+        run: ./.github/workflows/scripts/install_flutter.sh stable
+      - name: "Install Tools"
+        run: ./.github/workflows/scripts/install_tools.sh
+      - name: "Build models"
+        run: flutter pub run build_runner build
+      - name: "Test package with coverage"
+        run: flutter test --coverage
+      - name: "Upload test coverage to Codecov"
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: coverage/lcov.info
