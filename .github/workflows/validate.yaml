@@ -29,8 +29,8 @@ jobs:
         run: flutter pub get
       - name: "Show outdated packages"
         run: flutter pub outdated
-      - name: "Build models"
-        run: flutter pub run build_runner build
+      # - name: "Build models"
+      #   run: flutter pub run build_runner build
       - name: "Dart Analyzer"
         run: dart analyze . --fatal-infos
   test:
@@ -46,8 +46,8 @@ jobs:
         run: ./.github/workflows/scripts/install_flutter.sh stable
       - name: "Install Tools"
         run: ./.github/workflows/scripts/install_tools.sh
-      - name: "Build models"
-        run: flutter pub run build_runner build
+      # - name: "Build models"
+      #   run: flutter pub run build_runner build
       - name: "Test package with coverage"
         run: flutter test --coverage
       - name: "Upload test coverage to Codecov"
