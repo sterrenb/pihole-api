@@ -31,7 +31,9 @@ void main() async {
       params = params.copyWith(apiPort: 321);
       expect(params.apiUrl, "http://pi.hole:321/admin/api.php");
     });
+  });
 
+  group('adminUrl', () {
     test('default adminUrl should be valid', () {
       expect(params.apiUrl, "http://pi.hole:80/admin/api.php");
     });

@@ -7,7 +7,7 @@ import 'formatting.dart';
 
 part 'entities.freezed.dart';
 
-// ignore_for_file: constant_identifier_names
+// coverage:ignore-file
 
 @freezed
 class PiholeRepositoryParams with _$PiholeRepositoryParams {
