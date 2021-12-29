@@ -20,7 +20,6 @@ class _$PiholeRepositoryParamsTearOff {
   _PiholeRepositoryParams call(
       {required Dio dio,
       required String baseUrl,
-      required bool useSsl,
       required String apiPath,
       required int apiPort,
       required bool apiTokenRequired,
@@ -30,7 +29,6 @@ class _$PiholeRepositoryParamsTearOff {
     return _PiholeRepositoryParams(
       dio: dio,
       baseUrl: baseUrl,
-      useSsl: useSsl,
       apiPath: apiPath,
       apiPort: apiPort,
       apiTokenRequired: apiTokenRequired,
@@ -48,7 +46,6 @@ const $PiholeRepositoryParams = _$PiholeRepositoryParamsTearOff();
 mixin _$PiholeRepositoryParams {
   Dio get dio => throw _privateConstructorUsedError;
   String get baseUrl => throw _privateConstructorUsedError;
-  bool get useSsl => throw _privateConstructorUsedError;
   String get apiPath => throw _privateConstructorUsedError;
   int get apiPort => throw _privateConstructorUsedError;
   bool get apiTokenRequired => throw _privateConstructorUsedError;
@@ -69,7 +66,6 @@ abstract class $PiholeRepositoryParamsCopyWith<$Res> {
   $Res call(
       {Dio dio,
       String baseUrl,
-      bool useSsl,
       String apiPath,
       int apiPort,
       bool apiTokenRequired,
@@ -91,7 +87,6 @@ class _$PiholeRepositoryParamsCopyWithImpl<$Res>
   $Res call({
     Object? dio = freezed,
     Object? baseUrl = freezed,
-    Object? useSsl = freezed,
     Object? apiPath = freezed,
     Object? apiPort = freezed,
     Object? apiTokenRequired = freezed,
@@ -108,10 +103,6 @@ class _$PiholeRepositoryParamsCopyWithImpl<$Res>
           ? _value.baseUrl
           : baseUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      useSsl: useSsl == freezed
-          ? _value.useSsl
-          : useSsl // ignore: cast_nullable_to_non_nullable
-              as bool,
       apiPath: apiPath == freezed
           ? _value.apiPath
           : apiPath // ignore: cast_nullable_to_non_nullable
@@ -150,7 +141,6 @@ abstract class _$PiholeRepositoryParamsCopyWith<$Res>
   $Res call(
       {Dio dio,
       String baseUrl,
-      bool useSsl,
       String apiPath,
       int apiPort,
       bool apiTokenRequired,
@@ -174,7 +164,6 @@ class __$PiholeRepositoryParamsCopyWithImpl<$Res>
   $Res call({
     Object? dio = freezed,
     Object? baseUrl = freezed,
-    Object? useSsl = freezed,
     Object? apiPath = freezed,
     Object? apiPort = freezed,
     Object? apiTokenRequired = freezed,
@@ -191,10 +180,6 @@ class __$PiholeRepositoryParamsCopyWithImpl<$Res>
           ? _value.baseUrl
           : baseUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      useSsl: useSsl == freezed
-          ? _value.useSsl
-          : useSsl // ignore: cast_nullable_to_non_nullable
-              as bool,
       apiPath: apiPath == freezed
           ? _value.apiPath
           : apiPath // ignore: cast_nullable_to_non_nullable
@@ -229,7 +214,6 @@ class _$_PiholeRepositoryParams extends _PiholeRepositoryParams {
   _$_PiholeRepositoryParams(
       {required this.dio,
       required this.baseUrl,
-      required this.useSsl,
       required this.apiPath,
       required this.apiPort,
       required this.apiTokenRequired,
@@ -242,8 +226,6 @@ class _$_PiholeRepositoryParams extends _PiholeRepositoryParams {
   final Dio dio;
   @override
   final String baseUrl;
-  @override
-  final bool useSsl;
   @override
   final String apiPath;
   @override
@@ -259,7 +241,7 @@ class _$_PiholeRepositoryParams extends _PiholeRepositoryParams {
 
   @override
   String toString() {
-    return 'PiholeRepositoryParams(dio: $dio, baseUrl: $baseUrl, useSsl: $useSsl, apiPath: $apiPath, apiPort: $apiPort, apiTokenRequired: $apiTokenRequired, apiToken: $apiToken, allowSelfSignedCertificates: $allowSelfSignedCertificates, adminHome: $adminHome)';
+    return 'PiholeRepositoryParams(dio: $dio, baseUrl: $baseUrl, apiPath: $apiPath, apiPort: $apiPort, apiTokenRequired: $apiTokenRequired, apiToken: $apiToken, allowSelfSignedCertificates: $allowSelfSignedCertificates, adminHome: $adminHome)';
   }
 
   @override
@@ -269,7 +251,6 @@ class _$_PiholeRepositoryParams extends _PiholeRepositoryParams {
             other is _PiholeRepositoryParams &&
             (identical(other.dio, dio) || other.dio == dio) &&
             (identical(other.baseUrl, baseUrl) || other.baseUrl == baseUrl) &&
-            (identical(other.useSsl, useSsl) || other.useSsl == useSsl) &&
             (identical(other.apiPath, apiPath) || other.apiPath == apiPath) &&
             (identical(other.apiPort, apiPort) || other.apiPort == apiPort) &&
             (identical(other.apiTokenRequired, apiTokenRequired) ||
@@ -285,17 +266,8 @@ class _$_PiholeRepositoryParams extends _PiholeRepositoryParams {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      dio,
-      baseUrl,
-      useSsl,
-      apiPath,
-      apiPort,
-      apiTokenRequired,
-      apiToken,
-      allowSelfSignedCertificates,
-      adminHome);
+  int get hashCode => Object.hash(runtimeType, dio, baseUrl, apiPath, apiPort,
+      apiTokenRequired, apiToken, allowSelfSignedCertificates, adminHome);
 
   @JsonKey(ignore: true)
   @override
@@ -308,7 +280,6 @@ abstract class _PiholeRepositoryParams extends PiholeRepositoryParams {
   factory _PiholeRepositoryParams(
       {required Dio dio,
       required String baseUrl,
-      required bool useSsl,
       required String apiPath,
       required int apiPort,
       required bool apiTokenRequired,
@@ -321,8 +292,6 @@ abstract class _PiholeRepositoryParams extends PiholeRepositoryParams {
   Dio get dio;
   @override
   String get baseUrl;
-  @override
-  bool get useSsl;
   @override
   String get apiPath;
   @override

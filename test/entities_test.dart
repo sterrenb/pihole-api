@@ -10,8 +10,7 @@ void main() async {
     dio = Dio();
     params = PiholeRepositoryParams(
       dio: dio,
-      baseUrl: "pi.hole",
-      useSsl: false,
+      baseUrl: "http://pi.hole",
       apiPath: "/admin/api.php",
       apiPort: 80,
       apiTokenRequired: true,
@@ -23,19 +22,18 @@ void main() async {
 
   group('dioBase', () {
     test('default dioBase should be valid', () {
-      expect(params.dioBase, "http://pi.hole");
-    });
-
-    test('dioBase should handle SSL', () {
-      params = params.copyWith(useSsl: true, apiPort: 443);
-      expect(params.dioBase, "https://pi.hole");
+      expect(params.apiUrl, "http://pi.hole:80/admin/api.php");
     });
 
     test('dioBase should handle ports', () {
       params = params.copyWith(apiPort: 123);
-      expect(params.dioBase, "http://pi.hole:123");
+      expect(params.apiUrl, "http://pi.hole:123/admin/api.php");
       params = params.copyWith(apiPort: 321);
-      expect(params.dioBase, "http://pi.hole:321");
+      expect(params.apiUrl, "http://pi.hole:321/admin/api.php");
+    });
+
+    test('default adminUrl should be valid', () {
+      expect(params.apiUrl, "http://pi.hole:80/admin/api.php");
     });
   });
 }

@@ -16,7 +16,6 @@ class PiholeRepositoryParams with _$PiholeRepositoryParams {
   factory PiholeRepositoryParams({
     required Dio dio,
     required String baseUrl,
-    required bool useSsl,
     required String apiPath,
     required int apiPort,
     required bool apiTokenRequired,
@@ -25,8 +24,8 @@ class PiholeRepositoryParams with _$PiholeRepositoryParams {
     required String adminHome,
   }) = _PiholeRepositoryParams;
 
-  late final String dioBase =
-      '${useSsl ? 'https://' : 'http://'}$baseUrl${(apiPort == 80 && useSsl == false) || (apiPort == 443 && useSsl == true) ? '' : ':$apiPort'}';
+  late final String apiUrl = '$baseUrl:$apiPort$apiPath';
+  late final String adminUrl = '$baseUrl:$apiPort$adminHome';
 }
 
 @freezed

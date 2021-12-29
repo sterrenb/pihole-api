@@ -3,7 +3,6 @@ import 'package:dio/dio.dart';
 import 'package:http_mock_adapter/http_mock_adapter.dart';
 import 'package:pihole_api/pihole_api.dart';
 import 'package:pihole_api/src/formatting.dart';
-import 'package:pihole_api/src/pihole_repository_dio.dart';
 import 'package:test/test.dart';
 
 import './fixtures.dart';
@@ -19,13 +18,11 @@ void main() async {
   setUp(() {
     dio = Dio();
     dioAdapter = createMockDioAdapter();
-    // dioAdapter = DioAdapter();
     dio.httpClientAdapter = dioAdapter;
     cancelToken = CancelToken();
     params = PiholeRepositoryParams(
       dio: dio,
-      baseUrl: "pi.hole",
-      useSsl: false,
+      baseUrl: "http://pi.hole",
       apiPath: "admin/api.php",
       apiPort: 80,
       apiTokenRequired: true,
