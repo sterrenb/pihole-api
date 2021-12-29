@@ -5,10 +5,15 @@ import 'entities.dart';
 /// The string that counts as the API token on Pi-holes
 /// without authentication.
 ///
-/// https://github.com/sterrenburg/flutterhole/issues/79
+/// <https://github.com/sterrenburg/flutterhole/issues/79>
 const String kNoApiTokenNeeded = 'No password set';
 
 abstract class PiholeRepository {
+  /// AdminLTE API versions that have been manually tested against.
+  ///
+  /// <https://github.com/pi-hole/AdminLTE>
+  static const List<String> supportedVersions = ["v5.9"];
+
   Future<PiSummary> fetchSummary(CancelToken cancelToken);
 
   Future<PiQueryTypes> fetchQueryTypes(CancelToken cancelToken);
