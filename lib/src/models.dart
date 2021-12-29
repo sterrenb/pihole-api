@@ -6,6 +6,8 @@ import 'formatting.dart';
 part 'models.freezed.dart';
 part 'models.g.dart';
 
+// coverage:ignore-file
+
 @freezed
 class PiSummaryModel with _$PiSummaryModel {
   PiSummaryModel._();
