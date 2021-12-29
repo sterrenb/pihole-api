@@ -4,14 +4,25 @@
 
 A Flutter library for the [Pi-hole]([https://pi-hole.net/) API.
 
+Used in the [FlutterHole app](https://github.com/sterrenburg/flutterhole).
+
 ## Example
 
 Use it:
 
 ```dart
 final dio = Dio();
-final pihole = PiholeRepositoryDio(PiholeRepositoryParams(dio: dio, baseUrl: "http://pi.hole", ...));
-pihole.fetchSummary(CancelToken()).then((value) => print(value.toString()));
+final pihole = PiholeRepositoryDio(PiholeRepositoryParams(
+  dio: dio,
+  baseUrl: "http://pi.hole",
+  apiPath: "/admin/api.php",
+  apiPort: 80,
+  apiTokenRequired: true,
+  apiToken: "API_TOKEN",
+  allowSelfSignedCertificates: false,
+  adminHome: "/admin",
+));
+pihole.fetchSummary(CancelToken()).then((summary) => print(summary.toString()));
 ```
 
 ## Development
@@ -20,4 +31,6 @@ Build it:
 
 ```sh
 flutter pub run build_runner build
+# or
+flutter pub run build_runner build --delete-conflicting-outputs
 ```

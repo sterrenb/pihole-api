@@ -1,9 +1,12 @@
 name: pihole_api
-description: Pi-hole API.
+description: A Flutter library for the Pi-hole API.
 publish_to: none
-version: 0.1.1
+version: 0.1.2
+homepage: https://github.com/sterrenburg/pihole-api
+
 environment:
   sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.0"
 
 dependencies:
   dio: ^4.0.4
