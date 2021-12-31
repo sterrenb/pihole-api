@@ -1,6 +1,6 @@
 name: pihole_api
 description: Provides models and endpoint wrappers for the Pi-hole API (summary, queries, versions etc.).
-version: 0.1.3
+version: 0.1.4
 homepage: https://github.com/sterrenburg/pihole-api
 
 environment:
