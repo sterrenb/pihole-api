@@ -2,13 +2,15 @@
 
 [![codecov](https://codecov.io/gh/sterrenburg/pihole-api/branch/main/graph/badge.svg?token=1JBFG473VJ)](https://codecov.io/gh/sterrenburg/pihole-api) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-A Flutter library for the [Pi-hole]([https://pi-hole.net/) API.
+A Flutter library for the [Pi-hole](https://pi-hole.net/) API.
 
-Used in the [FlutterHole app](https://github.com/sterrenburg/flutterhole).
+Used in the [FlutterHole](https://github.com/sterrenburg/flutterhole) app.
 
 ## Example
 
-Use it:
+The following example prints the summary information after fetching it.
+
+**Note**: Do not forget to add your own API token.
 
 ```dart
 final dio = Dio();
@@ -27,7 +29,7 @@ pihole.fetchSummary(CancelToken()).then((summary) => print(summary.toString()));
 
 ## Development
 
-Build it:
+The models are built by [freezed](https://pub.dev/packages/freezed). To build the models, use `build_runner`:
 
 ```sh
 flutter pub run build_runner build
