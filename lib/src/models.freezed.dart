@@ -501,57 +501,57 @@ class _$_PiSummaryModel extends _PiSummaryModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PiSummaryModel &&
-            (identical(other.domainsBeingBlocked, domainsBeingBlocked) ||
-                other.domainsBeingBlocked == domainsBeingBlocked) &&
-            (identical(other.dnsQueriesToday, dnsQueriesToday) ||
-                other.dnsQueriesToday == dnsQueriesToday) &&
-            (identical(other.adsBlockedToday, adsBlockedToday) ||
-                other.adsBlockedToday == adsBlockedToday) &&
-            (identical(other.adsPercentageToday, adsPercentageToday) ||
-                other.adsPercentageToday == adsPercentageToday) &&
-            (identical(other.uniqueDomains, uniqueDomains) ||
-                other.uniqueDomains == uniqueDomains) &&
-            (identical(other.queriesForwarded, queriesForwarded) ||
-                other.queriesForwarded == queriesForwarded) &&
-            (identical(other.queriesCached, queriesCached) ||
-                other.queriesCached == queriesCached) &&
-            (identical(other.clientsEverSeen, clientsEverSeen) ||
-                other.clientsEverSeen == clientsEverSeen) &&
-            (identical(other.uniqueClients, uniqueClients) ||
-                other.uniqueClients == uniqueClients) &&
-            (identical(other.dnsQueriesAllTypes, dnsQueriesAllTypes) ||
-                other.dnsQueriesAllTypes == dnsQueriesAllTypes) &&
-            (identical(other.replyNoData, replyNoData) ||
-                other.replyNoData == replyNoData) &&
-            (identical(other.replyNxDomain, replyNxDomain) ||
-                other.replyNxDomain == replyNxDomain) &&
-            (identical(other.replyCName, replyCName) ||
-                other.replyCName == replyCName) &&
-            (identical(other.replyIP, replyIP) || other.replyIP == replyIP) &&
-            (identical(other.privacyLevel, privacyLevel) ||
-                other.privacyLevel == privacyLevel) &&
-            (identical(other.status, status) || other.status == status));
+            const DeepCollectionEquality()
+                .equals(other.domainsBeingBlocked, domainsBeingBlocked) &&
+            const DeepCollectionEquality()
+                .equals(other.dnsQueriesToday, dnsQueriesToday) &&
+            const DeepCollectionEquality()
+                .equals(other.adsBlockedToday, adsBlockedToday) &&
+            const DeepCollectionEquality()
+                .equals(other.adsPercentageToday, adsPercentageToday) &&
+            const DeepCollectionEquality()
+                .equals(other.uniqueDomains, uniqueDomains) &&
+            const DeepCollectionEquality()
+                .equals(other.queriesForwarded, queriesForwarded) &&
+            const DeepCollectionEquality()
+                .equals(other.queriesCached, queriesCached) &&
+            const DeepCollectionEquality()
+                .equals(other.clientsEverSeen, clientsEverSeen) &&
+            const DeepCollectionEquality()
+                .equals(other.uniqueClients, uniqueClients) &&
+            const DeepCollectionEquality()
+                .equals(other.dnsQueriesAllTypes, dnsQueriesAllTypes) &&
+            const DeepCollectionEquality()
+                .equals(other.replyNoData, replyNoData) &&
+            const DeepCollectionEquality()
+                .equals(other.replyNxDomain, replyNxDomain) &&
+            const DeepCollectionEquality()
+                .equals(other.replyCName, replyCName) &&
+            const DeepCollectionEquality().equals(other.replyIP, replyIP) &&
+            const DeepCollectionEquality()
+                .equals(other.privacyLevel, privacyLevel) &&
+            const DeepCollectionEquality().equals(other.status, status));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      domainsBeingBlocked,
-      dnsQueriesToday,
-      adsBlockedToday,
-      adsPercentageToday,
-      uniqueDomains,
-      queriesForwarded,
-      queriesCached,
-      clientsEverSeen,
-      uniqueClients,
-      dnsQueriesAllTypes,
-      replyNoData,
-      replyNxDomain,
-      replyCName,
-      replyIP,
-      privacyLevel,
-      status);
+      const DeepCollectionEquality().hash(domainsBeingBlocked),
+      const DeepCollectionEquality().hash(dnsQueriesToday),
+      const DeepCollectionEquality().hash(adsBlockedToday),
+      const DeepCollectionEquality().hash(adsPercentageToday),
+      const DeepCollectionEquality().hash(uniqueDomains),
+      const DeepCollectionEquality().hash(queriesForwarded),
+      const DeepCollectionEquality().hash(queriesCached),
+      const DeepCollectionEquality().hash(clientsEverSeen),
+      const DeepCollectionEquality().hash(uniqueClients),
+      const DeepCollectionEquality().hash(dnsQueriesAllTypes),
+      const DeepCollectionEquality().hash(replyNoData),
+      const DeepCollectionEquality().hash(replyNxDomain),
+      const DeepCollectionEquality().hash(replyCName),
+      const DeepCollectionEquality().hash(replyIP),
+      const DeepCollectionEquality().hash(privacyLevel),
+      const DeepCollectionEquality().hash(status));
 
   @JsonKey(ignore: true)
   @override
@@ -777,11 +777,12 @@ class _$_PiholeStatusModel extends _PiholeStatusModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PiholeStatusModel &&
-            (identical(other.status, status) || other.status == status));
+            const DeepCollectionEquality().equals(other.status, status));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, status);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(status));
 
   @JsonKey(ignore: true)
   @override
@@ -1559,23 +1560,28 @@ class _$_QueryItemModel extends _QueryItemModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _QueryItemModel &&
-            (identical(other.timestamp, timestamp) ||
-                other.timestamp == timestamp) &&
-            (identical(other.queryType, queryType) ||
-                other.queryType == queryType) &&
-            (identical(other.domain, domain) || other.domain == domain) &&
-            (identical(other.clientName, clientName) ||
-                other.clientName == clientName) &&
-            (identical(other.queryStatus, queryStatus) ||
-                other.queryStatus == queryStatus) &&
-            (identical(other.dnsSecStatus, dnsSecStatus) ||
-                other.dnsSecStatus == dnsSecStatus) &&
-            (identical(other.delta, delta) || other.delta == delta));
+            const DeepCollectionEquality().equals(other.timestamp, timestamp) &&
+            const DeepCollectionEquality().equals(other.queryType, queryType) &&
+            const DeepCollectionEquality().equals(other.domain, domain) &&
+            const DeepCollectionEquality()
+                .equals(other.clientName, clientName) &&
+            const DeepCollectionEquality()
+                .equals(other.queryStatus, queryStatus) &&
+            const DeepCollectionEquality()
+                .equals(other.dnsSecStatus, dnsSecStatus) &&
+            const DeepCollectionEquality().equals(other.delta, delta));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, timestamp, queryType, domain,
-      clientName, queryStatus, dnsSecStatus, delta);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(timestamp),
+      const DeepCollectionEquality().hash(queryType),
+      const DeepCollectionEquality().hash(domain),
+      const DeepCollectionEquality().hash(clientName),
+      const DeepCollectionEquality().hash(queryStatus),
+      const DeepCollectionEquality().hash(dnsSecStatus),
+      const DeepCollectionEquality().hash(delta));
 
   @JsonKey(ignore: true)
   @override
@@ -1941,12 +1947,15 @@ class _$_PiClientNameModel extends _PiClientNameModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PiClientNameModel &&
-            (identical(other.ip, ip) || other.ip == ip) &&
-            (identical(other.name, name) || other.name == name));
+            const DeepCollectionEquality().equals(other.ip, ip) &&
+            const DeepCollectionEquality().equals(other.name, name));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, ip, name);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(ip),
+      const DeepCollectionEquality().hash(name));
 
   @JsonKey(ignore: true)
   @override
@@ -2508,47 +2517,45 @@ class _$_PiVersionsModel extends _PiVersionsModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PiVersionsModel &&
-            (identical(other.hasCoreUpdate, hasCoreUpdate) ||
-                other.hasCoreUpdate == hasCoreUpdate) &&
-            (identical(other.hasWebUpdate, hasWebUpdate) ||
-                other.hasWebUpdate == hasWebUpdate) &&
-            (identical(other.hasFtlUpdate, hasFtlUpdate) ||
-                other.hasFtlUpdate == hasFtlUpdate) &&
-            (identical(other.currentCoreVersion, currentCoreVersion) ||
-                other.currentCoreVersion == currentCoreVersion) &&
-            (identical(other.currentWebVersion, currentWebVersion) ||
-                other.currentWebVersion == currentWebVersion) &&
-            (identical(other.currentFtlVersion, currentFtlVersion) ||
-                other.currentFtlVersion == currentFtlVersion) &&
-            (identical(other.latestCoreVersion, latestCoreVersion) ||
-                other.latestCoreVersion == latestCoreVersion) &&
-            (identical(other.latestWebVersion, latestWebVersion) ||
-                other.latestWebVersion == latestWebVersion) &&
-            (identical(other.latestFtlVersion, latestFtlVersion) ||
-                other.latestFtlVersion == latestFtlVersion) &&
-            (identical(other.coreBranch, coreBranch) ||
-                other.coreBranch == coreBranch) &&
-            (identical(other.webBranch, webBranch) ||
-                other.webBranch == webBranch) &&
-            (identical(other.ftlBranch, ftlBranch) ||
-                other.ftlBranch == ftlBranch));
+            const DeepCollectionEquality()
+                .equals(other.hasCoreUpdate, hasCoreUpdate) &&
+            const DeepCollectionEquality()
+                .equals(other.hasWebUpdate, hasWebUpdate) &&
+            const DeepCollectionEquality()
+                .equals(other.hasFtlUpdate, hasFtlUpdate) &&
+            const DeepCollectionEquality()
+                .equals(other.currentCoreVersion, currentCoreVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.currentWebVersion, currentWebVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.currentFtlVersion, currentFtlVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.latestCoreVersion, latestCoreVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.latestWebVersion, latestWebVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.latestFtlVersion, latestFtlVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.coreBranch, coreBranch) &&
+            const DeepCollectionEquality().equals(other.webBranch, webBranch) &&
+            const DeepCollectionEquality().equals(other.ftlBranch, ftlBranch));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      hasCoreUpdate,
-      hasWebUpdate,
-      hasFtlUpdate,
-      currentCoreVersion,
-      currentWebVersion,
-      currentFtlVersion,
-      latestCoreVersion,
-      latestWebVersion,
-      latestFtlVersion,
-      coreBranch,
-      webBranch,
-      ftlBranch);
+      const DeepCollectionEquality().hash(hasCoreUpdate),
+      const DeepCollectionEquality().hash(hasWebUpdate),
+      const DeepCollectionEquality().hash(hasFtlUpdate),
+      const DeepCollectionEquality().hash(currentCoreVersion),
+      const DeepCollectionEquality().hash(currentWebVersion),
+      const DeepCollectionEquality().hash(currentFtlVersion),
+      const DeepCollectionEquality().hash(latestCoreVersion),
+      const DeepCollectionEquality().hash(latestWebVersion),
+      const DeepCollectionEquality().hash(latestFtlVersion),
+      const DeepCollectionEquality().hash(coreBranch),
+      const DeepCollectionEquality().hash(webBranch),
+      const DeepCollectionEquality().hash(ftlBranch));
 
   @JsonKey(ignore: true)
   @override

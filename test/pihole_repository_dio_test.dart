@@ -23,8 +23,7 @@ void main() async {
     params = PiholeRepositoryParams(
       dio: dio,
       baseUrl: "http://pi.hole",
-      apiPath: "admin/api.php",
-      apiPort: 80,
+      apiPath: "/admin/api.php",
       apiTokenRequired: true,
       apiToken: "token",
       allowSelfSignedCertificates: false,

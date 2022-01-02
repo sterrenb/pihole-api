@@ -21,7 +21,6 @@ class _$PiholeRepositoryParamsTearOff {
       {required Dio dio,
       required String baseUrl,
       required String apiPath,
-      required int apiPort,
       required bool apiTokenRequired,
       required String apiToken,
       required bool allowSelfSignedCertificates,
@@ -30,7 +29,6 @@ class _$PiholeRepositoryParamsTearOff {
       dio: dio,
       baseUrl: baseUrl,
       apiPath: apiPath,
-      apiPort: apiPort,
       apiTokenRequired: apiTokenRequired,
       apiToken: apiToken,
       allowSelfSignedCertificates: allowSelfSignedCertificates,
@@ -47,7 +45,6 @@ mixin _$PiholeRepositoryParams {
   Dio get dio => throw _privateConstructorUsedError;
   String get baseUrl => throw _privateConstructorUsedError;
   String get apiPath => throw _privateConstructorUsedError;
-  int get apiPort => throw _privateConstructorUsedError;
   bool get apiTokenRequired => throw _privateConstructorUsedError;
   String get apiToken => throw _privateConstructorUsedError;
   bool get allowSelfSignedCertificates => throw _privateConstructorUsedError;
@@ -67,7 +64,6 @@ abstract class $PiholeRepositoryParamsCopyWith<$Res> {
       {Dio dio,
       String baseUrl,
       String apiPath,
-      int apiPort,
       bool apiTokenRequired,
       String apiToken,
       bool allowSelfSignedCertificates,
@@ -88,7 +84,6 @@ class _$PiholeRepositoryParamsCopyWithImpl<$Res>
     Object? dio = freezed,
     Object? baseUrl = freezed,
     Object? apiPath = freezed,
-    Object? apiPort = freezed,
     Object? apiTokenRequired = freezed,
     Object? apiToken = freezed,
     Object? allowSelfSignedCertificates = freezed,
@@ -107,10 +102,6 @@ class _$PiholeRepositoryParamsCopyWithImpl<$Res>
           ? _value.apiPath
           : apiPath // ignore: cast_nullable_to_non_nullable
               as String,
-      apiPort: apiPort == freezed
-          ? _value.apiPort
-          : apiPort // ignore: cast_nullable_to_non_nullable
-              as int,
       apiTokenRequired: apiTokenRequired == freezed
           ? _value.apiTokenRequired
           : apiTokenRequired // ignore: cast_nullable_to_non_nullable
@@ -142,7 +133,6 @@ abstract class _$PiholeRepositoryParamsCopyWith<$Res>
       {Dio dio,
       String baseUrl,
       String apiPath,
-      int apiPort,
       bool apiTokenRequired,
       String apiToken,
       bool allowSelfSignedCertificates,
@@ -165,7 +155,6 @@ class __$PiholeRepositoryParamsCopyWithImpl<$Res>
     Object? dio = freezed,
     Object? baseUrl = freezed,
     Object? apiPath = freezed,
-    Object? apiPort = freezed,
     Object? apiTokenRequired = freezed,
     Object? apiToken = freezed,
     Object? allowSelfSignedCertificates = freezed,
@@ -184,10 +173,6 @@ class __$PiholeRepositoryParamsCopyWithImpl<$Res>
           ? _value.apiPath
           : apiPath // ignore: cast_nullable_to_non_nullable
               as String,
-      apiPort: apiPort == freezed
-          ? _value.apiPort
-          : apiPort // ignore: cast_nullable_to_non_nullable
-              as int,
       apiTokenRequired: apiTokenRequired == freezed
           ? _value.apiTokenRequired
           : apiTokenRequired // ignore: cast_nullable_to_non_nullable
@@ -215,7 +200,6 @@ class _$_PiholeRepositoryParams extends _PiholeRepositoryParams {
       {required this.dio,
       required this.baseUrl,
       required this.apiPath,
-      required this.apiPort,
       required this.apiTokenRequired,
       required this.apiToken,
       required this.allowSelfSignedCertificates,
@@ -229,8 +213,6 @@ class _$_PiholeRepositoryParams extends _PiholeRepositoryParams {
   @override
   final String apiPath;
   @override
-  final int apiPort;
-  @override
   final bool apiTokenRequired;
   @override
   final String apiToken;
@@ -241,7 +223,7 @@ class _$_PiholeRepositoryParams extends _PiholeRepositoryParams {
 
   @override
   String toString() {
-    return 'PiholeRepositoryParams(dio: $dio, baseUrl: $baseUrl, apiPath: $apiPath, apiPort: $apiPort, apiTokenRequired: $apiTokenRequired, apiToken: $apiToken, allowSelfSignedCertificates: $allowSelfSignedCertificates, adminHome: $adminHome)';
+    return 'PiholeRepositoryParams(dio: $dio, baseUrl: $baseUrl, apiPath: $apiPath, apiTokenRequired: $apiTokenRequired, apiToken: $apiToken, allowSelfSignedCertificates: $allowSelfSignedCertificates, adminHome: $adminHome)';
   }
 
   @override
@@ -249,25 +231,28 @@ class _$_PiholeRepositoryParams extends _PiholeRepositoryParams {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PiholeRepositoryParams &&
-            (identical(other.dio, dio) || other.dio == dio) &&
-            (identical(other.baseUrl, baseUrl) || other.baseUrl == baseUrl) &&
-            (identical(other.apiPath, apiPath) || other.apiPath == apiPath) &&
-            (identical(other.apiPort, apiPort) || other.apiPort == apiPort) &&
-            (identical(other.apiTokenRequired, apiTokenRequired) ||
-                other.apiTokenRequired == apiTokenRequired) &&
-            (identical(other.apiToken, apiToken) ||
-                other.apiToken == apiToken) &&
-            (identical(other.allowSelfSignedCertificates,
-                    allowSelfSignedCertificates) ||
-                other.allowSelfSignedCertificates ==
-                    allowSelfSignedCertificates) &&
-            (identical(other.adminHome, adminHome) ||
-                other.adminHome == adminHome));
+            const DeepCollectionEquality().equals(other.dio, dio) &&
+            const DeepCollectionEquality().equals(other.baseUrl, baseUrl) &&
+            const DeepCollectionEquality().equals(other.apiPath, apiPath) &&
+            const DeepCollectionEquality()
+                .equals(other.apiTokenRequired, apiTokenRequired) &&
+            const DeepCollectionEquality().equals(other.apiToken, apiToken) &&
+            const DeepCollectionEquality().equals(
+                other.allowSelfSignedCertificates,
+                allowSelfSignedCertificates) &&
+            const DeepCollectionEquality().equals(other.adminHome, adminHome));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, dio, baseUrl, apiPath, apiPort,
-      apiTokenRequired, apiToken, allowSelfSignedCertificates, adminHome);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(dio),
+      const DeepCollectionEquality().hash(baseUrl),
+      const DeepCollectionEquality().hash(apiPath),
+      const DeepCollectionEquality().hash(apiTokenRequired),
+      const DeepCollectionEquality().hash(apiToken),
+      const DeepCollectionEquality().hash(allowSelfSignedCertificates),
+      const DeepCollectionEquality().hash(adminHome));
 
   @JsonKey(ignore: true)
   @override
@@ -281,7 +266,6 @@ abstract class _PiholeRepositoryParams extends PiholeRepositoryParams {
       {required Dio dio,
       required String baseUrl,
       required String apiPath,
-      required int apiPort,
       required bool apiTokenRequired,
       required String apiToken,
       required bool allowSelfSignedCertificates,
@@ -294,8 +278,6 @@ abstract class _PiholeRepositoryParams extends PiholeRepositoryParams {
   String get baseUrl;
   @override
   String get apiPath;
-  @override
-  int get apiPort;
   @override
   bool get apiTokenRequired;
   @override
@@ -824,12 +806,13 @@ class _$_InvalidResponse implements _InvalidResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _InvalidResponse &&
-            (identical(other.statusCode, statusCode) ||
-                other.statusCode == statusCode));
+            const DeepCollectionEquality()
+                .equals(other.statusCode, statusCode));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, statusCode);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(statusCode));
 
   @JsonKey(ignore: true)
   @override
@@ -1763,11 +1746,12 @@ class _$_GeneralApiFailure implements _GeneralApiFailure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GeneralApiFailure &&
-            (identical(other.message, message) || other.message == message));
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, message);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
@@ -2611,13 +2595,15 @@ class _$PiholeStatusSleeping implements PiholeStatusSleeping {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is PiholeStatusSleeping &&
-            (identical(other.duration, duration) ||
-                other.duration == duration) &&
-            (identical(other.start, start) || other.start == start));
+            const DeepCollectionEquality().equals(other.duration, duration) &&
+            const DeepCollectionEquality().equals(other.start, start));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, duration, start);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(duration),
+      const DeepCollectionEquality().hash(start));
 
   @JsonKey(ignore: true)
   @override
@@ -2776,11 +2762,12 @@ class _$PiholeStatusFailure implements PiholeStatusFailure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is PiholeStatusFailure &&
-            (identical(other.failure, failure) || other.failure == failure));
+            const DeepCollectionEquality().equals(other.failure, failure));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, failure);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(failure));
 
   @JsonKey(ignore: true)
   @override
@@ -3264,57 +3251,57 @@ class _$_PiSummary implements _PiSummary {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PiSummary &&
-            (identical(other.domainsBeingBlocked, domainsBeingBlocked) ||
-                other.domainsBeingBlocked == domainsBeingBlocked) &&
-            (identical(other.dnsQueriesToday, dnsQueriesToday) ||
-                other.dnsQueriesToday == dnsQueriesToday) &&
-            (identical(other.adsBlockedToday, adsBlockedToday) ||
-                other.adsBlockedToday == adsBlockedToday) &&
-            (identical(other.adsPercentageToday, adsPercentageToday) ||
-                other.adsPercentageToday == adsPercentageToday) &&
-            (identical(other.uniqueDomains, uniqueDomains) ||
-                other.uniqueDomains == uniqueDomains) &&
-            (identical(other.queriesForwarded, queriesForwarded) ||
-                other.queriesForwarded == queriesForwarded) &&
-            (identical(other.queriesCached, queriesCached) ||
-                other.queriesCached == queriesCached) &&
-            (identical(other.clientsEverSeen, clientsEverSeen) ||
-                other.clientsEverSeen == clientsEverSeen) &&
-            (identical(other.uniqueClients, uniqueClients) ||
-                other.uniqueClients == uniqueClients) &&
-            (identical(other.dnsQueriesAllTypes, dnsQueriesAllTypes) ||
-                other.dnsQueriesAllTypes == dnsQueriesAllTypes) &&
-            (identical(other.replyNoData, replyNoData) ||
-                other.replyNoData == replyNoData) &&
-            (identical(other.replyNxDomain, replyNxDomain) ||
-                other.replyNxDomain == replyNxDomain) &&
-            (identical(other.replyCName, replyCName) ||
-                other.replyCName == replyCName) &&
-            (identical(other.replyIP, replyIP) || other.replyIP == replyIP) &&
-            (identical(other.privacyLevel, privacyLevel) ||
-                other.privacyLevel == privacyLevel) &&
-            (identical(other.status, status) || other.status == status));
+            const DeepCollectionEquality()
+                .equals(other.domainsBeingBlocked, domainsBeingBlocked) &&
+            const DeepCollectionEquality()
+                .equals(other.dnsQueriesToday, dnsQueriesToday) &&
+            const DeepCollectionEquality()
+                .equals(other.adsBlockedToday, adsBlockedToday) &&
+            const DeepCollectionEquality()
+                .equals(other.adsPercentageToday, adsPercentageToday) &&
+            const DeepCollectionEquality()
+                .equals(other.uniqueDomains, uniqueDomains) &&
+            const DeepCollectionEquality()
+                .equals(other.queriesForwarded, queriesForwarded) &&
+            const DeepCollectionEquality()
+                .equals(other.queriesCached, queriesCached) &&
+            const DeepCollectionEquality()
+                .equals(other.clientsEverSeen, clientsEverSeen) &&
+            const DeepCollectionEquality()
+                .equals(other.uniqueClients, uniqueClients) &&
+            const DeepCollectionEquality()
+                .equals(other.dnsQueriesAllTypes, dnsQueriesAllTypes) &&
+            const DeepCollectionEquality()
+                .equals(other.replyNoData, replyNoData) &&
+            const DeepCollectionEquality()
+                .equals(other.replyNxDomain, replyNxDomain) &&
+            const DeepCollectionEquality()
+                .equals(other.replyCName, replyCName) &&
+            const DeepCollectionEquality().equals(other.replyIP, replyIP) &&
+            const DeepCollectionEquality()
+                .equals(other.privacyLevel, privacyLevel) &&
+            const DeepCollectionEquality().equals(other.status, status));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      domainsBeingBlocked,
-      dnsQueriesToday,
-      adsBlockedToday,
-      adsPercentageToday,
-      uniqueDomains,
-      queriesForwarded,
-      queriesCached,
-      clientsEverSeen,
-      uniqueClients,
-      dnsQueriesAllTypes,
-      replyNoData,
-      replyNxDomain,
-      replyCName,
-      replyIP,
-      privacyLevel,
-      status);
+      const DeepCollectionEquality().hash(domainsBeingBlocked),
+      const DeepCollectionEquality().hash(dnsQueriesToday),
+      const DeepCollectionEquality().hash(adsBlockedToday),
+      const DeepCollectionEquality().hash(adsPercentageToday),
+      const DeepCollectionEquality().hash(uniqueDomains),
+      const DeepCollectionEquality().hash(queriesForwarded),
+      const DeepCollectionEquality().hash(queriesCached),
+      const DeepCollectionEquality().hash(clientsEverSeen),
+      const DeepCollectionEquality().hash(uniqueClients),
+      const DeepCollectionEquality().hash(dnsQueriesAllTypes),
+      const DeepCollectionEquality().hash(replyNoData),
+      const DeepCollectionEquality().hash(replyNxDomain),
+      const DeepCollectionEquality().hash(replyCName),
+      const DeepCollectionEquality().hash(replyIP),
+      const DeepCollectionEquality().hash(privacyLevel),
+      const DeepCollectionEquality().hash(status));
 
   @JsonKey(ignore: true)
   @override
@@ -3514,16 +3501,19 @@ class _$_PiDetails extends _PiDetails {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PiDetails &&
-            (identical(other.temperature, temperature) ||
-                other.temperature == temperature) &&
+            const DeepCollectionEquality()
+                .equals(other.temperature, temperature) &&
             const DeepCollectionEquality().equals(other.cpuLoads, cpuLoads) &&
-            (identical(other.memoryUsage, memoryUsage) ||
-                other.memoryUsage == memoryUsage));
+            const DeepCollectionEquality()
+                .equals(other.memoryUsage, memoryUsage));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, temperature,
-      const DeepCollectionEquality().hash(cpuLoads), memoryUsage);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(temperature),
+      const DeepCollectionEquality().hash(cpuLoads),
+      const DeepCollectionEquality().hash(memoryUsage));
 
   @JsonKey(ignore: true)
   @override
@@ -4181,23 +4171,28 @@ class _$_QueryItem extends _QueryItem {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _QueryItem &&
-            (identical(other.timestamp, timestamp) ||
-                other.timestamp == timestamp) &&
-            (identical(other.queryType, queryType) ||
-                other.queryType == queryType) &&
-            (identical(other.domain, domain) || other.domain == domain) &&
-            (identical(other.clientName, clientName) ||
-                other.clientName == clientName) &&
-            (identical(other.queryStatus, queryStatus) ||
-                other.queryStatus == queryStatus) &&
-            (identical(other.dnsSecStatus, dnsSecStatus) ||
-                other.dnsSecStatus == dnsSecStatus) &&
-            (identical(other.delta, delta) || other.delta == delta));
+            const DeepCollectionEquality().equals(other.timestamp, timestamp) &&
+            const DeepCollectionEquality().equals(other.queryType, queryType) &&
+            const DeepCollectionEquality().equals(other.domain, domain) &&
+            const DeepCollectionEquality()
+                .equals(other.clientName, clientName) &&
+            const DeepCollectionEquality()
+                .equals(other.queryStatus, queryStatus) &&
+            const DeepCollectionEquality()
+                .equals(other.dnsSecStatus, dnsSecStatus) &&
+            const DeepCollectionEquality().equals(other.delta, delta));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, timestamp, queryType, domain,
-      clientName, queryStatus, dnsSecStatus, delta);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(timestamp),
+      const DeepCollectionEquality().hash(queryType),
+      const DeepCollectionEquality().hash(domain),
+      const DeepCollectionEquality().hash(clientName),
+      const DeepCollectionEquality().hash(queryStatus),
+      const DeepCollectionEquality().hash(dnsSecStatus),
+      const DeepCollectionEquality().hash(delta));
 
   @JsonKey(ignore: true)
   @override
@@ -4515,13 +4510,15 @@ class _$_SleepPiParams implements _SleepPiParams {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SleepPiParams &&
-            (identical(other.params, params) || other.params == params) &&
-            (identical(other.duration, duration) ||
-                other.duration == duration));
+            const DeepCollectionEquality().equals(other.params, params) &&
+            const DeepCollectionEquality().equals(other.duration, duration));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, params, duration);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(params),
+      const DeepCollectionEquality().hash(duration));
 
   @JsonKey(ignore: true)
   @override
@@ -4660,12 +4657,15 @@ class _$_PiClientName extends _PiClientName {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PiClientName &&
-            (identical(other.ip, ip) || other.ip == ip) &&
-            (identical(other.name, name) || other.name == name));
+            const DeepCollectionEquality().equals(other.ip, ip) &&
+            const DeepCollectionEquality().equals(other.name, name));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, ip, name);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(ip),
+      const DeepCollectionEquality().hash(name));
 
   @JsonKey(ignore: true)
   @override
@@ -5150,47 +5150,45 @@ class _$_PiVersions extends _PiVersions {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PiVersions &&
-            (identical(other.hasCoreUpdate, hasCoreUpdate) ||
-                other.hasCoreUpdate == hasCoreUpdate) &&
-            (identical(other.hasWebUpdate, hasWebUpdate) ||
-                other.hasWebUpdate == hasWebUpdate) &&
-            (identical(other.hasFtlUpdate, hasFtlUpdate) ||
-                other.hasFtlUpdate == hasFtlUpdate) &&
-            (identical(other.currentCoreVersion, currentCoreVersion) ||
-                other.currentCoreVersion == currentCoreVersion) &&
-            (identical(other.currentWebVersion, currentWebVersion) ||
-                other.currentWebVersion == currentWebVersion) &&
-            (identical(other.currentFtlVersion, currentFtlVersion) ||
-                other.currentFtlVersion == currentFtlVersion) &&
-            (identical(other.latestCoreVersion, latestCoreVersion) ||
-                other.latestCoreVersion == latestCoreVersion) &&
-            (identical(other.latestWebVersion, latestWebVersion) ||
-                other.latestWebVersion == latestWebVersion) &&
-            (identical(other.latestFtlVersion, latestFtlVersion) ||
-                other.latestFtlVersion == latestFtlVersion) &&
-            (identical(other.coreBranch, coreBranch) ||
-                other.coreBranch == coreBranch) &&
-            (identical(other.webBranch, webBranch) ||
-                other.webBranch == webBranch) &&
-            (identical(other.ftlBranch, ftlBranch) ||
-                other.ftlBranch == ftlBranch));
+            const DeepCollectionEquality()
+                .equals(other.hasCoreUpdate, hasCoreUpdate) &&
+            const DeepCollectionEquality()
+                .equals(other.hasWebUpdate, hasWebUpdate) &&
+            const DeepCollectionEquality()
+                .equals(other.hasFtlUpdate, hasFtlUpdate) &&
+            const DeepCollectionEquality()
+                .equals(other.currentCoreVersion, currentCoreVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.currentWebVersion, currentWebVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.currentFtlVersion, currentFtlVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.latestCoreVersion, latestCoreVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.latestWebVersion, latestWebVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.latestFtlVersion, latestFtlVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.coreBranch, coreBranch) &&
+            const DeepCollectionEquality().equals(other.webBranch, webBranch) &&
+            const DeepCollectionEquality().equals(other.ftlBranch, ftlBranch));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      hasCoreUpdate,
-      hasWebUpdate,
-      hasFtlUpdate,
-      currentCoreVersion,
-      currentWebVersion,
-      currentFtlVersion,
-      latestCoreVersion,
-      latestWebVersion,
-      latestFtlVersion,
-      coreBranch,
-      webBranch,
-      ftlBranch);
+      const DeepCollectionEquality().hash(hasCoreUpdate),
+      const DeepCollectionEquality().hash(hasWebUpdate),
+      const DeepCollectionEquality().hash(hasFtlUpdate),
+      const DeepCollectionEquality().hash(currentCoreVersion),
+      const DeepCollectionEquality().hash(currentWebVersion),
+      const DeepCollectionEquality().hash(currentFtlVersion),
+      const DeepCollectionEquality().hash(latestCoreVersion),
+      const DeepCollectionEquality().hash(latestWebVersion),
+      const DeepCollectionEquality().hash(latestFtlVersion),
+      const DeepCollectionEquality().hash(coreBranch),
+      const DeepCollectionEquality().hash(webBranch),
+      const DeepCollectionEquality().hash(ftlBranch));
 
   @JsonKey(ignore: true)
   @override

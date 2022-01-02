@@ -18,15 +18,14 @@ class PiholeRepositoryParams with _$PiholeRepositoryParams {
     required Dio dio,
     required String baseUrl,
     required String apiPath,
-    required int apiPort,
     required bool apiTokenRequired,
     required String apiToken,
     required bool allowSelfSignedCertificates,
     required String adminHome,
   }) = _PiholeRepositoryParams;
 
-  late final String apiUrl = '$baseUrl:$apiPort$apiPath';
-  late final String adminUrl = '$baseUrl:$apiPort$adminHome';
+  late final String apiUrl = '$baseUrl$apiPath';
+  late final String adminUrl = '$baseUrl$adminHome';
 }
 
 @freezed

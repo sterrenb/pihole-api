@@ -21,8 +21,9 @@ final pihole = PiholeRepositoryDio(PiholeRepositoryParams(
   dio: dio,
   baseUrl: "http://pi.hole",
   apiPath: "/admin/api.php",
-  apiPort: 80,
   apiTokenRequired: true,
+  // Find the API token from your Pi-hole admin dashboard while signed in, 
+  // e.g. from http://pi.hole/admin/scripts/pi-hole/php/api_token.php.
   apiToken: "API_TOKEN",
   allowSelfSignedCertificates: false,
   adminHome: "/admin",

@@ -12,7 +12,6 @@ void main() async {
       dio: dio,
       baseUrl: "http://pi.hole",
       apiPath: "/admin/api.php",
-      apiPort: 80,
       apiTokenRequired: true,
       apiToken: "token",
       allowSelfSignedCertificates: false,
@@ -20,22 +19,15 @@ void main() async {
     );
   });
 
-  group('dioBase', () {
-    test('default dioBase should be valid', () {
-      expect(params.apiUrl, "http://pi.hole:80/admin/api.php");
-    });
-
-    test('dioBase should handle ports', () {
-      params = params.copyWith(apiPort: 123);
-      expect(params.apiUrl, "http://pi.hole:123/admin/api.php");
-      params = params.copyWith(apiPort: 321);
-      expect(params.apiUrl, "http://pi.hole:321/admin/api.php");
+  group('apiUrl', () {
+    test('default apiUrl should be valid', () {
+      expect(params.apiUrl, "http://pi.hole/admin/api.php");
     });
   });
 
   group('adminUrl', () {
     test('default adminUrl should be valid', () {
-      expect(params.apiUrl, "http://pi.hole:80/admin/api.php");
+      expect(params.adminUrl, "http://pi.hole/admin");
     });
   });
 }
