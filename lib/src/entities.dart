@@ -15,13 +15,26 @@ class PiholeRepositoryParams with _$PiholeRepositoryParams {
   PiholeRepositoryParams._();
 
   factory PiholeRepositoryParams({
+    /// The http client.
     required Dio dio,
+
+    /// The URL of the host.
     required String baseUrl,
+
+    /// The local API path of the host.
     required String apiPath,
-    required bool apiTokenRequired,
-    required String apiToken,
-    required bool allowSelfSignedCertificates,
+
+    /// The local admin path of the host.
     required String adminHome,
+
+    /// Whether API tokens are enabled.
+    required bool apiTokenRequired,
+
+    /// The API token shown by the admin dashboard.
+    required String apiToken,
+
+    /// Allow unsigned certificates.
+    required bool allowSelfSignedCertificates,
   }) = _PiholeRepositoryParams;
 
   /// The base URL of the API endpoints.
