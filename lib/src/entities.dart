@@ -24,47 +24,63 @@ class PiholeRepositoryParams with _$PiholeRepositoryParams {
     required String adminHome,
   }) = _PiholeRepositoryParams;
 
+  /// The base URL of the API endpoints.
   late final String apiUrl = '$baseUrl$apiPath';
+
+  /// The home URL of the admin interface.
+  ///
+  /// Used for fetching details via the [PiDetails].
   late final String adminUrl = '$baseUrl$adminHome';
 }
 
 @freezed
 class PiholeApiFailure with _$PiholeApiFailure {
+  /// Resource not found.
   factory PiholeApiFailure.notFound() = _NotFound;
 
+  /// Authentication failed.
   const factory PiholeApiFailure.notAuthenticated() = _NotAuthenticated;
 
+  /// Unexpected status code.
   const factory PiholeApiFailure.invalidResponse(int statusCode) =
       _InvalidResponse;
 
+  /// Empty string instead of JSON.
   const factory PiholeApiFailure.emptyString() = _EmptyString;
 
+  /// Empty list instead of JSON.
   const factory PiholeApiFailure.emptyList() = _EmptyList;
 
+  /// Cancelled by user.
   const factory PiholeApiFailure.cancelled() = _Cancelled;
 
+  /// Request timeout.
   const factory PiholeApiFailure.timeout() = _Timeout;
 
+  /// DNS resolving failed.
   const factory PiholeApiFailure.hostname() = _HostName;
 
+  /// Exposed for custom messages.
   const factory PiholeApiFailure.general(String message) = _GeneralApiFailure;
 
+  /// Catch-all default case.
   const factory PiholeApiFailure.unknown(dynamic e) = _UnknownApiFailure;
 }
 
 @freezed
 class PiholeStatus with _$PiholeStatus {
-  const factory PiholeStatus.loading() = PiholeStatusLoading;
-
+  /// Pihole is listening to DNS requests.
   const factory PiholeStatus.enabled() = PiholeStatusEnabled;
 
+  /// Pihole is not listening to DNS requests.
   const factory PiholeStatus.disabled() = PiholeStatusDisabled;
 
+  /// Pihole started sleeping at [start] for the given [duration].
+  ///
+  /// The API just shows as "disabled" while sleeping, so
+  /// manage the sleeping state manually.
   const factory PiholeStatus.sleeping(Duration duration, DateTime start) =
       PiholeStatusSleeping;
-
-  const factory PiholeStatus.failure(PiholeApiFailure failure) =
-      PiholeStatusFailure;
 }
 
 @freezed

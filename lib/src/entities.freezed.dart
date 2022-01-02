@@ -2064,10 +2064,6 @@ abstract class _UnknownApiFailure implements PiholeApiFailure {
 class _$PiholeStatusTearOff {
   const _$PiholeStatusTearOff();
 
-  PiholeStatusLoading loading() {
-    return const PiholeStatusLoading();
-  }
-
   PiholeStatusEnabled enabled() {
     return const PiholeStatusEnabled();
   }
@@ -2082,12 +2078,6 @@ class _$PiholeStatusTearOff {
       start,
     );
   }
-
-  PiholeStatusFailure failure(PiholeApiFailure failure) {
-    return PiholeStatusFailure(
-      failure,
-    );
-  }
 }
 
 /// @nodoc
@@ -2097,57 +2087,45 @@ const $PiholeStatus = _$PiholeStatusTearOff();
 mixin _$PiholeStatus {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
     required TResult Function() enabled,
     required TResult Function() disabled,
     required TResult Function(Duration duration, DateTime start) sleeping,
-    required TResult Function(PiholeApiFailure failure) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? enabled,
     TResult Function()? disabled,
     TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? enabled,
     TResult Function()? disabled,
     TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PiholeStatusLoading value) loading,
     required TResult Function(PiholeStatusEnabled value) enabled,
     required TResult Function(PiholeStatusDisabled value) disabled,
     required TResult Function(PiholeStatusSleeping value) sleeping,
-    required TResult Function(PiholeStatusFailure value) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
     TResult Function(PiholeStatusEnabled value)? enabled,
     TResult Function(PiholeStatusDisabled value)? disabled,
     TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
     TResult Function(PiholeStatusEnabled value)? enabled,
     TResult Function(PiholeStatusDisabled value)? disabled,
     TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2167,129 +2145,6 @@ class _$PiholeStatusCopyWithImpl<$Res> implements $PiholeStatusCopyWith<$Res> {
   final PiholeStatus _value;
   // ignore: unused_field
   final $Res Function(PiholeStatus) _then;
-}
-
-/// @nodoc
-abstract class $PiholeStatusLoadingCopyWith<$Res> {
-  factory $PiholeStatusLoadingCopyWith(
-          PiholeStatusLoading value, $Res Function(PiholeStatusLoading) then) =
-      _$PiholeStatusLoadingCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class _$PiholeStatusLoadingCopyWithImpl<$Res>
-    extends _$PiholeStatusCopyWithImpl<$Res>
-    implements $PiholeStatusLoadingCopyWith<$Res> {
-  _$PiholeStatusLoadingCopyWithImpl(
-      PiholeStatusLoading _value, $Res Function(PiholeStatusLoading) _then)
-      : super(_value, (v) => _then(v as PiholeStatusLoading));
-
-  @override
-  PiholeStatusLoading get _value => super._value as PiholeStatusLoading;
-}
-
-/// @nodoc
-
-class _$PiholeStatusLoading implements PiholeStatusLoading {
-  const _$PiholeStatusLoading();
-
-  @override
-  String toString() {
-    return 'PiholeStatus.loading()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is PiholeStatusLoading);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function() enabled,
-    required TResult Function() disabled,
-    required TResult Function(Duration duration, DateTime start) sleeping,
-    required TResult Function(PiholeApiFailure failure) failure,
-  }) {
-    return loading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function()? enabled,
-    TResult Function()? disabled,
-    TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
-  }) {
-    return loading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function()? enabled,
-    TResult Function()? disabled,
-    TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PiholeStatusLoading value) loading,
-    required TResult Function(PiholeStatusEnabled value) enabled,
-    required TResult Function(PiholeStatusDisabled value) disabled,
-    required TResult Function(PiholeStatusSleeping value) sleeping,
-    required TResult Function(PiholeStatusFailure value) failure,
-  }) {
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
-    TResult Function(PiholeStatusEnabled value)? enabled,
-    TResult Function(PiholeStatusDisabled value)? disabled,
-    TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
-  }) {
-    return loading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
-    TResult Function(PiholeStatusEnabled value)? enabled,
-    TResult Function(PiholeStatusDisabled value)? disabled,
-    TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
-    required TResult orElse(),
-  }) {
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PiholeStatusLoading implements PiholeStatus {
-  const factory PiholeStatusLoading() = _$PiholeStatusLoading;
 }
 
 /// @nodoc
@@ -2333,11 +2188,9 @@ class _$PiholeStatusEnabled implements PiholeStatusEnabled {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
     required TResult Function() enabled,
     required TResult Function() disabled,
     required TResult Function(Duration duration, DateTime start) sleeping,
-    required TResult Function(PiholeApiFailure failure) failure,
   }) {
     return enabled();
   }
@@ -2345,11 +2198,9 @@ class _$PiholeStatusEnabled implements PiholeStatusEnabled {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? enabled,
     TResult Function()? disabled,
     TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
   }) {
     return enabled?.call();
   }
@@ -2357,11 +2208,9 @@ class _$PiholeStatusEnabled implements PiholeStatusEnabled {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? enabled,
     TResult Function()? disabled,
     TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
     required TResult orElse(),
   }) {
     if (enabled != null) {
@@ -2373,11 +2222,9 @@ class _$PiholeStatusEnabled implements PiholeStatusEnabled {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PiholeStatusLoading value) loading,
     required TResult Function(PiholeStatusEnabled value) enabled,
     required TResult Function(PiholeStatusDisabled value) disabled,
     required TResult Function(PiholeStatusSleeping value) sleeping,
-    required TResult Function(PiholeStatusFailure value) failure,
   }) {
     return enabled(this);
   }
@@ -2385,11 +2232,9 @@ class _$PiholeStatusEnabled implements PiholeStatusEnabled {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
     TResult Function(PiholeStatusEnabled value)? enabled,
     TResult Function(PiholeStatusDisabled value)? disabled,
     TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
   }) {
     return enabled?.call(this);
   }
@@ -2397,11 +2242,9 @@ class _$PiholeStatusEnabled implements PiholeStatusEnabled {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
     TResult Function(PiholeStatusEnabled value)? enabled,
     TResult Function(PiholeStatusDisabled value)? disabled,
     TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
     required TResult orElse(),
   }) {
     if (enabled != null) {
@@ -2456,11 +2299,9 @@ class _$PiholeStatusDisabled implements PiholeStatusDisabled {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
     required TResult Function() enabled,
     required TResult Function() disabled,
     required TResult Function(Duration duration, DateTime start) sleeping,
-    required TResult Function(PiholeApiFailure failure) failure,
   }) {
     return disabled();
   }
@@ -2468,11 +2309,9 @@ class _$PiholeStatusDisabled implements PiholeStatusDisabled {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? enabled,
     TResult Function()? disabled,
     TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
   }) {
     return disabled?.call();
   }
@@ -2480,11 +2319,9 @@ class _$PiholeStatusDisabled implements PiholeStatusDisabled {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? enabled,
     TResult Function()? disabled,
     TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
     required TResult orElse(),
   }) {
     if (disabled != null) {
@@ -2496,11 +2333,9 @@ class _$PiholeStatusDisabled implements PiholeStatusDisabled {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PiholeStatusLoading value) loading,
     required TResult Function(PiholeStatusEnabled value) enabled,
     required TResult Function(PiholeStatusDisabled value) disabled,
     required TResult Function(PiholeStatusSleeping value) sleeping,
-    required TResult Function(PiholeStatusFailure value) failure,
   }) {
     return disabled(this);
   }
@@ -2508,11 +2343,9 @@ class _$PiholeStatusDisabled implements PiholeStatusDisabled {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
     TResult Function(PiholeStatusEnabled value)? enabled,
     TResult Function(PiholeStatusDisabled value)? disabled,
     TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
   }) {
     return disabled?.call(this);
   }
@@ -2520,11 +2353,9 @@ class _$PiholeStatusDisabled implements PiholeStatusDisabled {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
     TResult Function(PiholeStatusEnabled value)? enabled,
     TResult Function(PiholeStatusDisabled value)? disabled,
     TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
     required TResult orElse(),
   }) {
     if (disabled != null) {
@@ -2614,11 +2445,9 @@ class _$PiholeStatusSleeping implements PiholeStatusSleeping {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loading,
     required TResult Function() enabled,
     required TResult Function() disabled,
     required TResult Function(Duration duration, DateTime start) sleeping,
-    required TResult Function(PiholeApiFailure failure) failure,
   }) {
     return sleeping(duration, start);
   }
@@ -2626,11 +2455,9 @@ class _$PiholeStatusSleeping implements PiholeStatusSleeping {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? enabled,
     TResult Function()? disabled,
     TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
   }) {
     return sleeping?.call(duration, start);
   }
@@ -2638,11 +2465,9 @@ class _$PiholeStatusSleeping implements PiholeStatusSleeping {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
     TResult Function()? enabled,
     TResult Function()? disabled,
     TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
     required TResult orElse(),
   }) {
     if (sleeping != null) {
@@ -2654,11 +2479,9 @@ class _$PiholeStatusSleeping implements PiholeStatusSleeping {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PiholeStatusLoading value) loading,
     required TResult Function(PiholeStatusEnabled value) enabled,
     required TResult Function(PiholeStatusDisabled value) disabled,
     required TResult Function(PiholeStatusSleeping value) sleeping,
-    required TResult Function(PiholeStatusFailure value) failure,
   }) {
     return sleeping(this);
   }
@@ -2666,11 +2489,9 @@ class _$PiholeStatusSleeping implements PiholeStatusSleeping {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
     TResult Function(PiholeStatusEnabled value)? enabled,
     TResult Function(PiholeStatusDisabled value)? disabled,
     TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
   }) {
     return sleeping?.call(this);
   }
@@ -2678,11 +2499,9 @@ class _$PiholeStatusSleeping implements PiholeStatusSleeping {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
     TResult Function(PiholeStatusEnabled value)? enabled,
     TResult Function(PiholeStatusDisabled value)? disabled,
     TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
     required TResult orElse(),
   }) {
     if (sleeping != null) {
@@ -2700,168 +2519,6 @@ abstract class PiholeStatusSleeping implements PiholeStatus {
   DateTime get start;
   @JsonKey(ignore: true)
   $PiholeStatusSleepingCopyWith<PiholeStatusSleeping> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PiholeStatusFailureCopyWith<$Res> {
-  factory $PiholeStatusFailureCopyWith(
-          PiholeStatusFailure value, $Res Function(PiholeStatusFailure) then) =
-      _$PiholeStatusFailureCopyWithImpl<$Res>;
-  $Res call({PiholeApiFailure failure});
-
-  $PiholeApiFailureCopyWith<$Res> get failure;
-}
-
-/// @nodoc
-class _$PiholeStatusFailureCopyWithImpl<$Res>
-    extends _$PiholeStatusCopyWithImpl<$Res>
-    implements $PiholeStatusFailureCopyWith<$Res> {
-  _$PiholeStatusFailureCopyWithImpl(
-      PiholeStatusFailure _value, $Res Function(PiholeStatusFailure) _then)
-      : super(_value, (v) => _then(v as PiholeStatusFailure));
-
-  @override
-  PiholeStatusFailure get _value => super._value as PiholeStatusFailure;
-
-  @override
-  $Res call({
-    Object? failure = freezed,
-  }) {
-    return _then(PiholeStatusFailure(
-      failure == freezed
-          ? _value.failure
-          : failure // ignore: cast_nullable_to_non_nullable
-              as PiholeApiFailure,
-    ));
-  }
-
-  @override
-  $PiholeApiFailureCopyWith<$Res> get failure {
-    return $PiholeApiFailureCopyWith<$Res>(_value.failure, (value) {
-      return _then(_value.copyWith(failure: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$PiholeStatusFailure implements PiholeStatusFailure {
-  const _$PiholeStatusFailure(this.failure);
-
-  @override
-  final PiholeApiFailure failure;
-
-  @override
-  String toString() {
-    return 'PiholeStatus.failure(failure: $failure)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is PiholeStatusFailure &&
-            const DeepCollectionEquality().equals(other.failure, failure));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(failure));
-
-  @JsonKey(ignore: true)
-  @override
-  $PiholeStatusFailureCopyWith<PiholeStatusFailure> get copyWith =>
-      _$PiholeStatusFailureCopyWithImpl<PiholeStatusFailure>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() loading,
-    required TResult Function() enabled,
-    required TResult Function() disabled,
-    required TResult Function(Duration duration, DateTime start) sleeping,
-    required TResult Function(PiholeApiFailure failure) failure,
-  }) {
-    return failure(this.failure);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function()? enabled,
-    TResult Function()? disabled,
-    TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
-  }) {
-    return failure?.call(this.failure);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loading,
-    TResult Function()? enabled,
-    TResult Function()? disabled,
-    TResult Function(Duration duration, DateTime start)? sleeping,
-    TResult Function(PiholeApiFailure failure)? failure,
-    required TResult orElse(),
-  }) {
-    if (failure != null) {
-      return failure(this.failure);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(PiholeStatusLoading value) loading,
-    required TResult Function(PiholeStatusEnabled value) enabled,
-    required TResult Function(PiholeStatusDisabled value) disabled,
-    required TResult Function(PiholeStatusSleeping value) sleeping,
-    required TResult Function(PiholeStatusFailure value) failure,
-  }) {
-    return failure(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
-    TResult Function(PiholeStatusEnabled value)? enabled,
-    TResult Function(PiholeStatusDisabled value)? disabled,
-    TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
-  }) {
-    return failure?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(PiholeStatusLoading value)? loading,
-    TResult Function(PiholeStatusEnabled value)? enabled,
-    TResult Function(PiholeStatusDisabled value)? disabled,
-    TResult Function(PiholeStatusSleeping value)? sleeping,
-    TResult Function(PiholeStatusFailure value)? failure,
-    required TResult orElse(),
-  }) {
-    if (failure != null) {
-      return failure(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class PiholeStatusFailure implements PiholeStatus {
-  const factory PiholeStatusFailure(PiholeApiFailure failure) =
-      _$PiholeStatusFailure;
-
-  PiholeApiFailure get failure;
-  @JsonKey(ignore: true)
-  $PiholeStatusFailureCopyWith<PiholeStatusFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
