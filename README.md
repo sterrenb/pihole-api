@@ -7,24 +7,26 @@
 
 A Flutter library for the [Pi-hole](https://pi-hole.net/) API.
 
-Used in the [FlutterHole](https://github.com/sterrenburg/flutterhole) app.
-
 ## Example
 
 The following example prints the summary information after fetching it.
 
-**Note**: Do not forget to add your own API token.
+**Note**: Do not forget to add your own API token if you use authenticated requests.
 
 ```dart
-final dio = Dio();
+import 'package:pihole_api/pihole_api.dart';
+
 final pihole = PiholeRepositoryDio(PiholeRepositoryParams(
-  dio: dio,
+  dio: Dio(BaseOptions(baseUrl: "http://pi.hole")),
   baseUrl: "http://pi.hole",
   apiPath: "/admin/api.php",
   apiTokenRequired: true,
   // Find the API token from your Pi-hole admin dashboard while signed in, 
   // e.g. from http://pi.hole/admin/scripts/pi-hole/php/api_token.php.
-  apiToken: "API_TOKEN",
+  apiToken: const String.fromEnvironment(
+    "PIHOLE_API_TOKEN",
+    defaultValue: "MY_TOKEN",
+  ),  
   allowSelfSignedCertificates: false,
   adminHome: "/admin",
 ));

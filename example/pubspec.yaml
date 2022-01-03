@@ -1,0 +1,24 @@
+name: pihole_api_example
+description: An example Flutter project using the pihole_api package.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.15.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  pihole_api:
+    path: ../../pihole_api
+  dio: ">=4.0.4 <5.0.0"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.4
+
+flutter:
+  uses-material-design: true
