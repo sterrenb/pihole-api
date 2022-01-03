@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   pihole_api:
-    path: ../../pihole_api
+    path: ../
   dio: ">=4.0.4 <5.0.0"
 
 dev_dependencies:
