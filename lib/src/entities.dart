@@ -123,17 +123,25 @@ class PiDetails with _$PiDetails {
   PiDetails._();
 
   factory PiDetails({
+    /// The CPU temperature.
     required double? temperature,
+
+    /// The CPU load per core.
     required List<double> cpuLoads,
+
+    /// The memory usage percentage.
     required double? memoryUsage,
   }) = _PiDetails;
 
+  /// The temperature in celsius, with symbol.
   late final String temperatureInCelcius =
       '${(temperature ?? -1).toStringAsFixed(1)} °C';
 
+  /// The temperature converted from celcius to fahrenheit, with symbol.
   late final String temperatureInFahrenheit =
       '${celciusToFahrenheit((temperature ?? -1)).toStringAsFixed(1)} °F';
 
+  /// The temperature converted from celcius to kelvin, with symbol.
   late final String temperatureInKelvin =
       '${celciusToKelvin((temperature ?? -1)).toStringAsFixed(1)} °K';
 }
@@ -154,7 +162,10 @@ class PiQueriesOverTime with _$PiQueriesOverTime {
   PiQueriesOverTime._();
 
   factory PiQueriesOverTime({
+    /// Permitted domain requests.
     required Map<DateTime, int> domainsOverTime,
+
+    /// Blocked domain requests.
     required Map<DateTime, int> adsOverTime,
   }) = _PiQueriesOverTime;
 
@@ -162,14 +173,31 @@ class PiQueriesOverTime with _$PiQueriesOverTime {
 }
 
 enum QueryStatus {
+  /// Unknown query.
   Unknown,
+
+  /// Blocked with adlist.
   BlockedWithGravity,
+
+  /// Forwarded to another DNS server.
   Forwarded,
+
+  /// Previously cached.
   Cached,
+
+  /// Blocked with regex or wildcard.
   BlockedWithRegexWildcard,
+
+  /// Blocked with blacklist.
   BlockedWithBlacklist,
+
+  /// Blocked with external IP.
   BlockedWithExternalIP,
+
+  /// Blocked with unknown external.
   BlockedWithExternalNull,
+
+  /// Blocked with upstream DNS server.
   BlockedWithExternalNXRA,
 }
 
@@ -187,13 +215,26 @@ class QueryItem with _$QueryItem {
   QueryItem._();
 
   factory QueryItem({
+    /// Timestamp of incoming query.
     required DateTime timestamp,
+
+    /// Type of query.
     required String queryType,
+
+    /// Query request source.
     required String domain,
+
+    /// Alphanumeric client name.
     required String clientName,
+
+    /// Query status.
     required QueryStatus queryStatus,
+
+    /// DNSSEC status.
     required DnsSecStatus dnsSecStatus,
-    required double delta, // milliseconds
+
+    /// Parse duration in milliseconds.
+    required double delta,
   }) = _QueryItem;
 
   late final int pageKey = (timestamp.millisecondsSinceEpoch / 1000).round();
@@ -204,7 +245,10 @@ class TopItems with _$TopItems {
   TopItems._();
 
   factory TopItems({
+    /// Top requested domains.
     required Map<String, int> topQueries,
+
+    /// Top blocked domains.
     required Map<String, int> topAds,
   }) = _TopItems;
 }
@@ -220,7 +264,10 @@ class PiClientName with _$PiClientName {
   PiClientName._();
 
   factory PiClientName({
+    /// Client IP.
     required String ip,
+
+    /// Client name. Defaults to empty string.
     required String name,
   }) = _PiClientName;
 
@@ -232,7 +279,10 @@ class PiClientActivityOverTime with _$PiClientActivityOverTime {
   PiClientActivityOverTime._();
 
   factory PiClientActivityOverTime({
+    /// All clients found in time period.
     required List<PiClientName> clients,
+
+    /// Activity per time interval.
     required Map<DateTime, List<int>> activity,
   }) = _PiClientActivityOverTime;
 
@@ -246,17 +296,40 @@ class PiVersions with _$PiVersions {
   PiVersions._();
 
   factory PiVersions({
+    /// Core update flag.
     required bool hasCoreUpdate,
+
+    /// Web interface update flag.
     required bool hasWebUpdate,
+
+    /// FTL server update flag.
     required bool hasFtlUpdate,
+
+    /// Current core version.
     required String currentCoreVersion,
+
+    /// Current web interface version.
     required String currentWebVersion,
+
+    /// Current FTL server version.
     required String currentFtlVersion,
+
+    /// Latest core version available.
     required String latestCoreVersion,
+
+    /// Latest web interface version available.
     required String latestWebVersion,
+
+    /// Latest FTL server version available.
     required String latestFtlVersion,
+
+    /// Current core git branch.
     required String coreBranch,
+
+    /// Current web interface git branch.
     required String webBranch,
+
+    /// Current core FTL server branch.
     required String ftlBranch,
   }) = _PiVersions;
 }
