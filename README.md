@@ -17,7 +17,6 @@ The following example prints the summary information after fetching it.
 import 'package:pihole_api/pihole_api.dart';
 
 final pihole = PiholeRepositoryDio(PiholeRepositoryParams(
-  dio: Dio(BaseOptions(baseUrl: "http://pi.hole")),
   baseUrl: "http://pi.hole",
   apiPath: "/admin/api.php",
   apiTokenRequired: true,
