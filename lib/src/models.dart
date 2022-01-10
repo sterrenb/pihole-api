@@ -8,6 +8,7 @@ part 'models.g.dart';
 
 // coverage:ignore-file
 
+/// [PiSummary] model.
 @freezed
 class PiSummaryModel with _$PiSummaryModel {
   PiSummaryModel._();
@@ -84,6 +85,7 @@ class PiSummaryModel with _$PiSummaryModel {
   );
 }
 
+/// [PiholeStatus] model.
 @freezed
 class PiholeStatusModel with _$PiholeStatusModel {
   PiholeStatusModel._();
@@ -100,6 +102,7 @@ class PiholeStatusModel with _$PiholeStatusModel {
       : const PiholeStatus.disabled();
 }
 
+/// [PiQueryTypes] model.
 @freezed
 class PiQueryTypesModel with _$PiQueryTypesModel {
   PiQueryTypesModel._();
@@ -116,6 +119,7 @@ class PiQueryTypesModel with _$PiQueryTypesModel {
       _$PiQueryTypesModelFromJson(json);
 }
 
+/// [PiForwardDestinations] model.
 @freezed
 class PiForwardDestinationsModel with _$PiForwardDestinationsModel {
   PiForwardDestinationsModel._();
@@ -133,6 +137,7 @@ class PiForwardDestinationsModel with _$PiForwardDestinationsModel {
       _$PiForwardDestinationsModelFromJson(json);
 }
 
+/// [PiQueriesOverTime] model.
 @freezed
 class PiQueriesOverTimeModel with _$PiQueriesOverTimeModel {
   PiQueriesOverTimeModel._();
@@ -154,7 +159,7 @@ class PiQueriesOverTimeModel with _$PiQueriesOverTimeModel {
       _$PiQueriesOverTimeModelFromJson(json);
 }
 
-// https://github.com/pi-hole/AdminLTE/blob/44aff727e59d129e6201341caa1d74c8b2954bd2/scripts/pi-hole/js/queries.js#L181
+/// https://github.com/pi-hole/AdminLTE/blob/44aff727e59d129e6201341caa1d74c8b2954bd2/scripts/pi-hole/js/queries.js#L181
 QueryStatus piStringToQueryStatus(String json) {
   try {
     final int index = int.parse(json);
@@ -180,6 +185,7 @@ DnsSecStatus piStringToDnsSecStatus(String json) {
   return DnsSecStatus.values[index - 1];
 }
 
+/// [QueryItem] model.
 @freezed
 class QueryItemModel with _$QueryItemModel {
   QueryItemModel._();
@@ -219,6 +225,7 @@ class QueryItemModel with _$QueryItemModel {
   );
 }
 
+/// [TopItems] model.
 @freezed
 class TopItemsModel with _$TopItemsModel {
   TopItemsModel._();
@@ -237,6 +244,7 @@ class TopItemsModel with _$TopItemsModel {
   );
 }
 
+/// [PiClientName] model.
 @freezed
 class PiClientNameModel with _$PiClientNameModel {
   PiClientNameModel._();
@@ -252,6 +260,7 @@ class PiClientNameModel with _$PiClientNameModel {
   late final PiClientName entity = PiClientName(ip: ip, name: name ?? '');
 }
 
+/// [PiClientActivityOverTime] model.
 @freezed
 class PiClientsOverTimeModel with _$PiClientsOverTimeModel {
   PiClientsOverTimeModel._();
@@ -273,6 +282,7 @@ class PiClientsOverTimeModel with _$PiClientsOverTimeModel {
       _$PiClientsOverTimeModelFromJson(json);
 }
 
+/// [PiVersions] model.
 @freezed
 class PiVersionsModel with _$PiVersionsModel {
   PiVersionsModel._();
