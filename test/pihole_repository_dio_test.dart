@@ -12,7 +12,7 @@ void main() async {
   late PiholeApiParams params;
   late Dio dio;
   late DioAdapter dioAdapter;
-  late PiholeApiDio repository;
+  late PiholeApiDio api;
   late CancelToken cancelToken;
 
   setUp(() {
@@ -29,12 +29,12 @@ void main() async {
       allowSelfSignedCertificates: false,
       adminHome: "/admin",
     );
-    repository = PiholeApiDio(params);
+    api = PiholeApiDio(params);
   });
 
   group('fetchSummary', () {
     test('fetchSummary returns PiSummary', () async {
-      final res = await repository.fetchSummary(cancelToken);
+      final res = await api.fetchSummary(cancelToken);
       expect(
           res,
           const PiSummary(
@@ -60,7 +60,7 @@ void main() async {
     test('fetchSummary handles empty reply', () async {
       dioAdapter.onGet("/admin/api.php", (request) => request.reply(200, ""),
           queryParameters: {'summaryRaw': ''});
-      expect(repository.fetchSummary(cancelToken),
+      expect(api.fetchSummary(cancelToken),
           throwsA(const PiholeApiFailure.emptyString()));
     });
 
@@ -70,7 +70,7 @@ void main() async {
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))),
           queryParameters: {'summaryRaw': ''});
-      expect(repository.fetchSummary(cancelToken),
+      expect(api.fetchSummary(cancelToken),
           throwsA(const PiholeApiFailure.general("")));
     });
 
@@ -84,7 +84,7 @@ void main() async {
                   type: DioErrorType.other,
                   error: 'Failed host lookup')),
           queryParameters: {'summaryRaw': ''});
-      expect(repository.fetchSummary(cancelToken),
+      expect(api.fetchSummary(cancelToken),
           throwsA(const PiholeApiFailure.hostname()));
     });
 
@@ -97,7 +97,7 @@ void main() async {
                   requestOptions: RequestOptions(path: ""),
                   type: DioErrorType.connectTimeout)),
           queryParameters: {'summaryRaw': ''});
-      expect(repository.fetchSummary(cancelToken),
+      expect(api.fetchSummary(cancelToken),
           throwsA(const PiholeApiFailure.timeout()));
     });
 
@@ -110,7 +110,7 @@ void main() async {
                   requestOptions: RequestOptions(path: ""),
                   type: DioErrorType.response)),
           queryParameters: {'summaryRaw': ''});
-      expect(repository.fetchSummary(cancelToken),
+      expect(api.fetchSummary(cancelToken),
           throwsA(const PiholeApiFailure.invalidResponse(500)));
     });
 
@@ -123,7 +123,7 @@ void main() async {
                   requestOptions: RequestOptions(path: ""),
                   type: DioErrorType.cancel)),
           queryParameters: {'summaryRaw': ''});
-      expect(repository.fetchSummary(cancelToken),
+      expect(api.fetchSummary(cancelToken),
           throwsA(const PiholeApiFailure.cancelled()));
     });
   });
@@ -153,7 +153,7 @@ void main() async {
                 }
               }),
           queryParameters: {'getQueryTypes': '', 'auth': 'token'});
-      final res = await repository.fetchQueryTypes(cancelToken);
+      final res = await api.fetchQueryTypes(cancelToken);
       expect(
           res,
           PiQueryTypes(types: {
@@ -170,15 +170,15 @@ void main() async {
     test('fetchQueryTypes handles empty list response', () async {
       dioAdapter.onGet("/admin/api.php", (request) => request.reply(200, []),
           queryParameters: {'getQueryTypes': '', 'auth': 'token'});
-      expect(repository.fetchQueryTypes(cancelToken),
+      expect(api.fetchQueryTypes(cancelToken),
           throwsA(const PiholeApiFailure.emptyList()));
     });
 
     test('fetchQueryTypes handles unauthenticated', () async {
-      repository = PiholeApiDio(params.copyWith(apiToken: ""));
+      api = PiholeApiDio(params.copyWith(apiToken: ""));
       dioAdapter.onGet("/admin/api.php", (request) => request.reply(200, []),
           queryParameters: {'getQueryTypes': '', 'auth': ''});
-      expect(repository.fetchQueryTypes(cancelToken),
+      expect(api.fetchQueryTypes(cancelToken),
           throwsA(const PiholeApiFailure.notAuthenticated()));
     });
 
@@ -188,7 +188,7 @@ void main() async {
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))),
           queryParameters: {'getQueryTypes': '', 'auth': 'token'});
-      expect(repository.fetchQueryTypes(cancelToken),
+      expect(api.fetchQueryTypes(cancelToken),
           throwsA(const PiholeApiFailure.general("")));
     });
   });
@@ -206,7 +206,7 @@ void main() async {
                 }
               }),
           queryParameters: {'getForwardDestinations': '', 'auth': 'token'});
-      final res = await repository.fetchForwardDestinations(cancelToken);
+      final res = await api.fetchForwardDestinations(cancelToken);
       expect(
           res,
           PiForwardDestinations(
@@ -225,7 +225,7 @@ void main() async {
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))),
           queryParameters: {'getForwardDestinations': '', 'auth': 'token'});
-      expect(repository.fetchForwardDestinations(cancelToken),
+      expect(api.fetchForwardDestinations(cancelToken),
           throwsA(const PiholeApiFailure.general("")));
     });
   });
@@ -247,7 +247,7 @@ void main() async {
                 }
               }),
           queryParameters: {'overTimeData10mins': '', 'auth': 'token'});
-      final res = await repository.fetchQueriesOverTime(cancelToken);
+      final res = await api.fetchQueriesOverTime(cancelToken);
       expect(
           res,
           PiQueriesOverTime(
@@ -270,7 +270,7 @@ void main() async {
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))),
           queryParameters: {'overTimeData10mins': '', 'auth': 'token'});
-      expect(repository.fetchQueriesOverTime(cancelToken),
+      expect(api.fetchQueriesOverTime(cancelToken),
           throwsA(const PiholeApiFailure.general("")));
     });
   });
@@ -297,7 +297,7 @@ void main() async {
             'overTimeDataClients': '',
             'auth': 'token'
           });
-      final res = await repository.fetchClientActivityOverTime(cancelToken);
+      final res = await api.fetchClientActivityOverTime(cancelToken);
       expect(
           res,
           PiClientActivityOverTime(
@@ -351,7 +351,7 @@ void main() async {
             'overTimeDataClients': '',
             'auth': 'token'
           });
-      expect(repository.fetchClientActivityOverTime(cancelToken),
+      expect(api.fetchClientActivityOverTime(cancelToken),
           throwsA(const PiholeApiFailure.general("")));
     });
   });
@@ -361,7 +361,7 @@ void main() async {
       dioAdapter.onGet("/admin/api.php",
           (request) => request.reply(200, {"status": "enabled"}),
           queryParameters: {'status': ''});
-      final res = await repository.ping(cancelToken);
+      final res = await api.ping(cancelToken);
       expect(res, const PiholeStatus.enabled());
     });
 
@@ -371,8 +371,8 @@ void main() async {
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))),
           queryParameters: {'status': ''});
-      expect(repository.ping(cancelToken),
-          throwsA(const PiholeApiFailure.general("")));
+      expect(
+          api.ping(cancelToken), throwsA(const PiholeApiFailure.general("")));
     });
   });
 
@@ -381,7 +381,7 @@ void main() async {
       dioAdapter.onGet("/admin/api.php",
           (request) => request.reply(200, {"status": "enabled"}),
           queryParameters: {'enable': '', 'auth': 'token'});
-      final res = await repository.enable(cancelToken);
+      final res = await api.enable(cancelToken);
       expect(res, const PiholeStatus.enabled());
     });
 
@@ -391,8 +391,8 @@ void main() async {
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))),
           queryParameters: {'enable': '', 'auth': 'token'});
-      expect(repository.enable(cancelToken),
-          throwsA(const PiholeApiFailure.general("")));
+      expect(
+          api.enable(cancelToken), throwsA(const PiholeApiFailure.general("")));
     });
   });
 
@@ -401,7 +401,7 @@ void main() async {
       dioAdapter.onGet("/admin/api.php",
           (request) => request.reply(200, {"status": "disabled"}),
           queryParameters: {'disable': '', 'auth': 'token'});
-      final res = await repository.disable(cancelToken);
+      final res = await api.disable(cancelToken);
       expect(res, const PiholeStatus.disabled());
     });
 
@@ -411,7 +411,7 @@ void main() async {
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))),
           queryParameters: {'disable': '', 'auth': 'token'});
-      expect(repository.disable(cancelToken),
+      expect(api.disable(cancelToken),
           throwsA(const PiholeApiFailure.general("")));
     });
   });
@@ -422,8 +422,7 @@ void main() async {
           (request) => request.reply(200, {"status": "disabled"}),
           queryParameters: {'disable': '30', 'auth': 'token'});
       withClock(Clock.fixed(DateTime(2000)), () async {
-        final res =
-            await repository.sleep(const Duration(seconds: 30), cancelToken);
+        final res = await api.sleep(const Duration(seconds: 30), cancelToken);
         expect(res,
             PiholeStatus.sleeping(const Duration(seconds: 30), clock.now()));
       });
@@ -433,8 +432,7 @@ void main() async {
       dioAdapter.onGet("/admin/api.php",
           (request) => request.reply(200, {"status": "enabled"}),
           queryParameters: {'disable': '30', 'auth': 'token'});
-      final res =
-          await repository.sleep(const Duration(seconds: 30), cancelToken);
+      final res = await api.sleep(const Duration(seconds: 30), cancelToken);
       expect(res, const PiholeStatus.enabled());
     });
 
@@ -444,7 +442,7 @@ void main() async {
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))),
           queryParameters: {'disable': '60', 'auth': 'token'});
-      expect(repository.sleep(const Duration(seconds: 60), cancelToken),
+      expect(api.sleep(const Duration(seconds: 60), cancelToken),
           throwsA(const PiholeApiFailure.general("")));
     });
   });
@@ -497,7 +495,7 @@ void main() async {
                 ]
               }),
           queryParameters: {'getAllQueries': '3', 'auth': 'token'});
-      final res = await repository.fetchQueryItems(cancelToken, 3);
+      final res = await api.fetchQueryItems(cancelToken, 3);
       expect(res, [
         QueryItem(
           timestamp: DateTime.fromMillisecondsSinceEpoch(1624981977 * 1000),
@@ -535,7 +533,7 @@ void main() async {
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))),
           queryParameters: {'getAllQueries': '10', 'auth': 'token'});
-      expect(repository.fetchQueryItems(cancelToken, 10),
+      expect(api.fetchQueryItems(cancelToken, 10),
           throwsA(const PiholeApiFailure.general("")));
     });
   });
@@ -557,7 +555,7 @@ void main() async {
                 }
               }),
           queryParameters: {'topItems': '', 'auth': 'token'});
-      final res = await repository.fetchTopItems(cancelToken);
+      final res = await api.fetchTopItems(cancelToken);
       expect(
           res,
           TopItems(
@@ -580,7 +578,7 @@ void main() async {
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))),
           queryParameters: {'topItems': '', 'auth': 'token'});
-      expect(repository.fetchTopItems(cancelToken),
+      expect(api.fetchTopItems(cancelToken),
           throwsA(const PiholeApiFailure.general("")));
     });
   });
@@ -604,7 +602,7 @@ void main() async {
                 "FTL_branch": "master"
               }),
           queryParameters: {'versions': ''});
-      final res = await repository.fetchVersions(cancelToken);
+      final res = await api.fetchVersions(cancelToken);
       expect(
           res,
           PiVersions(
@@ -629,7 +627,7 @@ void main() async {
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))),
           queryParameters: {'versions': ''});
-      expect(repository.fetchVersions(cancelToken),
+      expect(api.fetchVersions(cancelToken),
           throwsA(const PiholeApiFailure.general("")));
     });
   });
@@ -640,7 +638,7 @@ void main() async {
         "/admin",
         (request) => request.reply(200, adminHtmlString),
       );
-      final res = await repository.fetchPiDetails(cancelToken);
+      final res = await api.fetchPiDetails(cancelToken);
       expect(
           res,
           PiDetails(
@@ -655,7 +653,7 @@ void main() async {
         "/admin",
         (request) => request.reply(200, ''),
       );
-      expect(repository.fetchPiDetails(cancelToken),
+      expect(api.fetchPiDetails(cancelToken),
           throwsA(const PiholeApiFailure.emptyString()));
     });
 
@@ -664,7 +662,7 @@ void main() async {
           "/admin",
           (request) => request.throws(
               400, DioError(requestOptions: RequestOptions(path: ""))));
-      expect(repository.fetchPiDetails(cancelToken),
+      expect(api.fetchPiDetails(cancelToken),
           throwsA(const PiholeApiFailure.general("")));
     });
 
@@ -673,7 +671,7 @@ void main() async {
         "/admin",
         (request) => request.reply(200, adminHtmlStringWithoutTags),
       );
-      final res = await repository.fetchPiDetails(cancelToken);
+      final res = await api.fetchPiDetails(cancelToken);
       expect(
           res,
           PiDetails(
