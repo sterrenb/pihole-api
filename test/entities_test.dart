@@ -3,12 +3,12 @@ import 'package:pihole_api/pihole_api.dart';
 import 'package:test/test.dart';
 
 void main() async {
-  late PiholeRepositoryParams params;
+  late PiholeApiParams params;
   late Dio dio;
 
   setUp(() {
     dio = Dio();
-    params = PiholeRepositoryParams(
+    params = PiholeApiParams(
       dio: dio,
       baseUrl: "http://pi.hole",
       apiPath: "/admin/api.php",

@@ -11,7 +11,7 @@ const String kNoApiTokenNeeded = 'No password set';
 /// Provides Pi-hole API endpoints.
 ///
 /// The endpoints are based on the AdminLTE API.
-abstract class PiholeRepository {
+abstract class PiholeApi {
   /// AdminLTE API versions that have been manually tested against.
   ///
   /// <https://github.com/pi-hole/AdminLTE>

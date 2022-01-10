@@ -14,80 +14,93 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$PiholeRepositoryParamsTearOff {
-  const _$PiholeRepositoryParamsTearOff();
+class _$PiholeApiParamsTearOff {
+  const _$PiholeApiParamsTearOff();
 
-  _PiholeRepositoryParams call(
+  _PiholeApiParams call(
       {required Dio dio,
       required String baseUrl,
       required String apiPath,
+      required String adminHome,
       required bool apiTokenRequired,
       required String apiToken,
-      required bool allowSelfSignedCertificates,
-      required String adminHome}) {
-    return _PiholeRepositoryParams(
+      required bool allowSelfSignedCertificates}) {
+    return _PiholeApiParams(
       dio: dio,
       baseUrl: baseUrl,
       apiPath: apiPath,
+      adminHome: adminHome,
       apiTokenRequired: apiTokenRequired,
       apiToken: apiToken,
       allowSelfSignedCertificates: allowSelfSignedCertificates,
-      adminHome: adminHome,
     );
   }
 }
 
 /// @nodoc
-const $PiholeRepositoryParams = _$PiholeRepositoryParamsTearOff();
+const $PiholeApiParams = _$PiholeApiParamsTearOff();
 
 /// @nodoc
-mixin _$PiholeRepositoryParams {
+mixin _$PiholeApiParams {
+  /// The http client.
   Dio get dio => throw _privateConstructorUsedError;
+
+  /// The URL of the host.
   String get baseUrl => throw _privateConstructorUsedError;
+
+  /// The local API path of the host.
   String get apiPath => throw _privateConstructorUsedError;
-  bool get apiTokenRequired => throw _privateConstructorUsedError;
-  String get apiToken => throw _privateConstructorUsedError;
-  bool get allowSelfSignedCertificates => throw _privateConstructorUsedError;
+
+  /// The local admin path of the host.
   String get adminHome => throw _privateConstructorUsedError;
 
+  /// Whether API tokens are enabled.
+  bool get apiTokenRequired => throw _privateConstructorUsedError;
+
+  /// The API token shown by the admin dashboard.
+  String get apiToken => throw _privateConstructorUsedError;
+
+  /// Allow unsigned certificates.
+  bool get allowSelfSignedCertificates => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
-  $PiholeRepositoryParamsCopyWith<PiholeRepositoryParams> get copyWith =>
+  $PiholeApiParamsCopyWith<PiholeApiParams> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PiholeRepositoryParamsCopyWith<$Res> {
-  factory $PiholeRepositoryParamsCopyWith(PiholeRepositoryParams value,
-          $Res Function(PiholeRepositoryParams) then) =
-      _$PiholeRepositoryParamsCopyWithImpl<$Res>;
+abstract class $PiholeApiParamsCopyWith<$Res> {
+  factory $PiholeApiParamsCopyWith(
+          PiholeApiParams value, $Res Function(PiholeApiParams) then) =
+      _$PiholeApiParamsCopyWithImpl<$Res>;
   $Res call(
       {Dio dio,
       String baseUrl,
       String apiPath,
+      String adminHome,
       bool apiTokenRequired,
       String apiToken,
-      bool allowSelfSignedCertificates,
-      String adminHome});
+      bool allowSelfSignedCertificates});
 }
 
 /// @nodoc
-class _$PiholeRepositoryParamsCopyWithImpl<$Res>
-    implements $PiholeRepositoryParamsCopyWith<$Res> {
-  _$PiholeRepositoryParamsCopyWithImpl(this._value, this._then);
+class _$PiholeApiParamsCopyWithImpl<$Res>
+    implements $PiholeApiParamsCopyWith<$Res> {
+  _$PiholeApiParamsCopyWithImpl(this._value, this._then);
 
-  final PiholeRepositoryParams _value;
+  final PiholeApiParams _value;
   // ignore: unused_field
-  final $Res Function(PiholeRepositoryParams) _then;
+  final $Res Function(PiholeApiParams) _then;
 
   @override
   $Res call({
     Object? dio = freezed,
     Object? baseUrl = freezed,
     Object? apiPath = freezed,
+    Object? adminHome = freezed,
     Object? apiTokenRequired = freezed,
     Object? apiToken = freezed,
     Object? allowSelfSignedCertificates = freezed,
-    Object? adminHome = freezed,
   }) {
     return _then(_value.copyWith(
       dio: dio == freezed
@@ -102,6 +115,10 @@ class _$PiholeRepositoryParamsCopyWithImpl<$Res>
           ? _value.apiPath
           : apiPath // ignore: cast_nullable_to_non_nullable
               as String,
+      adminHome: adminHome == freezed
+          ? _value.adminHome
+          : adminHome // ignore: cast_nullable_to_non_nullable
+              as String,
       apiTokenRequired: apiTokenRequired == freezed
           ? _value.apiTokenRequired
           : apiTokenRequired // ignore: cast_nullable_to_non_nullable
@@ -114,53 +131,49 @@ class _$PiholeRepositoryParamsCopyWithImpl<$Res>
           ? _value.allowSelfSignedCertificates
           : allowSelfSignedCertificates // ignore: cast_nullable_to_non_nullable
               as bool,
-      adminHome: adminHome == freezed
-          ? _value.adminHome
-          : adminHome // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$PiholeRepositoryParamsCopyWith<$Res>
-    implements $PiholeRepositoryParamsCopyWith<$Res> {
-  factory _$PiholeRepositoryParamsCopyWith(_PiholeRepositoryParams value,
-          $Res Function(_PiholeRepositoryParams) then) =
-      __$PiholeRepositoryParamsCopyWithImpl<$Res>;
+abstract class _$PiholeApiParamsCopyWith<$Res>
+    implements $PiholeApiParamsCopyWith<$Res> {
+  factory _$PiholeApiParamsCopyWith(
+          _PiholeApiParams value, $Res Function(_PiholeApiParams) then) =
+      __$PiholeApiParamsCopyWithImpl<$Res>;
   @override
   $Res call(
       {Dio dio,
       String baseUrl,
       String apiPath,
+      String adminHome,
       bool apiTokenRequired,
       String apiToken,
-      bool allowSelfSignedCertificates,
-      String adminHome});
+      bool allowSelfSignedCertificates});
 }
 
 /// @nodoc
-class __$PiholeRepositoryParamsCopyWithImpl<$Res>
-    extends _$PiholeRepositoryParamsCopyWithImpl<$Res>
-    implements _$PiholeRepositoryParamsCopyWith<$Res> {
-  __$PiholeRepositoryParamsCopyWithImpl(_PiholeRepositoryParams _value,
-      $Res Function(_PiholeRepositoryParams) _then)
-      : super(_value, (v) => _then(v as _PiholeRepositoryParams));
+class __$PiholeApiParamsCopyWithImpl<$Res>
+    extends _$PiholeApiParamsCopyWithImpl<$Res>
+    implements _$PiholeApiParamsCopyWith<$Res> {
+  __$PiholeApiParamsCopyWithImpl(
+      _PiholeApiParams _value, $Res Function(_PiholeApiParams) _then)
+      : super(_value, (v) => _then(v as _PiholeApiParams));
 
   @override
-  _PiholeRepositoryParams get _value => super._value as _PiholeRepositoryParams;
+  _PiholeApiParams get _value => super._value as _PiholeApiParams;
 
   @override
   $Res call({
     Object? dio = freezed,
     Object? baseUrl = freezed,
     Object? apiPath = freezed,
+    Object? adminHome = freezed,
     Object? apiTokenRequired = freezed,
     Object? apiToken = freezed,
     Object? allowSelfSignedCertificates = freezed,
-    Object? adminHome = freezed,
   }) {
-    return _then(_PiholeRepositoryParams(
+    return _then(_PiholeApiParams(
       dio: dio == freezed
           ? _value.dio
           : dio // ignore: cast_nullable_to_non_nullable
@@ -173,6 +186,10 @@ class __$PiholeRepositoryParamsCopyWithImpl<$Res>
           ? _value.apiPath
           : apiPath // ignore: cast_nullable_to_non_nullable
               as String,
+      adminHome: adminHome == freezed
+          ? _value.adminHome
+          : adminHome // ignore: cast_nullable_to_non_nullable
+              as String,
       apiTokenRequired: apiTokenRequired == freezed
           ? _value.apiTokenRequired
           : apiTokenRequired // ignore: cast_nullable_to_non_nullable
@@ -185,62 +202,72 @@ class __$PiholeRepositoryParamsCopyWithImpl<$Res>
           ? _value.allowSelfSignedCertificates
           : allowSelfSignedCertificates // ignore: cast_nullable_to_non_nullable
               as bool,
-      adminHome: adminHome == freezed
-          ? _value.adminHome
-          : adminHome // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
 
 /// @nodoc
 
-class _$_PiholeRepositoryParams extends _PiholeRepositoryParams {
-  _$_PiholeRepositoryParams(
+class _$_PiholeApiParams extends _PiholeApiParams {
+  _$_PiholeApiParams(
       {required this.dio,
       required this.baseUrl,
       required this.apiPath,
+      required this.adminHome,
       required this.apiTokenRequired,
       required this.apiToken,
-      required this.allowSelfSignedCertificates,
-      required this.adminHome})
+      required this.allowSelfSignedCertificates})
       : super._();
 
   @override
+
+  /// The http client.
   final Dio dio;
   @override
+
+  /// The URL of the host.
   final String baseUrl;
   @override
+
+  /// The local API path of the host.
   final String apiPath;
   @override
+
+  /// The local admin path of the host.
+  final String adminHome;
+  @override
+
+  /// Whether API tokens are enabled.
   final bool apiTokenRequired;
   @override
+
+  /// The API token shown by the admin dashboard.
   final String apiToken;
   @override
+
+  /// Allow unsigned certificates.
   final bool allowSelfSignedCertificates;
-  @override
-  final String adminHome;
 
   @override
   String toString() {
-    return 'PiholeRepositoryParams(dio: $dio, baseUrl: $baseUrl, apiPath: $apiPath, apiTokenRequired: $apiTokenRequired, apiToken: $apiToken, allowSelfSignedCertificates: $allowSelfSignedCertificates, adminHome: $adminHome)';
+    return 'PiholeApiParams(dio: $dio, baseUrl: $baseUrl, apiPath: $apiPath, adminHome: $adminHome, apiTokenRequired: $apiTokenRequired, apiToken: $apiToken, allowSelfSignedCertificates: $allowSelfSignedCertificates)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PiholeRepositoryParams &&
+            other is _PiholeApiParams &&
             const DeepCollectionEquality().equals(other.dio, dio) &&
             const DeepCollectionEquality().equals(other.baseUrl, baseUrl) &&
             const DeepCollectionEquality().equals(other.apiPath, apiPath) &&
+            const DeepCollectionEquality().equals(other.adminHome, adminHome) &&
             const DeepCollectionEquality()
                 .equals(other.apiTokenRequired, apiTokenRequired) &&
             const DeepCollectionEquality().equals(other.apiToken, apiToken) &&
             const DeepCollectionEquality().equals(
                 other.allowSelfSignedCertificates,
-                allowSelfSignedCertificates) &&
-            const DeepCollectionEquality().equals(other.adminHome, adminHome));
+                allowSelfSignedCertificates));
   }
 
   @override
@@ -249,46 +276,59 @@ class _$_PiholeRepositoryParams extends _PiholeRepositoryParams {
       const DeepCollectionEquality().hash(dio),
       const DeepCollectionEquality().hash(baseUrl),
       const DeepCollectionEquality().hash(apiPath),
+      const DeepCollectionEquality().hash(adminHome),
       const DeepCollectionEquality().hash(apiTokenRequired),
       const DeepCollectionEquality().hash(apiToken),
-      const DeepCollectionEquality().hash(allowSelfSignedCertificates),
-      const DeepCollectionEquality().hash(adminHome));
+      const DeepCollectionEquality().hash(allowSelfSignedCertificates));
 
   @JsonKey(ignore: true)
   @override
-  _$PiholeRepositoryParamsCopyWith<_PiholeRepositoryParams> get copyWith =>
-      __$PiholeRepositoryParamsCopyWithImpl<_PiholeRepositoryParams>(
-          this, _$identity);
+  _$PiholeApiParamsCopyWith<_PiholeApiParams> get copyWith =>
+      __$PiholeApiParamsCopyWithImpl<_PiholeApiParams>(this, _$identity);
 }
 
-abstract class _PiholeRepositoryParams extends PiholeRepositoryParams {
-  factory _PiholeRepositoryParams(
+abstract class _PiholeApiParams extends PiholeApiParams {
+  factory _PiholeApiParams(
       {required Dio dio,
       required String baseUrl,
       required String apiPath,
+      required String adminHome,
       required bool apiTokenRequired,
       required String apiToken,
-      required bool allowSelfSignedCertificates,
-      required String adminHome}) = _$_PiholeRepositoryParams;
-  _PiholeRepositoryParams._() : super._();
+      required bool allowSelfSignedCertificates}) = _$_PiholeApiParams;
+  _PiholeApiParams._() : super._();
 
   @override
+
+  /// The http client.
   Dio get dio;
   @override
+
+  /// The URL of the host.
   String get baseUrl;
   @override
+
+  /// The local API path of the host.
   String get apiPath;
   @override
-  bool get apiTokenRequired;
-  @override
-  String get apiToken;
-  @override
-  bool get allowSelfSignedCertificates;
-  @override
+
+  /// The local admin path of the host.
   String get adminHome;
   @override
+
+  /// Whether API tokens are enabled.
+  bool get apiTokenRequired;
+  @override
+
+  /// The API token shown by the admin dashboard.
+  String get apiToken;
+  @override
+
+  /// Allow unsigned certificates.
+  bool get allowSelfSignedCertificates;
+  @override
   @JsonKey(ignore: true)
-  _$PiholeRepositoryParamsCopyWith<_PiholeRepositoryParams> get copyWith =>
+  _$PiholeApiParamsCopyWith<_PiholeApiParams> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3044,8 +3084,13 @@ const $PiDetails = _$PiDetailsTearOff();
 
 /// @nodoc
 mixin _$PiDetails {
+  /// The CPU temperature.
   double? get temperature => throw _privateConstructorUsedError;
+
+  /// The CPU load per core.
   List<double> get cpuLoads => throw _privateConstructorUsedError;
+
+  /// The memory usage percentage.
   double? get memoryUsage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -3142,10 +3187,16 @@ class _$_PiDetails extends _PiDetails {
       : super._();
 
   @override
+
+  /// The CPU temperature.
   final double? temperature;
   @override
+
+  /// The CPU load per core.
   final List<double> cpuLoads;
   @override
+
+  /// The memory usage percentage.
   final double? memoryUsage;
 
   @override
@@ -3186,10 +3237,16 @@ abstract class _PiDetails extends PiDetails {
   _PiDetails._() : super._();
 
   @override
+
+  /// The CPU temperature.
   double? get temperature;
   @override
+
+  /// The CPU load per core.
   List<double> get cpuLoads;
   @override
+
+  /// The memory usage percentage.
   double? get memoryUsage;
   @override
   @JsonKey(ignore: true)
@@ -3475,7 +3532,10 @@ const $PiQueriesOverTime = _$PiQueriesOverTimeTearOff();
 
 /// @nodoc
 mixin _$PiQueriesOverTime {
+  /// Permitted domain requests.
   Map<DateTime, int> get domainsOverTime => throw _privateConstructorUsedError;
+
+  /// Blocked domain requests.
   Map<DateTime, int> get adsOverTime => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -3567,8 +3627,12 @@ class _$_PiQueriesOverTime extends _PiQueriesOverTime {
       : super._();
 
   @override
+
+  /// Permitted domain requests.
   final Map<DateTime, int> domainsOverTime;
   @override
+
+  /// Blocked domain requests.
   final Map<DateTime, int> adsOverTime;
 
   @override
@@ -3606,8 +3670,12 @@ abstract class _PiQueriesOverTime extends PiQueriesOverTime {
   _PiQueriesOverTime._() : super._();
 
   @override
+
+  /// Permitted domain requests.
   Map<DateTime, int> get domainsOverTime;
   @override
+
+  /// Blocked domain requests.
   Map<DateTime, int> get adsOverTime;
   @override
   @JsonKey(ignore: true)
@@ -3644,12 +3712,25 @@ const $QueryItem = _$QueryItemTearOff();
 
 /// @nodoc
 mixin _$QueryItem {
+  /// Timestamp of incoming query.
   DateTime get timestamp => throw _privateConstructorUsedError;
+
+  /// Type of query.
   String get queryType => throw _privateConstructorUsedError;
+
+  /// Query request source.
   String get domain => throw _privateConstructorUsedError;
+
+  /// Alphanumeric client name.
   String get clientName => throw _privateConstructorUsedError;
+
+  /// Query status.
   QueryStatus get queryStatus => throw _privateConstructorUsedError;
+
+  /// DNSSEC status.
   DnsSecStatus get dnsSecStatus => throw _privateConstructorUsedError;
+
+  /// Parse duration in milliseconds.
   double get delta => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -3804,18 +3885,32 @@ class _$_QueryItem extends _QueryItem {
       : super._();
 
   @override
+
+  /// Timestamp of incoming query.
   final DateTime timestamp;
   @override
+
+  /// Type of query.
   final String queryType;
   @override
+
+  /// Query request source.
   final String domain;
   @override
+
+  /// Alphanumeric client name.
   final String clientName;
   @override
+
+  /// Query status.
   final QueryStatus queryStatus;
   @override
+
+  /// DNSSEC status.
   final DnsSecStatus dnsSecStatus;
   @override
+
+  /// Parse duration in milliseconds.
   final double delta;
 
   @override
@@ -3869,18 +3964,32 @@ abstract class _QueryItem extends QueryItem {
   _QueryItem._() : super._();
 
   @override
+
+  /// Timestamp of incoming query.
   DateTime get timestamp;
   @override
+
+  /// Type of query.
   String get queryType;
   @override
+
+  /// Query request source.
   String get domain;
   @override
+
+  /// Alphanumeric client name.
   String get clientName;
   @override
+
+  /// Query status.
   QueryStatus get queryStatus;
   @override
+
+  /// DNSSEC status.
   DnsSecStatus get dnsSecStatus;
   @override
+
+  /// Parse duration in milliseconds.
   double get delta;
   @override
   @JsonKey(ignore: true)
@@ -3907,7 +4016,10 @@ const $TopItems = _$TopItemsTearOff();
 
 /// @nodoc
 mixin _$TopItems {
+  /// Top requested domains.
   Map<String, int> get topQueries => throw _privateConstructorUsedError;
+
+  /// Top blocked domains.
   Map<String, int> get topAds => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -3989,8 +4101,12 @@ class _$_TopItems extends _TopItems {
   _$_TopItems({required this.topQueries, required this.topAds}) : super._();
 
   @override
+
+  /// Top requested domains.
   final Map<String, int> topQueries;
   @override
+
+  /// Top blocked domains.
   final Map<String, int> topAds;
 
   @override
@@ -4027,8 +4143,12 @@ abstract class _TopItems extends TopItems {
   _TopItems._() : super._();
 
   @override
+
+  /// Top requested domains.
   Map<String, int> get topQueries;
   @override
+
+  /// Top blocked domains.
   Map<String, int> get topAds;
   @override
   @JsonKey(ignore: true)
@@ -4040,7 +4160,7 @@ abstract class _TopItems extends TopItems {
 class _$SleepPiParamsTearOff {
   const _$SleepPiParamsTearOff();
 
-  _SleepPiParams call(PiholeRepositoryParams params, Duration duration) {
+  _SleepPiParams call(PiholeApiParams params, Duration duration) {
     return _SleepPiParams(
       params,
       duration,
@@ -4053,7 +4173,7 @@ const $SleepPiParams = _$SleepPiParamsTearOff();
 
 /// @nodoc
 mixin _$SleepPiParams {
-  PiholeRepositoryParams get params => throw _privateConstructorUsedError;
+  PiholeApiParams get params => throw _privateConstructorUsedError;
   Duration get duration => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -4066,9 +4186,9 @@ abstract class $SleepPiParamsCopyWith<$Res> {
   factory $SleepPiParamsCopyWith(
           SleepPiParams value, $Res Function(SleepPiParams) then) =
       _$SleepPiParamsCopyWithImpl<$Res>;
-  $Res call({PiholeRepositoryParams params, Duration duration});
+  $Res call({PiholeApiParams params, Duration duration});
 
-  $PiholeRepositoryParamsCopyWith<$Res> get params;
+  $PiholeApiParamsCopyWith<$Res> get params;
 }
 
 /// @nodoc
@@ -4089,7 +4209,7 @@ class _$SleepPiParamsCopyWithImpl<$Res>
       params: params == freezed
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
-              as PiholeRepositoryParams,
+              as PiholeApiParams,
       duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
@@ -4098,8 +4218,8 @@ class _$SleepPiParamsCopyWithImpl<$Res>
   }
 
   @override
-  $PiholeRepositoryParamsCopyWith<$Res> get params {
-    return $PiholeRepositoryParamsCopyWith<$Res>(_value.params, (value) {
+  $PiholeApiParamsCopyWith<$Res> get params {
+    return $PiholeApiParamsCopyWith<$Res>(_value.params, (value) {
       return _then(_value.copyWith(params: value));
     });
   }
@@ -4112,10 +4232,10 @@ abstract class _$SleepPiParamsCopyWith<$Res>
           _SleepPiParams value, $Res Function(_SleepPiParams) then) =
       __$SleepPiParamsCopyWithImpl<$Res>;
   @override
-  $Res call({PiholeRepositoryParams params, Duration duration});
+  $Res call({PiholeApiParams params, Duration duration});
 
   @override
-  $PiholeRepositoryParamsCopyWith<$Res> get params;
+  $PiholeApiParamsCopyWith<$Res> get params;
 }
 
 /// @nodoc
@@ -4138,7 +4258,7 @@ class __$SleepPiParamsCopyWithImpl<$Res>
       params == freezed
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
-              as PiholeRepositoryParams,
+              as PiholeApiParams,
       duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
@@ -4153,7 +4273,7 @@ class _$_SleepPiParams implements _SleepPiParams {
   _$_SleepPiParams(this.params, this.duration);
 
   @override
-  final PiholeRepositoryParams params;
+  final PiholeApiParams params;
   @override
   final Duration duration;
 
@@ -4184,11 +4304,11 @@ class _$_SleepPiParams implements _SleepPiParams {
 }
 
 abstract class _SleepPiParams implements SleepPiParams {
-  factory _SleepPiParams(PiholeRepositoryParams params, Duration duration) =
+  factory _SleepPiParams(PiholeApiParams params, Duration duration) =
       _$_SleepPiParams;
 
   @override
-  PiholeRepositoryParams get params;
+  PiholeApiParams get params;
   @override
   Duration get duration;
   @override
@@ -4214,7 +4334,10 @@ const $PiClientName = _$PiClientNameTearOff();
 
 /// @nodoc
 mixin _$PiClientName {
+  /// Client IP.
   String get ip => throw _privateConstructorUsedError;
+
+  /// Client name. Defaults to empty string.
   String get name => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -4300,8 +4423,12 @@ class _$_PiClientName extends _PiClientName {
   _$_PiClientName({required this.ip, required this.name}) : super._();
 
   @override
+
+  /// Client IP.
   final String ip;
   @override
+
+  /// Client name. Defaults to empty string.
   final String name;
 
   @override
@@ -4336,8 +4463,12 @@ abstract class _PiClientName extends PiClientName {
   _PiClientName._() : super._();
 
   @override
+
+  /// Client IP.
   String get ip;
   @override
+
+  /// Client name. Defaults to empty string.
   String get name;
   @override
   @JsonKey(ignore: true)
@@ -4364,7 +4495,10 @@ const $PiClientActivityOverTime = _$PiClientActivityOverTimeTearOff();
 
 /// @nodoc
 mixin _$PiClientActivityOverTime {
+  /// All clients found in time period.
   List<PiClientName> get clients => throw _privateConstructorUsedError;
+
+  /// Activity per time interval.
   Map<DateTime, List<int>> get activity => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -4454,8 +4588,12 @@ class _$_PiClientActivityOverTime extends _PiClientActivityOverTime {
       : super._();
 
   @override
+
+  /// All clients found in time period.
   final List<PiClientName> clients;
   @override
+
+  /// Activity per time interval.
   final Map<DateTime, List<int>> activity;
 
   @override
@@ -4493,8 +4631,12 @@ abstract class _PiClientActivityOverTime extends PiClientActivityOverTime {
   _PiClientActivityOverTime._() : super._();
 
   @override
+
+  /// All clients found in time period.
   List<PiClientName> get clients;
   @override
+
+  /// Activity per time interval.
   Map<DateTime, List<int>> get activity;
   @override
   @JsonKey(ignore: true)
@@ -4541,17 +4683,40 @@ const $PiVersions = _$PiVersionsTearOff();
 
 /// @nodoc
 mixin _$PiVersions {
+  /// Core update flag.
   bool get hasCoreUpdate => throw _privateConstructorUsedError;
+
+  /// Web interface update flag.
   bool get hasWebUpdate => throw _privateConstructorUsedError;
+
+  /// FTL server update flag.
   bool get hasFtlUpdate => throw _privateConstructorUsedError;
+
+  /// Current core version.
   String get currentCoreVersion => throw _privateConstructorUsedError;
+
+  /// Current web interface version.
   String get currentWebVersion => throw _privateConstructorUsedError;
+
+  /// Current FTL server version.
   String get currentFtlVersion => throw _privateConstructorUsedError;
+
+  /// Latest core version available.
   String get latestCoreVersion => throw _privateConstructorUsedError;
+
+  /// Latest web interface version available.
   String get latestWebVersion => throw _privateConstructorUsedError;
+
+  /// Latest FTL server version available.
   String get latestFtlVersion => throw _privateConstructorUsedError;
+
+  /// Current core git branch.
   String get coreBranch => throw _privateConstructorUsedError;
+
+  /// Current web interface git branch.
   String get webBranch => throw _privateConstructorUsedError;
+
+  /// Current core FTL server branch.
   String get ftlBranch => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -4773,28 +4938,52 @@ class _$_PiVersions extends _PiVersions {
       : super._();
 
   @override
+
+  /// Core update flag.
   final bool hasCoreUpdate;
   @override
+
+  /// Web interface update flag.
   final bool hasWebUpdate;
   @override
+
+  /// FTL server update flag.
   final bool hasFtlUpdate;
   @override
+
+  /// Current core version.
   final String currentCoreVersion;
   @override
+
+  /// Current web interface version.
   final String currentWebVersion;
   @override
+
+  /// Current FTL server version.
   final String currentFtlVersion;
   @override
+
+  /// Latest core version available.
   final String latestCoreVersion;
   @override
+
+  /// Latest web interface version available.
   final String latestWebVersion;
   @override
+
+  /// Latest FTL server version available.
   final String latestFtlVersion;
   @override
+
+  /// Current core git branch.
   final String coreBranch;
   @override
+
+  /// Current web interface git branch.
   final String webBranch;
   @override
+
+  /// Current core FTL server branch.
   final String ftlBranch;
 
   @override
@@ -4870,28 +5059,52 @@ abstract class _PiVersions extends PiVersions {
   _PiVersions._() : super._();
 
   @override
+
+  /// Core update flag.
   bool get hasCoreUpdate;
   @override
+
+  /// Web interface update flag.
   bool get hasWebUpdate;
   @override
+
+  /// FTL server update flag.
   bool get hasFtlUpdate;
   @override
+
+  /// Current core version.
   String get currentCoreVersion;
   @override
+
+  /// Current web interface version.
   String get currentWebVersion;
   @override
+
+  /// Current FTL server version.
   String get currentFtlVersion;
   @override
+
+  /// Latest core version available.
   String get latestCoreVersion;
   @override
+
+  /// Latest web interface version available.
   String get latestWebVersion;
   @override
+
+  /// Latest FTL server version available.
   String get latestFtlVersion;
   @override
+
+  /// Current core git branch.
   String get coreBranch;
   @override
+
+  /// Current web interface git branch.
   String get webBranch;
   @override
+
+  /// Current core FTL server branch.
   String get ftlBranch;
   @override
   @JsonKey(ignore: true)

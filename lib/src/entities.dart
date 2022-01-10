@@ -11,10 +11,10 @@ part 'entities.freezed.dart';
 // ignore_for_file: constant_identifier_names
 
 @freezed
-class PiholeRepositoryParams with _$PiholeRepositoryParams {
-  PiholeRepositoryParams._();
+class PiholeApiParams with _$PiholeApiParams {
+  PiholeApiParams._();
 
-  factory PiholeRepositoryParams({
+  factory PiholeApiParams({
     /// The http client.
     required Dio dio,
 
@@ -35,7 +35,7 @@ class PiholeRepositoryParams with _$PiholeRepositoryParams {
 
     /// Allow unsigned certificates.
     required bool allowSelfSignedCertificates,
-  }) = _PiholeRepositoryParams;
+  }) = _PiholeApiParams;
 
   /// The base URL of the API endpoints.
   late final String apiUrl = '$baseUrl$apiPath';
@@ -255,7 +255,7 @@ class TopItems with _$TopItems {
 
 @freezed
 class SleepPiParams with _$SleepPiParams {
-  factory SleepPiParams(PiholeRepositoryParams params, Duration duration) =
+  factory SleepPiParams(PiholeApiParams params, Duration duration) =
       _SleepPiParams;
 }
 

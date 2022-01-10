@@ -9,10 +9,10 @@ import './fixtures.dart';
 import 'mock_dio_adapter.dart';
 
 void main() async {
-  late PiholeRepositoryParams params;
+  late PiholeApiParams params;
   late Dio dio;
   late DioAdapter dioAdapter;
-  late PiholeRepositoryDio repository;
+  late PiholeApiDio repository;
   late CancelToken cancelToken;
 
   setUp(() {
@@ -20,7 +20,7 @@ void main() async {
     dioAdapter = createMockDioAdapter();
     dio.httpClientAdapter = dioAdapter;
     cancelToken = CancelToken();
-    params = PiholeRepositoryParams(
+    params = PiholeApiParams(
       dio: dio,
       baseUrl: "http://pi.hole",
       apiPath: "/admin/api.php",
@@ -29,7 +29,7 @@ void main() async {
       allowSelfSignedCertificates: false,
       adminHome: "/admin",
     );
-    repository = PiholeRepositoryDio(params);
+    repository = PiholeApiDio(params);
   });
 
   group('fetchSummary', () {
@@ -175,7 +175,7 @@ void main() async {
     });
 
     test('fetchQueryTypes handles unauthenticated', () async {
-      repository = PiholeRepositoryDio(params.copyWith(apiToken: ""));
+      repository = PiholeApiDio(params.copyWith(apiToken: ""));
       dioAdapter.onGet("/admin/api.php", (request) => request.reply(200, []),
           queryParameters: {'getQueryTypes': '', 'auth': ''});
       expect(repository.fetchQueryTypes(cancelToken),

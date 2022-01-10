@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 class PiholeApiDemo extends StatefulWidget {
   const PiholeApiDemo({Key? key}) : super(key: key);
 
-  static final pihole = PiholeRepositoryDio(PiholeRepositoryParams(
+  static final pihole = PiholeApiDio(PiholeApiParams(
     dio: Dio(BaseOptions(baseUrl: "http://10.0.1.5")),
     baseUrl: "http://10.0.1.5",
     apiPath: "/admin/api.php",

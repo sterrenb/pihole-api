@@ -2,16 +2,16 @@ import 'package:clock/clock.dart';
 import 'package:dio/dio.dart';
 import 'package:html/dom.dart';
 import 'package:html/parser.dart';
-import 'package:pihole_api/src/pihole_repository.dart';
+import 'package:pihole_api/src/pihole_api.dart';
 
 import 'entities.dart';
 import 'formatting.dart';
 import 'models.dart';
 
-class PiholeRepositoryDio implements PiholeRepository {
-  const PiholeRepositoryDio(this.params);
+class PiholeApiDio implements PiholeApi {
+  const PiholeApiDio(this.params);
 
-  final PiholeRepositoryParams params;
+  final PiholeApiParams params;
 
   Future<dynamic> _get(
     Map<String, dynamic> queryParameters,
