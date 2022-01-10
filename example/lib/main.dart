@@ -21,9 +21,9 @@ class MyApp extends StatelessWidget {
 class PiholeApiDemo extends StatefulWidget {
   const PiholeApiDemo({Key? key}) : super(key: key);
 
-  static final pihole = PiholeApiDio(PiholeApiParams(
-    dio: Dio(BaseOptions(baseUrl: "http://10.0.1.5")),
-    baseUrl: "http://10.0.1.5",
+  static final pihole = PiholeApiDio(
+      params: PiholeApiParams(
+    baseUrl: "http://pihole",
     apiPath: "/admin/api.php",
     apiTokenRequired: true,
     // Find the API token from your Pi-hole admin dashboard while signed in,

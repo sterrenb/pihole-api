@@ -31,6 +31,19 @@ void main() async {
     api = PiholeApiDio(params: params, dio: dio);
   });
 
+  group('params', () {
+    test('default dio should use baseUrl', () {
+      final res = PiholeApiDio(params: params);
+      expect(res.dio.options.baseUrl, params.baseUrl);
+    });
+
+    test('custom dio should inherit baseUrl', () {
+      final res = PiholeApiDio(
+          params: params, dio: Dio(BaseOptions(baseUrl: 'example.com')));
+      expect(res.dio.options.baseUrl, 'example.com');
+    });
+  });
+
   group('fetchSummary', () {
     test('fetchSummary returns PiSummary', () async {
       final res = await api.fetchSummary(cancelToken);

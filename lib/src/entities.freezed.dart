@@ -18,15 +18,13 @@ class _$PiholeApiParamsTearOff {
   const _$PiholeApiParamsTearOff();
 
   _PiholeApiParams call(
-      {required Dio dio,
-      required String baseUrl,
+      {required String baseUrl,
       required String apiPath,
       required String adminHome,
       required bool apiTokenRequired,
       required String apiToken,
       required bool allowSelfSignedCertificates}) {
     return _PiholeApiParams(
-      dio: dio,
       baseUrl: baseUrl,
       apiPath: apiPath,
       adminHome: adminHome,
@@ -42,9 +40,6 @@ const $PiholeApiParams = _$PiholeApiParamsTearOff();
 
 /// @nodoc
 mixin _$PiholeApiParams {
-  /// The http client.
-  Dio get dio => throw _privateConstructorUsedError;
-
   /// The URL of the host.
   String get baseUrl => throw _privateConstructorUsedError;
 
@@ -74,8 +69,7 @@ abstract class $PiholeApiParamsCopyWith<$Res> {
           PiholeApiParams value, $Res Function(PiholeApiParams) then) =
       _$PiholeApiParamsCopyWithImpl<$Res>;
   $Res call(
-      {Dio dio,
-      String baseUrl,
+      {String baseUrl,
       String apiPath,
       String adminHome,
       bool apiTokenRequired,
@@ -94,7 +88,6 @@ class _$PiholeApiParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? dio = freezed,
     Object? baseUrl = freezed,
     Object? apiPath = freezed,
     Object? adminHome = freezed,
@@ -103,10 +96,6 @@ class _$PiholeApiParamsCopyWithImpl<$Res>
     Object? allowSelfSignedCertificates = freezed,
   }) {
     return _then(_value.copyWith(
-      dio: dio == freezed
-          ? _value.dio
-          : dio // ignore: cast_nullable_to_non_nullable
-              as Dio,
       baseUrl: baseUrl == freezed
           ? _value.baseUrl
           : baseUrl // ignore: cast_nullable_to_non_nullable
@@ -143,8 +132,7 @@ abstract class _$PiholeApiParamsCopyWith<$Res>
       __$PiholeApiParamsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Dio dio,
-      String baseUrl,
+      {String baseUrl,
       String apiPath,
       String adminHome,
       bool apiTokenRequired,
@@ -165,7 +153,6 @@ class __$PiholeApiParamsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? dio = freezed,
     Object? baseUrl = freezed,
     Object? apiPath = freezed,
     Object? adminHome = freezed,
@@ -174,10 +161,6 @@ class __$PiholeApiParamsCopyWithImpl<$Res>
     Object? allowSelfSignedCertificates = freezed,
   }) {
     return _then(_PiholeApiParams(
-      dio: dio == freezed
-          ? _value.dio
-          : dio // ignore: cast_nullable_to_non_nullable
-              as Dio,
       baseUrl: baseUrl == freezed
           ? _value.baseUrl
           : baseUrl // ignore: cast_nullable_to_non_nullable
@@ -210,8 +193,7 @@ class __$PiholeApiParamsCopyWithImpl<$Res>
 
 class _$_PiholeApiParams extends _PiholeApiParams {
   _$_PiholeApiParams(
-      {required this.dio,
-      required this.baseUrl,
+      {required this.baseUrl,
       required this.apiPath,
       required this.adminHome,
       required this.apiTokenRequired,
@@ -219,10 +201,6 @@ class _$_PiholeApiParams extends _PiholeApiParams {
       required this.allowSelfSignedCertificates})
       : super._();
 
-  @override
-
-  /// The http client.
-  final Dio dio;
   @override
 
   /// The URL of the host.
@@ -250,7 +228,7 @@ class _$_PiholeApiParams extends _PiholeApiParams {
 
   @override
   String toString() {
-    return 'PiholeApiParams(dio: $dio, baseUrl: $baseUrl, apiPath: $apiPath, adminHome: $adminHome, apiTokenRequired: $apiTokenRequired, apiToken: $apiToken, allowSelfSignedCertificates: $allowSelfSignedCertificates)';
+    return 'PiholeApiParams(baseUrl: $baseUrl, apiPath: $apiPath, adminHome: $adminHome, apiTokenRequired: $apiTokenRequired, apiToken: $apiToken, allowSelfSignedCertificates: $allowSelfSignedCertificates)';
   }
 
   @override
@@ -258,7 +236,6 @@ class _$_PiholeApiParams extends _PiholeApiParams {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PiholeApiParams &&
-            const DeepCollectionEquality().equals(other.dio, dio) &&
             const DeepCollectionEquality().equals(other.baseUrl, baseUrl) &&
             const DeepCollectionEquality().equals(other.apiPath, apiPath) &&
             const DeepCollectionEquality().equals(other.adminHome, adminHome) &&
@@ -273,7 +250,6 @@ class _$_PiholeApiParams extends _PiholeApiParams {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(dio),
       const DeepCollectionEquality().hash(baseUrl),
       const DeepCollectionEquality().hash(apiPath),
       const DeepCollectionEquality().hash(adminHome),
@@ -289,8 +265,7 @@ class _$_PiholeApiParams extends _PiholeApiParams {
 
 abstract class _PiholeApiParams extends PiholeApiParams {
   factory _PiholeApiParams(
-      {required Dio dio,
-      required String baseUrl,
+      {required String baseUrl,
       required String apiPath,
       required String adminHome,
       required bool apiTokenRequired,
@@ -298,10 +273,6 @@ abstract class _PiholeApiParams extends PiholeApiParams {
       required bool allowSelfSignedCertificates}) = _$_PiholeApiParams;
   _PiholeApiParams._() : super._();
 
-  @override
-
-  /// The http client.
-  Dio get dio;
   @override
 
   /// The URL of the host.
@@ -3270,6 +3241,7 @@ const $PiQueryTypes = _$PiQueryTypesTearOff();
 
 /// @nodoc
 mixin _$PiQueryTypes {
+  /// The types as a map of type name and percentage of hits.
   Map<String, double> get types => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -3345,6 +3317,8 @@ class _$_PiQueryTypes implements _PiQueryTypes {
   _$_PiQueryTypes({required this.types});
 
   @override
+
+  /// The types as a map of type name and percentage of hits.
   final Map<String, double> types;
 
   @override
@@ -3374,6 +3348,8 @@ abstract class _PiQueryTypes implements PiQueryTypes {
   factory _PiQueryTypes({required Map<String, double> types}) = _$_PiQueryTypes;
 
   @override
+
+  /// The types as a map of type name and percentage of hits.
   Map<String, double> get types;
   @override
   @JsonKey(ignore: true)
@@ -3397,6 +3373,7 @@ const $PiForwardDestinations = _$PiForwardDestinationsTearOff();
 
 /// @nodoc
 mixin _$PiForwardDestinations {
+  /// The upstream servers as a map of destination name and percentage of hits.
   Map<String, double> get destinations => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -3474,6 +3451,8 @@ class _$_PiForwardDestinations implements _PiForwardDestinations {
   _$_PiForwardDestinations({required this.destinations});
 
   @override
+
+  /// The upstream servers as a map of destination name and percentage of hits.
   final Map<String, double> destinations;
 
   @override
@@ -3506,6 +3485,8 @@ abstract class _PiForwardDestinations implements PiForwardDestinations {
       _$_PiForwardDestinations;
 
   @override
+
+  /// The upstream servers as a map of destination name and percentage of hits.
   Map<String, double> get destinations;
   @override
   @JsonKey(ignore: true)
@@ -4153,167 +4134,6 @@ abstract class _TopItems extends TopItems {
   @override
   @JsonKey(ignore: true)
   _$TopItemsCopyWith<_TopItems> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-class _$SleepPiParamsTearOff {
-  const _$SleepPiParamsTearOff();
-
-  _SleepPiParams call(PiholeApiParams params, Duration duration) {
-    return _SleepPiParams(
-      params,
-      duration,
-    );
-  }
-}
-
-/// @nodoc
-const $SleepPiParams = _$SleepPiParamsTearOff();
-
-/// @nodoc
-mixin _$SleepPiParams {
-  PiholeApiParams get params => throw _privateConstructorUsedError;
-  Duration get duration => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $SleepPiParamsCopyWith<SleepPiParams> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SleepPiParamsCopyWith<$Res> {
-  factory $SleepPiParamsCopyWith(
-          SleepPiParams value, $Res Function(SleepPiParams) then) =
-      _$SleepPiParamsCopyWithImpl<$Res>;
-  $Res call({PiholeApiParams params, Duration duration});
-
-  $PiholeApiParamsCopyWith<$Res> get params;
-}
-
-/// @nodoc
-class _$SleepPiParamsCopyWithImpl<$Res>
-    implements $SleepPiParamsCopyWith<$Res> {
-  _$SleepPiParamsCopyWithImpl(this._value, this._then);
-
-  final SleepPiParams _value;
-  // ignore: unused_field
-  final $Res Function(SleepPiParams) _then;
-
-  @override
-  $Res call({
-    Object? params = freezed,
-    Object? duration = freezed,
-  }) {
-    return _then(_value.copyWith(
-      params: params == freezed
-          ? _value.params
-          : params // ignore: cast_nullable_to_non_nullable
-              as PiholeApiParams,
-      duration: duration == freezed
-          ? _value.duration
-          : duration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-    ));
-  }
-
-  @override
-  $PiholeApiParamsCopyWith<$Res> get params {
-    return $PiholeApiParamsCopyWith<$Res>(_value.params, (value) {
-      return _then(_value.copyWith(params: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$SleepPiParamsCopyWith<$Res>
-    implements $SleepPiParamsCopyWith<$Res> {
-  factory _$SleepPiParamsCopyWith(
-          _SleepPiParams value, $Res Function(_SleepPiParams) then) =
-      __$SleepPiParamsCopyWithImpl<$Res>;
-  @override
-  $Res call({PiholeApiParams params, Duration duration});
-
-  @override
-  $PiholeApiParamsCopyWith<$Res> get params;
-}
-
-/// @nodoc
-class __$SleepPiParamsCopyWithImpl<$Res>
-    extends _$SleepPiParamsCopyWithImpl<$Res>
-    implements _$SleepPiParamsCopyWith<$Res> {
-  __$SleepPiParamsCopyWithImpl(
-      _SleepPiParams _value, $Res Function(_SleepPiParams) _then)
-      : super(_value, (v) => _then(v as _SleepPiParams));
-
-  @override
-  _SleepPiParams get _value => super._value as _SleepPiParams;
-
-  @override
-  $Res call({
-    Object? params = freezed,
-    Object? duration = freezed,
-  }) {
-    return _then(_SleepPiParams(
-      params == freezed
-          ? _value.params
-          : params // ignore: cast_nullable_to_non_nullable
-              as PiholeApiParams,
-      duration == freezed
-          ? _value.duration
-          : duration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_SleepPiParams implements _SleepPiParams {
-  _$_SleepPiParams(this.params, this.duration);
-
-  @override
-  final PiholeApiParams params;
-  @override
-  final Duration duration;
-
-  @override
-  String toString() {
-    return 'SleepPiParams(params: $params, duration: $duration)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _SleepPiParams &&
-            const DeepCollectionEquality().equals(other.params, params) &&
-            const DeepCollectionEquality().equals(other.duration, duration));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(params),
-      const DeepCollectionEquality().hash(duration));
-
-  @JsonKey(ignore: true)
-  @override
-  _$SleepPiParamsCopyWith<_SleepPiParams> get copyWith =>
-      __$SleepPiParamsCopyWithImpl<_SleepPiParams>(this, _$identity);
-}
-
-abstract class _SleepPiParams implements SleepPiParams {
-  factory _SleepPiParams(PiholeApiParams params, Duration duration) =
-      _$_SleepPiParams;
-
-  @override
-  PiholeApiParams get params;
-  @override
-  Duration get duration;
-  @override
-  @JsonKey(ignore: true)
-  _$SleepPiParamsCopyWith<_SleepPiParams> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

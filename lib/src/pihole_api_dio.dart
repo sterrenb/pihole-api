@@ -8,18 +8,26 @@ import 'entities.dart';
 import 'formatting.dart';
 import 'models.dart';
 
+/// Implements the Pi-hole API using [Dio].
 class PiholeApiDio implements PiholeApi {
-  const PiholeApiDio(this.params);
+  PiholeApiDio({
+    required this.params,
+    Dio? dio,
+  }) : dio = dio ?? Dio(BaseOptions(baseUrl: params.baseUrl));
 
+  /// The parameters.
   final PiholeApiParams params;
+
+  /// The Dio instance. 
+  /// 
+  /// Defaults to an instance that inherits the baseUrl from [params].
+  final Dio dio;
 
   Future<dynamic> _get(
     Map<String, dynamic> queryParameters,
     CancelToken cancelToken,
   ) async {
-    // log(LogCall(title, LogLevel.info, 'GET /${queryParameters.keys.first}'));
-
-    final response = await params.dio.get(
+    final response = await dio.get(
       params.apiPath,
       queryParameters: queryParameters,
       cancelToken: cancelToken,
@@ -175,7 +183,7 @@ class PiholeApiDio implements PiholeApi {
   @override
   Future<PiDetails> fetchPiDetails(CancelToken cancelToken) async {
     try {
-      final response = await params.dio.get(
+      final response = await dio.get(
         params.adminHome,
         cancelToken: cancelToken,
       );

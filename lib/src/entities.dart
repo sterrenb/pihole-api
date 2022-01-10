@@ -10,14 +10,12 @@ part 'entities.freezed.dart';
 // coverage:ignore-file
 // ignore_for_file: constant_identifier_names
 
+/// A convenience class for API parameters.
 @freezed
 class PiholeApiParams with _$PiholeApiParams {
   PiholeApiParams._();
 
   factory PiholeApiParams({
-    /// The http client.
-    required Dio dio,
-
     /// The URL of the host.
     required String baseUrl,
 
@@ -46,6 +44,7 @@ class PiholeApiParams with _$PiholeApiParams {
   late final String adminUrl = '$baseUrl$adminHome';
 }
 
+/// A failure object thrown by the [PiholeApi].
 @freezed
 class PiholeApiFailure with _$PiholeApiFailure {
   /// Resource not found.
@@ -80,6 +79,7 @@ class PiholeApiFailure with _$PiholeApiFailure {
   const factory PiholeApiFailure.unknown(dynamic e) = _UnknownApiFailure;
 }
 
+/// The status of the [PiholeApi].
 @freezed
 class PiholeStatus with _$PiholeStatus {
   /// Pihole is listening to DNS requests.
@@ -96,6 +96,7 @@ class PiholeStatus with _$PiholeStatus {
       PiholeStatusSleeping;
 }
 
+/// Summary data.
 @freezed
 class PiSummary with _$PiSummary {
   const factory PiSummary({
@@ -118,6 +119,7 @@ class PiSummary with _$PiSummary {
   }) = _PiSummary;
 }
 
+/// Details that are scraped from the admin page.
 @freezed
 class PiDetails with _$PiDetails {
   PiDetails._();
@@ -146,15 +148,22 @@ class PiDetails with _$PiDetails {
       '${celciusToKelvin((temperature ?? -1)).toStringAsFixed(1)} °K';
 }
 
+/// Query types (e.g. IPV4, IPV6).
 @freezed
 class PiQueryTypes with _$PiQueryTypes {
-  factory PiQueryTypes({required Map<String, double> types}) = _PiQueryTypes;
+  factory PiQueryTypes({
+    /// The types as a map of type name and percentage of hits.
+    required Map<String, double> types,
+  }) = _PiQueryTypes;
 }
 
+/// Upstream servers (e.g. google, 8.8.8.8).
 @freezed
 class PiForwardDestinations with _$PiForwardDestinations {
-  factory PiForwardDestinations({required Map<String, double> destinations}) =
-      _PiForwardDestinations;
+  factory PiForwardDestinations({
+    /// The upstream servers as a map of destination name and percentage of hits.
+    required Map<String, double> destinations,
+  }) = _PiForwardDestinations;
 }
 
 @freezed
@@ -172,6 +181,7 @@ class PiQueriesOverTime with _$PiQueriesOverTime {
   late final int highestDomains = domainsOverTime.values.reduce(max);
 }
 
+/// Query status (e.g. blocked, forwarded).
 enum QueryStatus {
   /// Unknown query.
   Unknown,
@@ -201,6 +211,7 @@ enum QueryStatus {
   BlockedWithExternalNXRA,
 }
 
+/// DNSSec status.
 enum DnsSecStatus {
   Empty,
   Secure,
@@ -210,6 +221,7 @@ enum DnsSecStatus {
   Unknown,
 }
 
+/// A single DNS query.
 @freezed
 class QueryItem with _$QueryItem {
   QueryItem._();
@@ -240,6 +252,7 @@ class QueryItem with _$QueryItem {
   late final int pageKey = (timestamp.millisecondsSinceEpoch / 1000).round();
 }
 
+/// Most forwarded and blocked domains.
 @freezed
 class TopItems with _$TopItems {
   TopItems._();
@@ -253,12 +266,7 @@ class TopItems with _$TopItems {
   }) = _TopItems;
 }
 
-@freezed
-class SleepPiParams with _$SleepPiParams {
-  factory SleepPiParams(PiholeApiParams params, Duration duration) =
-      _SleepPiParams;
-}
-
+/// Client IP and, if available, name.
 @freezed
 class PiClientName with _$PiClientName {
   PiClientName._();
@@ -274,6 +282,7 @@ class PiClientName with _$PiClientName {
   late final String nameOrIp = name.isNotEmpty ? name : ip;
 }
 
+/// Requests over time, per client.
 @freezed
 class PiClientActivityOverTime with _$PiClientActivityOverTime {
   PiClientActivityOverTime._();
@@ -291,6 +300,7 @@ class PiClientActivityOverTime with _$PiClientActivityOverTime {
           client, activity.values.map((e) => e.elementAt(index)).toList()));
 }
 
+/// Versions.
 @freezed
 class PiVersions with _$PiVersions {
   PiVersions._();
