@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:pihole_api/pihole_api.dart';
 import 'package:test/test.dart';
 

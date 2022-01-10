@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'formatting.dart';
