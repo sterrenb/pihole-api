@@ -18,8 +18,8 @@ class PiholeApiDio implements PiholeApi {
   /// The parameters.
   final PiholeApiParams params;
 
-  /// The Dio instance. 
-  /// 
+  /// The Dio instance.
+  ///
   /// Defaults to an instance that inherits the baseUrl from [params].
   final Dio dio;
 
