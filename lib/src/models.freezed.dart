@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'models.dart';
 
@@ -11,76 +12,11 @@ part of 'models.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PiSummaryModel _$PiSummaryModelFromJson(Map<String, dynamic> json) {
   return _PiSummaryModel.fromJson(json);
 }
-
-/// @nodoc
-class _$PiSummaryModelTearOff {
-  const _$PiSummaryModelTearOff();
-
-  _PiSummaryModel call(
-      {@JsonKey(fromJson: numFromJson, name: 'domains_being_blocked')
-          num domainsBeingBlocked = 0,
-      @JsonKey(fromJson: numFromJson, name: 'dns_queries_today')
-          num dnsQueriesToday = 0,
-      @JsonKey(fromJson: numFromJson, name: 'ads_blocked_today')
-          num adsBlockedToday = 0,
-      @JsonKey(fromJson: numFromJson, name: 'ads_percentage_today')
-          num adsPercentageToday = 0,
-      @JsonKey(fromJson: numFromJson, name: 'unique_domains')
-          num uniqueDomains = 0,
-      @JsonKey(fromJson: numFromJson, name: 'queries_forwarded')
-          num queriesForwarded = 0,
-      @JsonKey(fromJson: numFromJson, name: 'queries_cached')
-          num queriesCached = 0,
-      @JsonKey(fromJson: numFromJson, name: 'clients_ever_seen')
-          num clientsEverSeen = 0,
-      @JsonKey(fromJson: numFromJson, name: 'unique_clients')
-          num uniqueClients = 0,
-      @JsonKey(fromJson: numFromJson, name: 'dns_queries_all_types')
-          num dnsQueriesAllTypes = 0,
-      @JsonKey(fromJson: numFromJson, name: 'reply_NODATA')
-          num replyNoData = 0,
-      @JsonKey(fromJson: numFromJson, name: 'reply_NXDOMAIN')
-          num replyNxDomain = 0,
-      @JsonKey(fromJson: numFromJson, name: 'reply_CNAME')
-          num replyCName = 0,
-      @JsonKey(fromJson: numFromJson, name: 'reply_IP')
-          num replyIP = 0,
-      @JsonKey(fromJson: numFromJson, name: 'privacy_level')
-          num privacyLevel = 0,
-      @JsonKey(name: 'status')
-          String status = 'unknown'}) {
-    return _PiSummaryModel(
-      domainsBeingBlocked: domainsBeingBlocked,
-      dnsQueriesToday: dnsQueriesToday,
-      adsBlockedToday: adsBlockedToday,
-      adsPercentageToday: adsPercentageToday,
-      uniqueDomains: uniqueDomains,
-      queriesForwarded: queriesForwarded,
-      queriesCached: queriesCached,
-      clientsEverSeen: clientsEverSeen,
-      uniqueClients: uniqueClients,
-      dnsQueriesAllTypes: dnsQueriesAllTypes,
-      replyNoData: replyNoData,
-      replyNxDomain: replyNxDomain,
-      replyCName: replyCName,
-      replyIP: replyIP,
-      privacyLevel: privacyLevel,
-      status: status,
-    );
-  }
-
-  PiSummaryModel fromJson(Map<String, Object?> json) {
-    return PiSummaryModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PiSummaryModel = _$PiSummaryModelTearOff();
 
 /// @nodoc
 mixin _$PiSummaryModel {
@@ -127,7 +63,8 @@ mixin _$PiSummaryModel {
 abstract class $PiSummaryModelCopyWith<$Res> {
   factory $PiSummaryModelCopyWith(
           PiSummaryModel value, $Res Function(PiSummaryModel) then) =
-      _$PiSummaryModelCopyWithImpl<$Res>;
+      _$PiSummaryModelCopyWithImpl<$Res, PiSummaryModel>;
+  @useResult
   $Res call(
       {@JsonKey(fromJson: numFromJson, name: 'domains_being_blocked')
           num domainsBeingBlocked,
@@ -164,109 +101,112 @@ abstract class $PiSummaryModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PiSummaryModelCopyWithImpl<$Res>
+class _$PiSummaryModelCopyWithImpl<$Res, $Val extends PiSummaryModel>
     implements $PiSummaryModelCopyWith<$Res> {
   _$PiSummaryModelCopyWithImpl(this._value, this._then);
 
-  final PiSummaryModel _value;
   // ignore: unused_field
-  final $Res Function(PiSummaryModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? domainsBeingBlocked = freezed,
-    Object? dnsQueriesToday = freezed,
-    Object? adsBlockedToday = freezed,
-    Object? adsPercentageToday = freezed,
-    Object? uniqueDomains = freezed,
-    Object? queriesForwarded = freezed,
-    Object? queriesCached = freezed,
-    Object? clientsEverSeen = freezed,
-    Object? uniqueClients = freezed,
-    Object? dnsQueriesAllTypes = freezed,
-    Object? replyNoData = freezed,
-    Object? replyNxDomain = freezed,
-    Object? replyCName = freezed,
-    Object? replyIP = freezed,
-    Object? privacyLevel = freezed,
-    Object? status = freezed,
+    Object? domainsBeingBlocked = null,
+    Object? dnsQueriesToday = null,
+    Object? adsBlockedToday = null,
+    Object? adsPercentageToday = null,
+    Object? uniqueDomains = null,
+    Object? queriesForwarded = null,
+    Object? queriesCached = null,
+    Object? clientsEverSeen = null,
+    Object? uniqueClients = null,
+    Object? dnsQueriesAllTypes = null,
+    Object? replyNoData = null,
+    Object? replyNxDomain = null,
+    Object? replyCName = null,
+    Object? replyIP = null,
+    Object? privacyLevel = null,
+    Object? status = null,
   }) {
     return _then(_value.copyWith(
-      domainsBeingBlocked: domainsBeingBlocked == freezed
+      domainsBeingBlocked: null == domainsBeingBlocked
           ? _value.domainsBeingBlocked
           : domainsBeingBlocked // ignore: cast_nullable_to_non_nullable
               as num,
-      dnsQueriesToday: dnsQueriesToday == freezed
+      dnsQueriesToday: null == dnsQueriesToday
           ? _value.dnsQueriesToday
           : dnsQueriesToday // ignore: cast_nullable_to_non_nullable
               as num,
-      adsBlockedToday: adsBlockedToday == freezed
+      adsBlockedToday: null == adsBlockedToday
           ? _value.adsBlockedToday
           : adsBlockedToday // ignore: cast_nullable_to_non_nullable
               as num,
-      adsPercentageToday: adsPercentageToday == freezed
+      adsPercentageToday: null == adsPercentageToday
           ? _value.adsPercentageToday
           : adsPercentageToday // ignore: cast_nullable_to_non_nullable
               as num,
-      uniqueDomains: uniqueDomains == freezed
+      uniqueDomains: null == uniqueDomains
           ? _value.uniqueDomains
           : uniqueDomains // ignore: cast_nullable_to_non_nullable
               as num,
-      queriesForwarded: queriesForwarded == freezed
+      queriesForwarded: null == queriesForwarded
           ? _value.queriesForwarded
           : queriesForwarded // ignore: cast_nullable_to_non_nullable
               as num,
-      queriesCached: queriesCached == freezed
+      queriesCached: null == queriesCached
           ? _value.queriesCached
           : queriesCached // ignore: cast_nullable_to_non_nullable
               as num,
-      clientsEverSeen: clientsEverSeen == freezed
+      clientsEverSeen: null == clientsEverSeen
           ? _value.clientsEverSeen
           : clientsEverSeen // ignore: cast_nullable_to_non_nullable
               as num,
-      uniqueClients: uniqueClients == freezed
+      uniqueClients: null == uniqueClients
           ? _value.uniqueClients
           : uniqueClients // ignore: cast_nullable_to_non_nullable
               as num,
-      dnsQueriesAllTypes: dnsQueriesAllTypes == freezed
+      dnsQueriesAllTypes: null == dnsQueriesAllTypes
           ? _value.dnsQueriesAllTypes
           : dnsQueriesAllTypes // ignore: cast_nullable_to_non_nullable
               as num,
-      replyNoData: replyNoData == freezed
+      replyNoData: null == replyNoData
           ? _value.replyNoData
           : replyNoData // ignore: cast_nullable_to_non_nullable
               as num,
-      replyNxDomain: replyNxDomain == freezed
+      replyNxDomain: null == replyNxDomain
           ? _value.replyNxDomain
           : replyNxDomain // ignore: cast_nullable_to_non_nullable
               as num,
-      replyCName: replyCName == freezed
+      replyCName: null == replyCName
           ? _value.replyCName
           : replyCName // ignore: cast_nullable_to_non_nullable
               as num,
-      replyIP: replyIP == freezed
+      replyIP: null == replyIP
           ? _value.replyIP
           : replyIP // ignore: cast_nullable_to_non_nullable
               as num,
-      privacyLevel: privacyLevel == freezed
+      privacyLevel: null == privacyLevel
           ? _value.privacyLevel
           : privacyLevel // ignore: cast_nullable_to_non_nullable
               as num,
-      status: status == freezed
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PiSummaryModelCopyWith<$Res>
+abstract class _$$_PiSummaryModelCopyWith<$Res>
     implements $PiSummaryModelCopyWith<$Res> {
-  factory _$PiSummaryModelCopyWith(
-          _PiSummaryModel value, $Res Function(_PiSummaryModel) then) =
-      __$PiSummaryModelCopyWithImpl<$Res>;
+  factory _$$_PiSummaryModelCopyWith(
+          _$_PiSummaryModel value, $Res Function(_$_PiSummaryModel) then) =
+      __$$_PiSummaryModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(fromJson: numFromJson, name: 'domains_being_blocked')
           num domainsBeingBlocked,
@@ -303,97 +243,95 @@ abstract class _$PiSummaryModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PiSummaryModelCopyWithImpl<$Res>
-    extends _$PiSummaryModelCopyWithImpl<$Res>
-    implements _$PiSummaryModelCopyWith<$Res> {
-  __$PiSummaryModelCopyWithImpl(
-      _PiSummaryModel _value, $Res Function(_PiSummaryModel) _then)
-      : super(_value, (v) => _then(v as _PiSummaryModel));
+class __$$_PiSummaryModelCopyWithImpl<$Res>
+    extends _$PiSummaryModelCopyWithImpl<$Res, _$_PiSummaryModel>
+    implements _$$_PiSummaryModelCopyWith<$Res> {
+  __$$_PiSummaryModelCopyWithImpl(
+      _$_PiSummaryModel _value, $Res Function(_$_PiSummaryModel) _then)
+      : super(_value, _then);
 
-  @override
-  _PiSummaryModel get _value => super._value as _PiSummaryModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? domainsBeingBlocked = freezed,
-    Object? dnsQueriesToday = freezed,
-    Object? adsBlockedToday = freezed,
-    Object? adsPercentageToday = freezed,
-    Object? uniqueDomains = freezed,
-    Object? queriesForwarded = freezed,
-    Object? queriesCached = freezed,
-    Object? clientsEverSeen = freezed,
-    Object? uniqueClients = freezed,
-    Object? dnsQueriesAllTypes = freezed,
-    Object? replyNoData = freezed,
-    Object? replyNxDomain = freezed,
-    Object? replyCName = freezed,
-    Object? replyIP = freezed,
-    Object? privacyLevel = freezed,
-    Object? status = freezed,
+    Object? domainsBeingBlocked = null,
+    Object? dnsQueriesToday = null,
+    Object? adsBlockedToday = null,
+    Object? adsPercentageToday = null,
+    Object? uniqueDomains = null,
+    Object? queriesForwarded = null,
+    Object? queriesCached = null,
+    Object? clientsEverSeen = null,
+    Object? uniqueClients = null,
+    Object? dnsQueriesAllTypes = null,
+    Object? replyNoData = null,
+    Object? replyNxDomain = null,
+    Object? replyCName = null,
+    Object? replyIP = null,
+    Object? privacyLevel = null,
+    Object? status = null,
   }) {
-    return _then(_PiSummaryModel(
-      domainsBeingBlocked: domainsBeingBlocked == freezed
+    return _then(_$_PiSummaryModel(
+      domainsBeingBlocked: null == domainsBeingBlocked
           ? _value.domainsBeingBlocked
           : domainsBeingBlocked // ignore: cast_nullable_to_non_nullable
               as num,
-      dnsQueriesToday: dnsQueriesToday == freezed
+      dnsQueriesToday: null == dnsQueriesToday
           ? _value.dnsQueriesToday
           : dnsQueriesToday // ignore: cast_nullable_to_non_nullable
               as num,
-      adsBlockedToday: adsBlockedToday == freezed
+      adsBlockedToday: null == adsBlockedToday
           ? _value.adsBlockedToday
           : adsBlockedToday // ignore: cast_nullable_to_non_nullable
               as num,
-      adsPercentageToday: adsPercentageToday == freezed
+      adsPercentageToday: null == adsPercentageToday
           ? _value.adsPercentageToday
           : adsPercentageToday // ignore: cast_nullable_to_non_nullable
               as num,
-      uniqueDomains: uniqueDomains == freezed
+      uniqueDomains: null == uniqueDomains
           ? _value.uniqueDomains
           : uniqueDomains // ignore: cast_nullable_to_non_nullable
               as num,
-      queriesForwarded: queriesForwarded == freezed
+      queriesForwarded: null == queriesForwarded
           ? _value.queriesForwarded
           : queriesForwarded // ignore: cast_nullable_to_non_nullable
               as num,
-      queriesCached: queriesCached == freezed
+      queriesCached: null == queriesCached
           ? _value.queriesCached
           : queriesCached // ignore: cast_nullable_to_non_nullable
               as num,
-      clientsEverSeen: clientsEverSeen == freezed
+      clientsEverSeen: null == clientsEverSeen
           ? _value.clientsEverSeen
           : clientsEverSeen // ignore: cast_nullable_to_non_nullable
               as num,
-      uniqueClients: uniqueClients == freezed
+      uniqueClients: null == uniqueClients
           ? _value.uniqueClients
           : uniqueClients // ignore: cast_nullable_to_non_nullable
               as num,
-      dnsQueriesAllTypes: dnsQueriesAllTypes == freezed
+      dnsQueriesAllTypes: null == dnsQueriesAllTypes
           ? _value.dnsQueriesAllTypes
           : dnsQueriesAllTypes // ignore: cast_nullable_to_non_nullable
               as num,
-      replyNoData: replyNoData == freezed
+      replyNoData: null == replyNoData
           ? _value.replyNoData
           : replyNoData // ignore: cast_nullable_to_non_nullable
               as num,
-      replyNxDomain: replyNxDomain == freezed
+      replyNxDomain: null == replyNxDomain
           ? _value.replyNxDomain
           : replyNxDomain // ignore: cast_nullable_to_non_nullable
               as num,
-      replyCName: replyCName == freezed
+      replyCName: null == replyCName
           ? _value.replyCName
           : replyCName // ignore: cast_nullable_to_non_nullable
               as num,
-      replyIP: replyIP == freezed
+      replyIP: null == replyIP
           ? _value.replyIP
           : replyIP // ignore: cast_nullable_to_non_nullable
               as num,
-      privacyLevel: privacyLevel == freezed
+      privacyLevel: null == privacyLevel
           ? _value.privacyLevel
           : privacyLevel // ignore: cast_nullable_to_non_nullable
               as num,
-      status: status == freezed
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
@@ -500,104 +438,108 @@ class _$_PiSummaryModel extends _PiSummaryModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PiSummaryModel &&
-            const DeepCollectionEquality()
-                .equals(other.domainsBeingBlocked, domainsBeingBlocked) &&
-            const DeepCollectionEquality()
-                .equals(other.dnsQueriesToday, dnsQueriesToday) &&
-            const DeepCollectionEquality()
-                .equals(other.adsBlockedToday, adsBlockedToday) &&
-            const DeepCollectionEquality()
-                .equals(other.adsPercentageToday, adsPercentageToday) &&
-            const DeepCollectionEquality()
-                .equals(other.uniqueDomains, uniqueDomains) &&
-            const DeepCollectionEquality()
-                .equals(other.queriesForwarded, queriesForwarded) &&
-            const DeepCollectionEquality()
-                .equals(other.queriesCached, queriesCached) &&
-            const DeepCollectionEquality()
-                .equals(other.clientsEverSeen, clientsEverSeen) &&
-            const DeepCollectionEquality()
-                .equals(other.uniqueClients, uniqueClients) &&
-            const DeepCollectionEquality()
-                .equals(other.dnsQueriesAllTypes, dnsQueriesAllTypes) &&
-            const DeepCollectionEquality()
-                .equals(other.replyNoData, replyNoData) &&
-            const DeepCollectionEquality()
-                .equals(other.replyNxDomain, replyNxDomain) &&
-            const DeepCollectionEquality()
-                .equals(other.replyCName, replyCName) &&
-            const DeepCollectionEquality().equals(other.replyIP, replyIP) &&
-            const DeepCollectionEquality()
-                .equals(other.privacyLevel, privacyLevel) &&
-            const DeepCollectionEquality().equals(other.status, status));
+            other is _$_PiSummaryModel &&
+            (identical(other.domainsBeingBlocked, domainsBeingBlocked) ||
+                other.domainsBeingBlocked == domainsBeingBlocked) &&
+            (identical(other.dnsQueriesToday, dnsQueriesToday) ||
+                other.dnsQueriesToday == dnsQueriesToday) &&
+            (identical(other.adsBlockedToday, adsBlockedToday) ||
+                other.adsBlockedToday == adsBlockedToday) &&
+            (identical(other.adsPercentageToday, adsPercentageToday) ||
+                other.adsPercentageToday == adsPercentageToday) &&
+            (identical(other.uniqueDomains, uniqueDomains) ||
+                other.uniqueDomains == uniqueDomains) &&
+            (identical(other.queriesForwarded, queriesForwarded) ||
+                other.queriesForwarded == queriesForwarded) &&
+            (identical(other.queriesCached, queriesCached) ||
+                other.queriesCached == queriesCached) &&
+            (identical(other.clientsEverSeen, clientsEverSeen) ||
+                other.clientsEverSeen == clientsEverSeen) &&
+            (identical(other.uniqueClients, uniqueClients) ||
+                other.uniqueClients == uniqueClients) &&
+            (identical(other.dnsQueriesAllTypes, dnsQueriesAllTypes) ||
+                other.dnsQueriesAllTypes == dnsQueriesAllTypes) &&
+            (identical(other.replyNoData, replyNoData) ||
+                other.replyNoData == replyNoData) &&
+            (identical(other.replyNxDomain, replyNxDomain) ||
+                other.replyNxDomain == replyNxDomain) &&
+            (identical(other.replyCName, replyCName) ||
+                other.replyCName == replyCName) &&
+            (identical(other.replyIP, replyIP) || other.replyIP == replyIP) &&
+            (identical(other.privacyLevel, privacyLevel) ||
+                other.privacyLevel == privacyLevel) &&
+            (identical(other.status, status) || other.status == status));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(domainsBeingBlocked),
-      const DeepCollectionEquality().hash(dnsQueriesToday),
-      const DeepCollectionEquality().hash(adsBlockedToday),
-      const DeepCollectionEquality().hash(adsPercentageToday),
-      const DeepCollectionEquality().hash(uniqueDomains),
-      const DeepCollectionEquality().hash(queriesForwarded),
-      const DeepCollectionEquality().hash(queriesCached),
-      const DeepCollectionEquality().hash(clientsEverSeen),
-      const DeepCollectionEquality().hash(uniqueClients),
-      const DeepCollectionEquality().hash(dnsQueriesAllTypes),
-      const DeepCollectionEquality().hash(replyNoData),
-      const DeepCollectionEquality().hash(replyNxDomain),
-      const DeepCollectionEquality().hash(replyCName),
-      const DeepCollectionEquality().hash(replyIP),
-      const DeepCollectionEquality().hash(privacyLevel),
-      const DeepCollectionEquality().hash(status));
 
   @JsonKey(ignore: true)
   @override
-  _$PiSummaryModelCopyWith<_PiSummaryModel> get copyWith =>
-      __$PiSummaryModelCopyWithImpl<_PiSummaryModel>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      domainsBeingBlocked,
+      dnsQueriesToday,
+      adsBlockedToday,
+      adsPercentageToday,
+      uniqueDomains,
+      queriesForwarded,
+      queriesCached,
+      clientsEverSeen,
+      uniqueClients,
+      dnsQueriesAllTypes,
+      replyNoData,
+      replyNxDomain,
+      replyCName,
+      replyIP,
+      privacyLevel,
+      status);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PiSummaryModelCopyWith<_$_PiSummaryModel> get copyWith =>
+      __$$_PiSummaryModelCopyWithImpl<_$_PiSummaryModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PiSummaryModelToJson(this);
+    return _$$_PiSummaryModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _PiSummaryModel extends PiSummaryModel {
   factory _PiSummaryModel(
       {@JsonKey(fromJson: numFromJson, name: 'domains_being_blocked')
-          num domainsBeingBlocked,
+          final num domainsBeingBlocked,
       @JsonKey(fromJson: numFromJson, name: 'dns_queries_today')
-          num dnsQueriesToday,
+          final num dnsQueriesToday,
       @JsonKey(fromJson: numFromJson, name: 'ads_blocked_today')
-          num adsBlockedToday,
+          final num adsBlockedToday,
       @JsonKey(fromJson: numFromJson, name: 'ads_percentage_today')
-          num adsPercentageToday,
+          final num adsPercentageToday,
       @JsonKey(fromJson: numFromJson, name: 'unique_domains')
-          num uniqueDomains,
+          final num uniqueDomains,
       @JsonKey(fromJson: numFromJson, name: 'queries_forwarded')
-          num queriesForwarded,
+          final num queriesForwarded,
       @JsonKey(fromJson: numFromJson, name: 'queries_cached')
-          num queriesCached,
+          final num queriesCached,
       @JsonKey(fromJson: numFromJson, name: 'clients_ever_seen')
-          num clientsEverSeen,
+          final num clientsEverSeen,
       @JsonKey(fromJson: numFromJson, name: 'unique_clients')
-          num uniqueClients,
+          final num uniqueClients,
       @JsonKey(fromJson: numFromJson, name: 'dns_queries_all_types')
-          num dnsQueriesAllTypes,
+          final num dnsQueriesAllTypes,
       @JsonKey(fromJson: numFromJson, name: 'reply_NODATA')
-          num replyNoData,
+          final num replyNoData,
       @JsonKey(fromJson: numFromJson, name: 'reply_NXDOMAIN')
-          num replyNxDomain,
+          final num replyNxDomain,
       @JsonKey(fromJson: numFromJson, name: 'reply_CNAME')
-          num replyCName,
+          final num replyCName,
       @JsonKey(fromJson: numFromJson, name: 'reply_IP')
-          num replyIP,
+          final num replyIP,
       @JsonKey(fromJson: numFromJson, name: 'privacy_level')
-          num privacyLevel,
+          final num privacyLevel,
       @JsonKey(name: 'status')
-          String status}) = _$_PiSummaryModel;
+          final String status}) = _$_PiSummaryModel;
   _PiSummaryModel._() : super._();
 
   factory _PiSummaryModel.fromJson(Map<String, dynamic> json) =
@@ -653,31 +595,13 @@ abstract class _PiSummaryModel extends PiSummaryModel {
   String get status;
   @override
   @JsonKey(ignore: true)
-  _$PiSummaryModelCopyWith<_PiSummaryModel> get copyWith =>
+  _$$_PiSummaryModelCopyWith<_$_PiSummaryModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 PiholeStatusModel _$PiholeStatusModelFromJson(Map<String, dynamic> json) {
   return _PiholeStatusModel.fromJson(json);
 }
-
-/// @nodoc
-class _$PiholeStatusModelTearOff {
-  const _$PiholeStatusModelTearOff();
-
-  _PiholeStatusModel call({@JsonKey(name: 'status') required String status}) {
-    return _PiholeStatusModel(
-      status: status,
-    );
-  }
-
-  PiholeStatusModel fromJson(Map<String, Object?> json) {
-    return PiholeStatusModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PiholeStatusModel = _$PiholeStatusModelTearOff();
 
 /// @nodoc
 mixin _$PiholeStatusModel {
@@ -694,59 +618,61 @@ mixin _$PiholeStatusModel {
 abstract class $PiholeStatusModelCopyWith<$Res> {
   factory $PiholeStatusModelCopyWith(
           PiholeStatusModel value, $Res Function(PiholeStatusModel) then) =
-      _$PiholeStatusModelCopyWithImpl<$Res>;
+      _$PiholeStatusModelCopyWithImpl<$Res, PiholeStatusModel>;
+  @useResult
   $Res call({@JsonKey(name: 'status') String status});
 }
 
 /// @nodoc
-class _$PiholeStatusModelCopyWithImpl<$Res>
+class _$PiholeStatusModelCopyWithImpl<$Res, $Val extends PiholeStatusModel>
     implements $PiholeStatusModelCopyWith<$Res> {
   _$PiholeStatusModelCopyWithImpl(this._value, this._then);
 
-  final PiholeStatusModel _value;
   // ignore: unused_field
-  final $Res Function(PiholeStatusModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? status = freezed,
+    Object? status = null,
   }) {
     return _then(_value.copyWith(
-      status: status == freezed
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PiholeStatusModelCopyWith<$Res>
+abstract class _$$_PiholeStatusModelCopyWith<$Res>
     implements $PiholeStatusModelCopyWith<$Res> {
-  factory _$PiholeStatusModelCopyWith(
-          _PiholeStatusModel value, $Res Function(_PiholeStatusModel) then) =
-      __$PiholeStatusModelCopyWithImpl<$Res>;
+  factory _$$_PiholeStatusModelCopyWith(_$_PiholeStatusModel value,
+          $Res Function(_$_PiholeStatusModel) then) =
+      __$$_PiholeStatusModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({@JsonKey(name: 'status') String status});
 }
 
 /// @nodoc
-class __$PiholeStatusModelCopyWithImpl<$Res>
-    extends _$PiholeStatusModelCopyWithImpl<$Res>
-    implements _$PiholeStatusModelCopyWith<$Res> {
-  __$PiholeStatusModelCopyWithImpl(
-      _PiholeStatusModel _value, $Res Function(_PiholeStatusModel) _then)
-      : super(_value, (v) => _then(v as _PiholeStatusModel));
+class __$$_PiholeStatusModelCopyWithImpl<$Res>
+    extends _$PiholeStatusModelCopyWithImpl<$Res, _$_PiholeStatusModel>
+    implements _$$_PiholeStatusModelCopyWith<$Res> {
+  __$$_PiholeStatusModelCopyWithImpl(
+      _$_PiholeStatusModel _value, $Res Function(_$_PiholeStatusModel) _then)
+      : super(_value, _then);
 
-  @override
-  _PiholeStatusModel get _value => super._value as _PiholeStatusModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? status = freezed,
+    Object? status = null,
   }) {
-    return _then(_PiholeStatusModel(
-      status: status == freezed
+    return _then(_$_PiholeStatusModel(
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
@@ -776,28 +702,33 @@ class _$_PiholeStatusModel extends _PiholeStatusModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PiholeStatusModel &&
-            const DeepCollectionEquality().equals(other.status, status));
+            other is _$_PiholeStatusModel &&
+            (identical(other.status, status) || other.status == status));
   }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(status));
 
   @JsonKey(ignore: true)
   @override
-  _$PiholeStatusModelCopyWith<_PiholeStatusModel> get copyWith =>
-      __$PiholeStatusModelCopyWithImpl<_PiholeStatusModel>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, status);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PiholeStatusModelCopyWith<_$_PiholeStatusModel> get copyWith =>
+      __$$_PiholeStatusModelCopyWithImpl<_$_PiholeStatusModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PiholeStatusModelToJson(this);
+    return _$$_PiholeStatusModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _PiholeStatusModel extends PiholeStatusModel {
   factory _PiholeStatusModel(
-      {@JsonKey(name: 'status') required String status}) = _$_PiholeStatusModel;
+          {@JsonKey(name: 'status') required final String status}) =
+      _$_PiholeStatusModel;
   _PiholeStatusModel._() : super._();
 
   factory _PiholeStatusModel.fromJson(Map<String, dynamic> json) =
@@ -808,32 +739,13 @@ abstract class _PiholeStatusModel extends PiholeStatusModel {
   String get status;
   @override
   @JsonKey(ignore: true)
-  _$PiholeStatusModelCopyWith<_PiholeStatusModel> get copyWith =>
+  _$$_PiholeStatusModelCopyWith<_$_PiholeStatusModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 PiQueryTypesModel _$PiQueryTypesModelFromJson(Map<String, dynamic> json) {
   return _PiQueryTypesModel.fromJson(json);
 }
-
-/// @nodoc
-class _$PiQueryTypesModelTearOff {
-  const _$PiQueryTypesModelTearOff();
-
-  _PiQueryTypesModel call(
-      {@JsonKey(name: 'querytypes') required Map<String, num> types}) {
-    return _PiQueryTypesModel(
-      types: types,
-    );
-  }
-
-  PiQueryTypesModel fromJson(Map<String, Object?> json) {
-    return PiQueryTypesModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PiQueryTypesModel = _$PiQueryTypesModelTearOff();
 
 /// @nodoc
 mixin _$PiQueryTypesModel {
@@ -850,60 +762,62 @@ mixin _$PiQueryTypesModel {
 abstract class $PiQueryTypesModelCopyWith<$Res> {
   factory $PiQueryTypesModelCopyWith(
           PiQueryTypesModel value, $Res Function(PiQueryTypesModel) then) =
-      _$PiQueryTypesModelCopyWithImpl<$Res>;
+      _$PiQueryTypesModelCopyWithImpl<$Res, PiQueryTypesModel>;
+  @useResult
   $Res call({@JsonKey(name: 'querytypes') Map<String, num> types});
 }
 
 /// @nodoc
-class _$PiQueryTypesModelCopyWithImpl<$Res>
+class _$PiQueryTypesModelCopyWithImpl<$Res, $Val extends PiQueryTypesModel>
     implements $PiQueryTypesModelCopyWith<$Res> {
   _$PiQueryTypesModelCopyWithImpl(this._value, this._then);
 
-  final PiQueryTypesModel _value;
   // ignore: unused_field
-  final $Res Function(PiQueryTypesModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? types = freezed,
+    Object? types = null,
   }) {
     return _then(_value.copyWith(
-      types: types == freezed
+      types: null == types
           ? _value.types
           : types // ignore: cast_nullable_to_non_nullable
               as Map<String, num>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PiQueryTypesModelCopyWith<$Res>
+abstract class _$$_PiQueryTypesModelCopyWith<$Res>
     implements $PiQueryTypesModelCopyWith<$Res> {
-  factory _$PiQueryTypesModelCopyWith(
-          _PiQueryTypesModel value, $Res Function(_PiQueryTypesModel) then) =
-      __$PiQueryTypesModelCopyWithImpl<$Res>;
+  factory _$$_PiQueryTypesModelCopyWith(_$_PiQueryTypesModel value,
+          $Res Function(_$_PiQueryTypesModel) then) =
+      __$$_PiQueryTypesModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({@JsonKey(name: 'querytypes') Map<String, num> types});
 }
 
 /// @nodoc
-class __$PiQueryTypesModelCopyWithImpl<$Res>
-    extends _$PiQueryTypesModelCopyWithImpl<$Res>
-    implements _$PiQueryTypesModelCopyWith<$Res> {
-  __$PiQueryTypesModelCopyWithImpl(
-      _PiQueryTypesModel _value, $Res Function(_PiQueryTypesModel) _then)
-      : super(_value, (v) => _then(v as _PiQueryTypesModel));
+class __$$_PiQueryTypesModelCopyWithImpl<$Res>
+    extends _$PiQueryTypesModelCopyWithImpl<$Res, _$_PiQueryTypesModel>
+    implements _$$_PiQueryTypesModelCopyWith<$Res> {
+  __$$_PiQueryTypesModelCopyWithImpl(
+      _$_PiQueryTypesModel _value, $Res Function(_$_PiQueryTypesModel) _then)
+      : super(_value, _then);
 
-  @override
-  _PiQueryTypesModel get _value => super._value as _PiQueryTypesModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? types = freezed,
+    Object? types = null,
   }) {
-    return _then(_PiQueryTypesModel(
-      types: types == freezed
-          ? _value.types
+    return _then(_$_PiQueryTypesModel(
+      types: null == types
+          ? _value._types
           : types // ignore: cast_nullable_to_non_nullable
               as Map<String, num>,
     ));
@@ -913,15 +827,22 @@ class __$PiQueryTypesModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PiQueryTypesModel extends _PiQueryTypesModel {
-  _$_PiQueryTypesModel({@JsonKey(name: 'querytypes') required this.types})
-      : super._();
+  _$_PiQueryTypesModel(
+      {@JsonKey(name: 'querytypes') required final Map<String, num> types})
+      : _types = types,
+        super._();
 
   factory _$_PiQueryTypesModel.fromJson(Map<String, dynamic> json) =>
       _$$_PiQueryTypesModelFromJson(json);
 
+  final Map<String, num> _types;
   @override
   @JsonKey(name: 'querytypes')
-  final Map<String, num> types;
+  Map<String, num> get types {
+    if (_types is EqualUnmodifiableMapView) return _types;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_types);
+  }
 
   @override
   String toString() {
@@ -932,29 +853,34 @@ class _$_PiQueryTypesModel extends _PiQueryTypesModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PiQueryTypesModel &&
-            const DeepCollectionEquality().equals(other.types, types));
+            other is _$_PiQueryTypesModel &&
+            const DeepCollectionEquality().equals(other._types, _types));
   }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(types));
 
   @JsonKey(ignore: true)
   @override
-  _$PiQueryTypesModelCopyWith<_PiQueryTypesModel> get copyWith =>
-      __$PiQueryTypesModelCopyWithImpl<_PiQueryTypesModel>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_types));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PiQueryTypesModelCopyWith<_$_PiQueryTypesModel> get copyWith =>
+      __$$_PiQueryTypesModelCopyWithImpl<_$_PiQueryTypesModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PiQueryTypesModelToJson(this);
+    return _$$_PiQueryTypesModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _PiQueryTypesModel extends PiQueryTypesModel {
   factory _PiQueryTypesModel(
-          {@JsonKey(name: 'querytypes') required Map<String, num> types}) =
-      _$_PiQueryTypesModel;
+      {@JsonKey(name: 'querytypes')
+          required final Map<String, num> types}) = _$_PiQueryTypesModel;
   _PiQueryTypesModel._() : super._();
 
   factory _PiQueryTypesModel.fromJson(Map<String, dynamic> json) =
@@ -965,7 +891,7 @@ abstract class _PiQueryTypesModel extends PiQueryTypesModel {
   Map<String, num> get types;
   @override
   @JsonKey(ignore: true)
-  _$PiQueryTypesModelCopyWith<_PiQueryTypesModel> get copyWith =>
+  _$$_PiQueryTypesModelCopyWith<_$_PiQueryTypesModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -973,26 +899,6 @@ PiForwardDestinationsModel _$PiForwardDestinationsModelFromJson(
     Map<String, dynamic> json) {
   return _PiForwardDestinationsModel.fromJson(json);
 }
-
-/// @nodoc
-class _$PiForwardDestinationsModelTearOff {
-  const _$PiForwardDestinationsModelTearOff();
-
-  _PiForwardDestinationsModel call(
-      {@JsonKey(name: 'forward_destinations')
-          required Map<String, num> destinations}) {
-    return _PiForwardDestinationsModel(
-      destinations: destinations,
-    );
-  }
-
-  PiForwardDestinationsModel fromJson(Map<String, Object?> json) {
-    return PiForwardDestinationsModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PiForwardDestinationsModel = _$PiForwardDestinationsModelTearOff();
 
 /// @nodoc
 mixin _$PiForwardDestinationsModel {
@@ -1009,64 +915,69 @@ mixin _$PiForwardDestinationsModel {
 abstract class $PiForwardDestinationsModelCopyWith<$Res> {
   factory $PiForwardDestinationsModelCopyWith(PiForwardDestinationsModel value,
           $Res Function(PiForwardDestinationsModel) then) =
-      _$PiForwardDestinationsModelCopyWithImpl<$Res>;
+      _$PiForwardDestinationsModelCopyWithImpl<$Res,
+          PiForwardDestinationsModel>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'forward_destinations') Map<String, num> destinations});
 }
 
 /// @nodoc
-class _$PiForwardDestinationsModelCopyWithImpl<$Res>
+class _$PiForwardDestinationsModelCopyWithImpl<$Res,
+        $Val extends PiForwardDestinationsModel>
     implements $PiForwardDestinationsModelCopyWith<$Res> {
   _$PiForwardDestinationsModelCopyWithImpl(this._value, this._then);
 
-  final PiForwardDestinationsModel _value;
   // ignore: unused_field
-  final $Res Function(PiForwardDestinationsModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? destinations = freezed,
+    Object? destinations = null,
   }) {
     return _then(_value.copyWith(
-      destinations: destinations == freezed
+      destinations: null == destinations
           ? _value.destinations
           : destinations // ignore: cast_nullable_to_non_nullable
               as Map<String, num>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PiForwardDestinationsModelCopyWith<$Res>
+abstract class _$$_PiForwardDestinationsModelCopyWith<$Res>
     implements $PiForwardDestinationsModelCopyWith<$Res> {
-  factory _$PiForwardDestinationsModelCopyWith(
-          _PiForwardDestinationsModel value,
-          $Res Function(_PiForwardDestinationsModel) then) =
-      __$PiForwardDestinationsModelCopyWithImpl<$Res>;
+  factory _$$_PiForwardDestinationsModelCopyWith(
+          _$_PiForwardDestinationsModel value,
+          $Res Function(_$_PiForwardDestinationsModel) then) =
+      __$$_PiForwardDestinationsModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'forward_destinations') Map<String, num> destinations});
 }
 
 /// @nodoc
-class __$PiForwardDestinationsModelCopyWithImpl<$Res>
-    extends _$PiForwardDestinationsModelCopyWithImpl<$Res>
-    implements _$PiForwardDestinationsModelCopyWith<$Res> {
-  __$PiForwardDestinationsModelCopyWithImpl(_PiForwardDestinationsModel _value,
-      $Res Function(_PiForwardDestinationsModel) _then)
-      : super(_value, (v) => _then(v as _PiForwardDestinationsModel));
+class __$$_PiForwardDestinationsModelCopyWithImpl<$Res>
+    extends _$PiForwardDestinationsModelCopyWithImpl<$Res,
+        _$_PiForwardDestinationsModel>
+    implements _$$_PiForwardDestinationsModelCopyWith<$Res> {
+  __$$_PiForwardDestinationsModelCopyWithImpl(
+      _$_PiForwardDestinationsModel _value,
+      $Res Function(_$_PiForwardDestinationsModel) _then)
+      : super(_value, _then);
 
-  @override
-  _PiForwardDestinationsModel get _value =>
-      super._value as _PiForwardDestinationsModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? destinations = freezed,
+    Object? destinations = null,
   }) {
-    return _then(_PiForwardDestinationsModel(
-      destinations: destinations == freezed
-          ? _value.destinations
+    return _then(_$_PiForwardDestinationsModel(
+      destinations: null == destinations
+          ? _value._destinations
           : destinations // ignore: cast_nullable_to_non_nullable
               as Map<String, num>,
     ));
@@ -1077,15 +988,22 @@ class __$PiForwardDestinationsModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PiForwardDestinationsModel extends _PiForwardDestinationsModel {
   _$_PiForwardDestinationsModel(
-      {@JsonKey(name: 'forward_destinations') required this.destinations})
-      : super._();
+      {@JsonKey(name: 'forward_destinations')
+          required final Map<String, num> destinations})
+      : _destinations = destinations,
+        super._();
 
   factory _$_PiForwardDestinationsModel.fromJson(Map<String, dynamic> json) =>
       _$$_PiForwardDestinationsModelFromJson(json);
 
+  final Map<String, num> _destinations;
   @override
   @JsonKey(name: 'forward_destinations')
-  final Map<String, num> destinations;
+  Map<String, num> get destinations {
+    if (_destinations is EqualUnmodifiableMapView) return _destinations;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_destinations);
+  }
 
   @override
   String toString() {
@@ -1096,31 +1014,35 @@ class _$_PiForwardDestinationsModel extends _PiForwardDestinationsModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PiForwardDestinationsModel &&
+            other is _$_PiForwardDestinationsModel &&
             const DeepCollectionEquality()
-                .equals(other.destinations, destinations));
+                .equals(other._destinations, _destinations));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(destinations));
 
   @JsonKey(ignore: true)
   @override
-  _$PiForwardDestinationsModelCopyWith<_PiForwardDestinationsModel>
-      get copyWith => __$PiForwardDestinationsModelCopyWithImpl<
-          _PiForwardDestinationsModel>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_destinations));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PiForwardDestinationsModelCopyWith<_$_PiForwardDestinationsModel>
+      get copyWith => __$$_PiForwardDestinationsModelCopyWithImpl<
+          _$_PiForwardDestinationsModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PiForwardDestinationsModelToJson(this);
+    return _$$_PiForwardDestinationsModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _PiForwardDestinationsModel extends PiForwardDestinationsModel {
   factory _PiForwardDestinationsModel(
           {@JsonKey(name: 'forward_destinations')
-              required Map<String, num> destinations}) =
+              required final Map<String, num> destinations}) =
       _$_PiForwardDestinationsModel;
   _PiForwardDestinationsModel._() : super._();
 
@@ -1132,7 +1054,7 @@ abstract class _PiForwardDestinationsModel extends PiForwardDestinationsModel {
   Map<String, num> get destinations;
   @override
   @JsonKey(ignore: true)
-  _$PiForwardDestinationsModelCopyWith<_PiForwardDestinationsModel>
+  _$$_PiForwardDestinationsModelCopyWith<_$_PiForwardDestinationsModel>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1140,29 +1062,6 @@ PiQueriesOverTimeModel _$PiQueriesOverTimeModelFromJson(
     Map<String, dynamic> json) {
   return _PiQueriesOverTimeModel.fromJson(json);
 }
-
-/// @nodoc
-class _$PiQueriesOverTimeModelTearOff {
-  const _$PiQueriesOverTimeModelTearOff();
-
-  _PiQueriesOverTimeModel call(
-      {@JsonKey(name: 'domains_over_time')
-          required Map<String, num> domainsOverTime,
-      @JsonKey(name: 'ads_over_time')
-          required Map<String, num> adsOverTime}) {
-    return _PiQueriesOverTimeModel(
-      domainsOverTime: domainsOverTime,
-      adsOverTime: adsOverTime,
-    );
-  }
-
-  PiQueriesOverTimeModel fromJson(Map<String, Object?> json) {
-    return PiQueriesOverTimeModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PiQueriesOverTimeModel = _$PiQueriesOverTimeModelTearOff();
 
 /// @nodoc
 mixin _$PiQueriesOverTimeModel {
@@ -1181,74 +1080,78 @@ mixin _$PiQueriesOverTimeModel {
 abstract class $PiQueriesOverTimeModelCopyWith<$Res> {
   factory $PiQueriesOverTimeModelCopyWith(PiQueriesOverTimeModel value,
           $Res Function(PiQueriesOverTimeModel) then) =
-      _$PiQueriesOverTimeModelCopyWithImpl<$Res>;
+      _$PiQueriesOverTimeModelCopyWithImpl<$Res, PiQueriesOverTimeModel>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'domains_over_time') Map<String, num> domainsOverTime,
       @JsonKey(name: 'ads_over_time') Map<String, num> adsOverTime});
 }
 
 /// @nodoc
-class _$PiQueriesOverTimeModelCopyWithImpl<$Res>
+class _$PiQueriesOverTimeModelCopyWithImpl<$Res,
+        $Val extends PiQueriesOverTimeModel>
     implements $PiQueriesOverTimeModelCopyWith<$Res> {
   _$PiQueriesOverTimeModelCopyWithImpl(this._value, this._then);
 
-  final PiQueriesOverTimeModel _value;
   // ignore: unused_field
-  final $Res Function(PiQueriesOverTimeModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? domainsOverTime = freezed,
-    Object? adsOverTime = freezed,
+    Object? domainsOverTime = null,
+    Object? adsOverTime = null,
   }) {
     return _then(_value.copyWith(
-      domainsOverTime: domainsOverTime == freezed
+      domainsOverTime: null == domainsOverTime
           ? _value.domainsOverTime
           : domainsOverTime // ignore: cast_nullable_to_non_nullable
               as Map<String, num>,
-      adsOverTime: adsOverTime == freezed
+      adsOverTime: null == adsOverTime
           ? _value.adsOverTime
           : adsOverTime // ignore: cast_nullable_to_non_nullable
               as Map<String, num>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PiQueriesOverTimeModelCopyWith<$Res>
+abstract class _$$_PiQueriesOverTimeModelCopyWith<$Res>
     implements $PiQueriesOverTimeModelCopyWith<$Res> {
-  factory _$PiQueriesOverTimeModelCopyWith(_PiQueriesOverTimeModel value,
-          $Res Function(_PiQueriesOverTimeModel) then) =
-      __$PiQueriesOverTimeModelCopyWithImpl<$Res>;
+  factory _$$_PiQueriesOverTimeModelCopyWith(_$_PiQueriesOverTimeModel value,
+          $Res Function(_$_PiQueriesOverTimeModel) then) =
+      __$$_PiQueriesOverTimeModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'domains_over_time') Map<String, num> domainsOverTime,
       @JsonKey(name: 'ads_over_time') Map<String, num> adsOverTime});
 }
 
 /// @nodoc
-class __$PiQueriesOverTimeModelCopyWithImpl<$Res>
-    extends _$PiQueriesOverTimeModelCopyWithImpl<$Res>
-    implements _$PiQueriesOverTimeModelCopyWith<$Res> {
-  __$PiQueriesOverTimeModelCopyWithImpl(_PiQueriesOverTimeModel _value,
-      $Res Function(_PiQueriesOverTimeModel) _then)
-      : super(_value, (v) => _then(v as _PiQueriesOverTimeModel));
+class __$$_PiQueriesOverTimeModelCopyWithImpl<$Res>
+    extends _$PiQueriesOverTimeModelCopyWithImpl<$Res,
+        _$_PiQueriesOverTimeModel>
+    implements _$$_PiQueriesOverTimeModelCopyWith<$Res> {
+  __$$_PiQueriesOverTimeModelCopyWithImpl(_$_PiQueriesOverTimeModel _value,
+      $Res Function(_$_PiQueriesOverTimeModel) _then)
+      : super(_value, _then);
 
-  @override
-  _PiQueriesOverTimeModel get _value => super._value as _PiQueriesOverTimeModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? domainsOverTime = freezed,
-    Object? adsOverTime = freezed,
+    Object? domainsOverTime = null,
+    Object? adsOverTime = null,
   }) {
-    return _then(_PiQueriesOverTimeModel(
-      domainsOverTime: domainsOverTime == freezed
-          ? _value.domainsOverTime
+    return _then(_$_PiQueriesOverTimeModel(
+      domainsOverTime: null == domainsOverTime
+          ? _value._domainsOverTime
           : domainsOverTime // ignore: cast_nullable_to_non_nullable
               as Map<String, num>,
-      adsOverTime: adsOverTime == freezed
-          ? _value.adsOverTime
+      adsOverTime: null == adsOverTime
+          ? _value._adsOverTime
           : adsOverTime // ignore: cast_nullable_to_non_nullable
               as Map<String, num>,
     ));
@@ -1259,19 +1162,34 @@ class __$PiQueriesOverTimeModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PiQueriesOverTimeModel extends _PiQueriesOverTimeModel {
   _$_PiQueriesOverTimeModel(
-      {@JsonKey(name: 'domains_over_time') required this.domainsOverTime,
-      @JsonKey(name: 'ads_over_time') required this.adsOverTime})
-      : super._();
+      {@JsonKey(name: 'domains_over_time')
+          required final Map<String, num> domainsOverTime,
+      @JsonKey(name: 'ads_over_time')
+          required final Map<String, num> adsOverTime})
+      : _domainsOverTime = domainsOverTime,
+        _adsOverTime = adsOverTime,
+        super._();
 
   factory _$_PiQueriesOverTimeModel.fromJson(Map<String, dynamic> json) =>
       _$$_PiQueriesOverTimeModelFromJson(json);
 
+  final Map<String, num> _domainsOverTime;
   @override
   @JsonKey(name: 'domains_over_time')
-  final Map<String, num> domainsOverTime;
+  Map<String, num> get domainsOverTime {
+    if (_domainsOverTime is EqualUnmodifiableMapView) return _domainsOverTime;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_domainsOverTime);
+  }
+
+  final Map<String, num> _adsOverTime;
   @override
   @JsonKey(name: 'ads_over_time')
-  final Map<String, num> adsOverTime;
+  Map<String, num> get adsOverTime {
+    if (_adsOverTime is EqualUnmodifiableMapView) return _adsOverTime;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_adsOverTime);
+  }
 
   @override
   String toString() {
@@ -1282,37 +1200,42 @@ class _$_PiQueriesOverTimeModel extends _PiQueriesOverTimeModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PiQueriesOverTimeModel &&
+            other is _$_PiQueriesOverTimeModel &&
             const DeepCollectionEquality()
-                .equals(other.domainsOverTime, domainsOverTime) &&
+                .equals(other._domainsOverTime, _domainsOverTime) &&
             const DeepCollectionEquality()
-                .equals(other.adsOverTime, adsOverTime));
+                .equals(other._adsOverTime, _adsOverTime));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(domainsOverTime),
-      const DeepCollectionEquality().hash(adsOverTime));
 
   @JsonKey(ignore: true)
   @override
-  _$PiQueriesOverTimeModelCopyWith<_PiQueriesOverTimeModel> get copyWith =>
-      __$PiQueriesOverTimeModelCopyWithImpl<_PiQueriesOverTimeModel>(
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_domainsOverTime),
+      const DeepCollectionEquality().hash(_adsOverTime));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PiQueriesOverTimeModelCopyWith<_$_PiQueriesOverTimeModel> get copyWith =>
+      __$$_PiQueriesOverTimeModelCopyWithImpl<_$_PiQueriesOverTimeModel>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PiQueriesOverTimeModelToJson(this);
+    return _$$_PiQueriesOverTimeModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _PiQueriesOverTimeModel extends PiQueriesOverTimeModel {
   factory _PiQueriesOverTimeModel(
-      {@JsonKey(name: 'domains_over_time')
-          required Map<String, num> domainsOverTime,
-      @JsonKey(name: 'ads_over_time')
-          required Map<String, num> adsOverTime}) = _$_PiQueriesOverTimeModel;
+          {@JsonKey(name: 'domains_over_time')
+              required final Map<String, num> domainsOverTime,
+          @JsonKey(name: 'ads_over_time')
+              required final Map<String, num> adsOverTime}) =
+      _$_PiQueriesOverTimeModel;
   _PiQueriesOverTimeModel._() : super._();
 
   factory _PiQueriesOverTimeModel.fromJson(Map<String, dynamic> json) =
@@ -1326,44 +1249,13 @@ abstract class _PiQueriesOverTimeModel extends PiQueriesOverTimeModel {
   Map<String, num> get adsOverTime;
   @override
   @JsonKey(ignore: true)
-  _$PiQueriesOverTimeModelCopyWith<_PiQueriesOverTimeModel> get copyWith =>
+  _$$_PiQueriesOverTimeModelCopyWith<_$_PiQueriesOverTimeModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 QueryItemModel _$QueryItemModelFromJson(Map<String, dynamic> json) {
   return _QueryItemModel.fromJson(json);
 }
-
-/// @nodoc
-class _$QueryItemModelTearOff {
-  const _$QueryItemModelTearOff();
-
-  _QueryItemModel call(
-      {required DateTime timestamp,
-      required String queryType,
-      required String domain,
-      required String clientName,
-      required QueryStatus queryStatus,
-      required DnsSecStatus dnsSecStatus,
-      required double delta}) {
-    return _QueryItemModel(
-      timestamp: timestamp,
-      queryType: queryType,
-      domain: domain,
-      clientName: clientName,
-      queryStatus: queryStatus,
-      dnsSecStatus: dnsSecStatus,
-      delta: delta,
-    );
-  }
-
-  QueryItemModel fromJson(Map<String, Object?> json) {
-    return QueryItemModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $QueryItemModel = _$QueryItemModelTearOff();
 
 /// @nodoc
 mixin _$QueryItemModel {
@@ -1385,7 +1277,8 @@ mixin _$QueryItemModel {
 abstract class $QueryItemModelCopyWith<$Res> {
   factory $QueryItemModelCopyWith(
           QueryItemModel value, $Res Function(QueryItemModel) then) =
-      _$QueryItemModelCopyWithImpl<$Res>;
+      _$QueryItemModelCopyWithImpl<$Res, QueryItemModel>;
+  @useResult
   $Res call(
       {DateTime timestamp,
       String queryType,
@@ -1397,64 +1290,67 @@ abstract class $QueryItemModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$QueryItemModelCopyWithImpl<$Res>
+class _$QueryItemModelCopyWithImpl<$Res, $Val extends QueryItemModel>
     implements $QueryItemModelCopyWith<$Res> {
   _$QueryItemModelCopyWithImpl(this._value, this._then);
 
-  final QueryItemModel _value;
   // ignore: unused_field
-  final $Res Function(QueryItemModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? timestamp = freezed,
-    Object? queryType = freezed,
-    Object? domain = freezed,
-    Object? clientName = freezed,
-    Object? queryStatus = freezed,
-    Object? dnsSecStatus = freezed,
-    Object? delta = freezed,
+    Object? timestamp = null,
+    Object? queryType = null,
+    Object? domain = null,
+    Object? clientName = null,
+    Object? queryStatus = null,
+    Object? dnsSecStatus = null,
+    Object? delta = null,
   }) {
     return _then(_value.copyWith(
-      timestamp: timestamp == freezed
+      timestamp: null == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      queryType: queryType == freezed
+      queryType: null == queryType
           ? _value.queryType
           : queryType // ignore: cast_nullable_to_non_nullable
               as String,
-      domain: domain == freezed
+      domain: null == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
               as String,
-      clientName: clientName == freezed
+      clientName: null == clientName
           ? _value.clientName
           : clientName // ignore: cast_nullable_to_non_nullable
               as String,
-      queryStatus: queryStatus == freezed
+      queryStatus: null == queryStatus
           ? _value.queryStatus
           : queryStatus // ignore: cast_nullable_to_non_nullable
               as QueryStatus,
-      dnsSecStatus: dnsSecStatus == freezed
+      dnsSecStatus: null == dnsSecStatus
           ? _value.dnsSecStatus
           : dnsSecStatus // ignore: cast_nullable_to_non_nullable
               as DnsSecStatus,
-      delta: delta == freezed
+      delta: null == delta
           ? _value.delta
           : delta // ignore: cast_nullable_to_non_nullable
               as double,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$QueryItemModelCopyWith<$Res>
+abstract class _$$_QueryItemModelCopyWith<$Res>
     implements $QueryItemModelCopyWith<$Res> {
-  factory _$QueryItemModelCopyWith(
-          _QueryItemModel value, $Res Function(_QueryItemModel) then) =
-      __$QueryItemModelCopyWithImpl<$Res>;
+  factory _$$_QueryItemModelCopyWith(
+          _$_QueryItemModel value, $Res Function(_$_QueryItemModel) then) =
+      __$$_QueryItemModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {DateTime timestamp,
       String queryType,
@@ -1466,52 +1362,50 @@ abstract class _$QueryItemModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$QueryItemModelCopyWithImpl<$Res>
-    extends _$QueryItemModelCopyWithImpl<$Res>
-    implements _$QueryItemModelCopyWith<$Res> {
-  __$QueryItemModelCopyWithImpl(
-      _QueryItemModel _value, $Res Function(_QueryItemModel) _then)
-      : super(_value, (v) => _then(v as _QueryItemModel));
+class __$$_QueryItemModelCopyWithImpl<$Res>
+    extends _$QueryItemModelCopyWithImpl<$Res, _$_QueryItemModel>
+    implements _$$_QueryItemModelCopyWith<$Res> {
+  __$$_QueryItemModelCopyWithImpl(
+      _$_QueryItemModel _value, $Res Function(_$_QueryItemModel) _then)
+      : super(_value, _then);
 
-  @override
-  _QueryItemModel get _value => super._value as _QueryItemModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? timestamp = freezed,
-    Object? queryType = freezed,
-    Object? domain = freezed,
-    Object? clientName = freezed,
-    Object? queryStatus = freezed,
-    Object? dnsSecStatus = freezed,
-    Object? delta = freezed,
+    Object? timestamp = null,
+    Object? queryType = null,
+    Object? domain = null,
+    Object? clientName = null,
+    Object? queryStatus = null,
+    Object? dnsSecStatus = null,
+    Object? delta = null,
   }) {
-    return _then(_QueryItemModel(
-      timestamp: timestamp == freezed
+    return _then(_$_QueryItemModel(
+      timestamp: null == timestamp
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      queryType: queryType == freezed
+      queryType: null == queryType
           ? _value.queryType
           : queryType // ignore: cast_nullable_to_non_nullable
               as String,
-      domain: domain == freezed
+      domain: null == domain
           ? _value.domain
           : domain // ignore: cast_nullable_to_non_nullable
               as String,
-      clientName: clientName == freezed
+      clientName: null == clientName
           ? _value.clientName
           : clientName // ignore: cast_nullable_to_non_nullable
               as String,
-      queryStatus: queryStatus == freezed
+      queryStatus: null == queryStatus
           ? _value.queryStatus
           : queryStatus // ignore: cast_nullable_to_non_nullable
               as QueryStatus,
-      dnsSecStatus: dnsSecStatus == freezed
+      dnsSecStatus: null == dnsSecStatus
           ? _value.dnsSecStatus
           : dnsSecStatus // ignore: cast_nullable_to_non_nullable
               as DnsSecStatus,
-      delta: delta == freezed
+      delta: null == delta
           ? _value.delta
           : delta // ignore: cast_nullable_to_non_nullable
               as double,
@@ -1559,50 +1453,49 @@ class _$_QueryItemModel extends _QueryItemModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _QueryItemModel &&
-            const DeepCollectionEquality().equals(other.timestamp, timestamp) &&
-            const DeepCollectionEquality().equals(other.queryType, queryType) &&
-            const DeepCollectionEquality().equals(other.domain, domain) &&
-            const DeepCollectionEquality()
-                .equals(other.clientName, clientName) &&
-            const DeepCollectionEquality()
-                .equals(other.queryStatus, queryStatus) &&
-            const DeepCollectionEquality()
-                .equals(other.dnsSecStatus, dnsSecStatus) &&
-            const DeepCollectionEquality().equals(other.delta, delta));
+            other is _$_QueryItemModel &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp) &&
+            (identical(other.queryType, queryType) ||
+                other.queryType == queryType) &&
+            (identical(other.domain, domain) || other.domain == domain) &&
+            (identical(other.clientName, clientName) ||
+                other.clientName == clientName) &&
+            (identical(other.queryStatus, queryStatus) ||
+                other.queryStatus == queryStatus) &&
+            (identical(other.dnsSecStatus, dnsSecStatus) ||
+                other.dnsSecStatus == dnsSecStatus) &&
+            (identical(other.delta, delta) || other.delta == delta));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(timestamp),
-      const DeepCollectionEquality().hash(queryType),
-      const DeepCollectionEquality().hash(domain),
-      const DeepCollectionEquality().hash(clientName),
-      const DeepCollectionEquality().hash(queryStatus),
-      const DeepCollectionEquality().hash(dnsSecStatus),
-      const DeepCollectionEquality().hash(delta));
 
   @JsonKey(ignore: true)
   @override
-  _$QueryItemModelCopyWith<_QueryItemModel> get copyWith =>
-      __$QueryItemModelCopyWithImpl<_QueryItemModel>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, timestamp, queryType, domain,
+      clientName, queryStatus, dnsSecStatus, delta);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_QueryItemModelCopyWith<_$_QueryItemModel> get copyWith =>
+      __$$_QueryItemModelCopyWithImpl<_$_QueryItemModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QueryItemModelToJson(this);
+    return _$$_QueryItemModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _QueryItemModel extends QueryItemModel {
   factory _QueryItemModel(
-      {required DateTime timestamp,
-      required String queryType,
-      required String domain,
-      required String clientName,
-      required QueryStatus queryStatus,
-      required DnsSecStatus dnsSecStatus,
-      required double delta}) = _$_QueryItemModel;
+      {required final DateTime timestamp,
+      required final String queryType,
+      required final String domain,
+      required final String clientName,
+      required final QueryStatus queryStatus,
+      required final DnsSecStatus dnsSecStatus,
+      required final double delta}) = _$_QueryItemModel;
   _QueryItemModel._() : super._();
 
   factory _QueryItemModel.fromJson(Map<String, dynamic> json) =
@@ -1624,34 +1517,13 @@ abstract class _QueryItemModel extends QueryItemModel {
   double get delta;
   @override
   @JsonKey(ignore: true)
-  _$QueryItemModelCopyWith<_QueryItemModel> get copyWith =>
+  _$$_QueryItemModelCopyWith<_$_QueryItemModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TopItemsModel _$TopItemsModelFromJson(Map<String, dynamic> json) {
   return _TopItemsModel.fromJson(json);
 }
-
-/// @nodoc
-class _$TopItemsModelTearOff {
-  const _$TopItemsModelTearOff();
-
-  _TopItemsModel call(
-      {@JsonKey(name: 'top_queries') required Map<String, int> topQueries,
-      @JsonKey(name: 'top_ads') required Map<String, int> topAds}) {
-    return _TopItemsModel(
-      topQueries: topQueries,
-      topAds: topAds,
-    );
-  }
-
-  TopItemsModel fromJson(Map<String, Object?> json) {
-    return TopItemsModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TopItemsModel = _$TopItemsModelTearOff();
 
 /// @nodoc
 mixin _$TopItemsModel {
@@ -1670,74 +1542,76 @@ mixin _$TopItemsModel {
 abstract class $TopItemsModelCopyWith<$Res> {
   factory $TopItemsModelCopyWith(
           TopItemsModel value, $Res Function(TopItemsModel) then) =
-      _$TopItemsModelCopyWithImpl<$Res>;
+      _$TopItemsModelCopyWithImpl<$Res, TopItemsModel>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'top_queries') Map<String, int> topQueries,
       @JsonKey(name: 'top_ads') Map<String, int> topAds});
 }
 
 /// @nodoc
-class _$TopItemsModelCopyWithImpl<$Res>
+class _$TopItemsModelCopyWithImpl<$Res, $Val extends TopItemsModel>
     implements $TopItemsModelCopyWith<$Res> {
   _$TopItemsModelCopyWithImpl(this._value, this._then);
 
-  final TopItemsModel _value;
   // ignore: unused_field
-  final $Res Function(TopItemsModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? topQueries = freezed,
-    Object? topAds = freezed,
+    Object? topQueries = null,
+    Object? topAds = null,
   }) {
     return _then(_value.copyWith(
-      topQueries: topQueries == freezed
+      topQueries: null == topQueries
           ? _value.topQueries
           : topQueries // ignore: cast_nullable_to_non_nullable
               as Map<String, int>,
-      topAds: topAds == freezed
+      topAds: null == topAds
           ? _value.topAds
           : topAds // ignore: cast_nullable_to_non_nullable
               as Map<String, int>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$TopItemsModelCopyWith<$Res>
+abstract class _$$_TopItemsModelCopyWith<$Res>
     implements $TopItemsModelCopyWith<$Res> {
-  factory _$TopItemsModelCopyWith(
-          _TopItemsModel value, $Res Function(_TopItemsModel) then) =
-      __$TopItemsModelCopyWithImpl<$Res>;
+  factory _$$_TopItemsModelCopyWith(
+          _$_TopItemsModel value, $Res Function(_$_TopItemsModel) then) =
+      __$$_TopItemsModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'top_queries') Map<String, int> topQueries,
       @JsonKey(name: 'top_ads') Map<String, int> topAds});
 }
 
 /// @nodoc
-class __$TopItemsModelCopyWithImpl<$Res>
-    extends _$TopItemsModelCopyWithImpl<$Res>
-    implements _$TopItemsModelCopyWith<$Res> {
-  __$TopItemsModelCopyWithImpl(
-      _TopItemsModel _value, $Res Function(_TopItemsModel) _then)
-      : super(_value, (v) => _then(v as _TopItemsModel));
+class __$$_TopItemsModelCopyWithImpl<$Res>
+    extends _$TopItemsModelCopyWithImpl<$Res, _$_TopItemsModel>
+    implements _$$_TopItemsModelCopyWith<$Res> {
+  __$$_TopItemsModelCopyWithImpl(
+      _$_TopItemsModel _value, $Res Function(_$_TopItemsModel) _then)
+      : super(_value, _then);
 
-  @override
-  _TopItemsModel get _value => super._value as _TopItemsModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? topQueries = freezed,
-    Object? topAds = freezed,
+    Object? topQueries = null,
+    Object? topAds = null,
   }) {
-    return _then(_TopItemsModel(
-      topQueries: topQueries == freezed
-          ? _value.topQueries
+    return _then(_$_TopItemsModel(
+      topQueries: null == topQueries
+          ? _value._topQueries
           : topQueries // ignore: cast_nullable_to_non_nullable
               as Map<String, int>,
-      topAds: topAds == freezed
-          ? _value.topAds
+      topAds: null == topAds
+          ? _value._topAds
           : topAds // ignore: cast_nullable_to_non_nullable
               as Map<String, int>,
     ));
@@ -1748,19 +1622,32 @@ class __$TopItemsModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TopItemsModel extends _TopItemsModel {
   _$_TopItemsModel(
-      {@JsonKey(name: 'top_queries') required this.topQueries,
-      @JsonKey(name: 'top_ads') required this.topAds})
-      : super._();
+      {@JsonKey(name: 'top_queries') required final Map<String, int> topQueries,
+      @JsonKey(name: 'top_ads') required final Map<String, int> topAds})
+      : _topQueries = topQueries,
+        _topAds = topAds,
+        super._();
 
   factory _$_TopItemsModel.fromJson(Map<String, dynamic> json) =>
       _$$_TopItemsModelFromJson(json);
 
+  final Map<String, int> _topQueries;
   @override
   @JsonKey(name: 'top_queries')
-  final Map<String, int> topQueries;
+  Map<String, int> get topQueries {
+    if (_topQueries is EqualUnmodifiableMapView) return _topQueries;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_topQueries);
+  }
+
+  final Map<String, int> _topAds;
   @override
   @JsonKey(name: 'top_ads')
-  final Map<String, int> topAds;
+  Map<String, int> get topAds {
+    if (_topAds is EqualUnmodifiableMapView) return _topAds;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_topAds);
+  }
 
   @override
   String toString() {
@@ -1771,34 +1658,39 @@ class _$_TopItemsModel extends _TopItemsModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TopItemsModel &&
+            other is _$_TopItemsModel &&
             const DeepCollectionEquality()
-                .equals(other.topQueries, topQueries) &&
-            const DeepCollectionEquality().equals(other.topAds, topAds));
+                .equals(other._topQueries, _topQueries) &&
+            const DeepCollectionEquality().equals(other._topAds, _topAds));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(topQueries),
-      const DeepCollectionEquality().hash(topAds));
 
   @JsonKey(ignore: true)
   @override
-  _$TopItemsModelCopyWith<_TopItemsModel> get copyWith =>
-      __$TopItemsModelCopyWithImpl<_TopItemsModel>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_topQueries),
+      const DeepCollectionEquality().hash(_topAds));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TopItemsModelCopyWith<_$_TopItemsModel> get copyWith =>
+      __$$_TopItemsModelCopyWithImpl<_$_TopItemsModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TopItemsModelToJson(this);
+    return _$$_TopItemsModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _TopItemsModel extends TopItemsModel {
   factory _TopItemsModel(
-          {@JsonKey(name: 'top_queries') required Map<String, int> topQueries,
-          @JsonKey(name: 'top_ads') required Map<String, int> topAds}) =
-      _$_TopItemsModel;
+      {@JsonKey(name: 'top_queries')
+          required final Map<String, int> topQueries,
+      @JsonKey(name: 'top_ads')
+          required final Map<String, int> topAds}) = _$_TopItemsModel;
   _TopItemsModel._() : super._();
 
   factory _TopItemsModel.fromJson(Map<String, dynamic> json) =
@@ -1812,32 +1704,13 @@ abstract class _TopItemsModel extends TopItemsModel {
   Map<String, int> get topAds;
   @override
   @JsonKey(ignore: true)
-  _$TopItemsModelCopyWith<_TopItemsModel> get copyWith =>
+  _$$_TopItemsModelCopyWith<_$_TopItemsModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 PiClientNameModel _$PiClientNameModelFromJson(Map<String, dynamic> json) {
   return _PiClientNameModel.fromJson(json);
 }
-
-/// @nodoc
-class _$PiClientNameModelTearOff {
-  const _$PiClientNameModelTearOff();
-
-  _PiClientNameModel call({required String ip, String? name}) {
-    return _PiClientNameModel(
-      ip: ip,
-      name: name,
-    );
-  }
-
-  PiClientNameModel fromJson(Map<String, Object?> json) {
-    return PiClientNameModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PiClientNameModel = _$PiClientNameModelTearOff();
 
 /// @nodoc
 mixin _$PiClientNameModel {
@@ -1854,69 +1727,71 @@ mixin _$PiClientNameModel {
 abstract class $PiClientNameModelCopyWith<$Res> {
   factory $PiClientNameModelCopyWith(
           PiClientNameModel value, $Res Function(PiClientNameModel) then) =
-      _$PiClientNameModelCopyWithImpl<$Res>;
+      _$PiClientNameModelCopyWithImpl<$Res, PiClientNameModel>;
+  @useResult
   $Res call({String ip, String? name});
 }
 
 /// @nodoc
-class _$PiClientNameModelCopyWithImpl<$Res>
+class _$PiClientNameModelCopyWithImpl<$Res, $Val extends PiClientNameModel>
     implements $PiClientNameModelCopyWith<$Res> {
   _$PiClientNameModelCopyWithImpl(this._value, this._then);
 
-  final PiClientNameModel _value;
   // ignore: unused_field
-  final $Res Function(PiClientNameModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ip = freezed,
+    Object? ip = null,
     Object? name = freezed,
   }) {
     return _then(_value.copyWith(
-      ip: ip == freezed
+      ip: null == ip
           ? _value.ip
           : ip // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PiClientNameModelCopyWith<$Res>
+abstract class _$$_PiClientNameModelCopyWith<$Res>
     implements $PiClientNameModelCopyWith<$Res> {
-  factory _$PiClientNameModelCopyWith(
-          _PiClientNameModel value, $Res Function(_PiClientNameModel) then) =
-      __$PiClientNameModelCopyWithImpl<$Res>;
+  factory _$$_PiClientNameModelCopyWith(_$_PiClientNameModel value,
+          $Res Function(_$_PiClientNameModel) then) =
+      __$$_PiClientNameModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String ip, String? name});
 }
 
 /// @nodoc
-class __$PiClientNameModelCopyWithImpl<$Res>
-    extends _$PiClientNameModelCopyWithImpl<$Res>
-    implements _$PiClientNameModelCopyWith<$Res> {
-  __$PiClientNameModelCopyWithImpl(
-      _PiClientNameModel _value, $Res Function(_PiClientNameModel) _then)
-      : super(_value, (v) => _then(v as _PiClientNameModel));
+class __$$_PiClientNameModelCopyWithImpl<$Res>
+    extends _$PiClientNameModelCopyWithImpl<$Res, _$_PiClientNameModel>
+    implements _$$_PiClientNameModelCopyWith<$Res> {
+  __$$_PiClientNameModelCopyWithImpl(
+      _$_PiClientNameModel _value, $Res Function(_$_PiClientNameModel) _then)
+      : super(_value, _then);
 
-  @override
-  _PiClientNameModel get _value => super._value as _PiClientNameModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ip = freezed,
+    Object? ip = null,
     Object? name = freezed,
   }) {
-    return _then(_PiClientNameModel(
-      ip: ip == freezed
+    return _then(_$_PiClientNameModel(
+      ip: null == ip
           ? _value.ip
           : ip // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1946,30 +1821,32 @@ class _$_PiClientNameModel extends _PiClientNameModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PiClientNameModel &&
-            const DeepCollectionEquality().equals(other.ip, ip) &&
-            const DeepCollectionEquality().equals(other.name, name));
+            other is _$_PiClientNameModel &&
+            (identical(other.ip, ip) || other.ip == ip) &&
+            (identical(other.name, name) || other.name == name));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(ip),
-      const DeepCollectionEquality().hash(name));
 
   @JsonKey(ignore: true)
   @override
-  _$PiClientNameModelCopyWith<_PiClientNameModel> get copyWith =>
-      __$PiClientNameModelCopyWithImpl<_PiClientNameModel>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, ip, name);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PiClientNameModelCopyWith<_$_PiClientNameModel> get copyWith =>
+      __$$_PiClientNameModelCopyWithImpl<_$_PiClientNameModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PiClientNameModelToJson(this);
+    return _$$_PiClientNameModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _PiClientNameModel extends PiClientNameModel {
-  factory _PiClientNameModel({required String ip, String? name}) =
+  factory _PiClientNameModel({required final String ip, final String? name}) =
       _$_PiClientNameModel;
   _PiClientNameModel._() : super._();
 
@@ -1982,7 +1859,7 @@ abstract class _PiClientNameModel extends PiClientNameModel {
   String? get name;
   @override
   @JsonKey(ignore: true)
-  _$PiClientNameModelCopyWith<_PiClientNameModel> get copyWith =>
+  _$$_PiClientNameModelCopyWith<_$_PiClientNameModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1990,27 +1867,6 @@ PiClientsOverTimeModel _$PiClientsOverTimeModelFromJson(
     Map<String, dynamic> json) {
   return _PiClientsOverTimeModel.fromJson(json);
 }
-
-/// @nodoc
-class _$PiClientsOverTimeModelTearOff {
-  const _$PiClientsOverTimeModelTearOff();
-
-  _PiClientsOverTimeModel call(
-      {required List<PiClientNameModel> clients,
-      @JsonKey(name: 'over_time') required Map<String, List<int>> activity}) {
-    return _PiClientsOverTimeModel(
-      clients: clients,
-      activity: activity,
-    );
-  }
-
-  PiClientsOverTimeModel fromJson(Map<String, Object?> json) {
-    return PiClientsOverTimeModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PiClientsOverTimeModel = _$PiClientsOverTimeModelTearOff();
 
 /// @nodoc
 mixin _$PiClientsOverTimeModel {
@@ -2028,74 +1884,78 @@ mixin _$PiClientsOverTimeModel {
 abstract class $PiClientsOverTimeModelCopyWith<$Res> {
   factory $PiClientsOverTimeModelCopyWith(PiClientsOverTimeModel value,
           $Res Function(PiClientsOverTimeModel) then) =
-      _$PiClientsOverTimeModelCopyWithImpl<$Res>;
+      _$PiClientsOverTimeModelCopyWithImpl<$Res, PiClientsOverTimeModel>;
+  @useResult
   $Res call(
       {List<PiClientNameModel> clients,
       @JsonKey(name: 'over_time') Map<String, List<int>> activity});
 }
 
 /// @nodoc
-class _$PiClientsOverTimeModelCopyWithImpl<$Res>
+class _$PiClientsOverTimeModelCopyWithImpl<$Res,
+        $Val extends PiClientsOverTimeModel>
     implements $PiClientsOverTimeModelCopyWith<$Res> {
   _$PiClientsOverTimeModelCopyWithImpl(this._value, this._then);
 
-  final PiClientsOverTimeModel _value;
   // ignore: unused_field
-  final $Res Function(PiClientsOverTimeModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? clients = freezed,
-    Object? activity = freezed,
+    Object? clients = null,
+    Object? activity = null,
   }) {
     return _then(_value.copyWith(
-      clients: clients == freezed
+      clients: null == clients
           ? _value.clients
           : clients // ignore: cast_nullable_to_non_nullable
               as List<PiClientNameModel>,
-      activity: activity == freezed
+      activity: null == activity
           ? _value.activity
           : activity // ignore: cast_nullable_to_non_nullable
               as Map<String, List<int>>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PiClientsOverTimeModelCopyWith<$Res>
+abstract class _$$_PiClientsOverTimeModelCopyWith<$Res>
     implements $PiClientsOverTimeModelCopyWith<$Res> {
-  factory _$PiClientsOverTimeModelCopyWith(_PiClientsOverTimeModel value,
-          $Res Function(_PiClientsOverTimeModel) then) =
-      __$PiClientsOverTimeModelCopyWithImpl<$Res>;
+  factory _$$_PiClientsOverTimeModelCopyWith(_$_PiClientsOverTimeModel value,
+          $Res Function(_$_PiClientsOverTimeModel) then) =
+      __$$_PiClientsOverTimeModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {List<PiClientNameModel> clients,
       @JsonKey(name: 'over_time') Map<String, List<int>> activity});
 }
 
 /// @nodoc
-class __$PiClientsOverTimeModelCopyWithImpl<$Res>
-    extends _$PiClientsOverTimeModelCopyWithImpl<$Res>
-    implements _$PiClientsOverTimeModelCopyWith<$Res> {
-  __$PiClientsOverTimeModelCopyWithImpl(_PiClientsOverTimeModel _value,
-      $Res Function(_PiClientsOverTimeModel) _then)
-      : super(_value, (v) => _then(v as _PiClientsOverTimeModel));
+class __$$_PiClientsOverTimeModelCopyWithImpl<$Res>
+    extends _$PiClientsOverTimeModelCopyWithImpl<$Res,
+        _$_PiClientsOverTimeModel>
+    implements _$$_PiClientsOverTimeModelCopyWith<$Res> {
+  __$$_PiClientsOverTimeModelCopyWithImpl(_$_PiClientsOverTimeModel _value,
+      $Res Function(_$_PiClientsOverTimeModel) _then)
+      : super(_value, _then);
 
-  @override
-  _PiClientsOverTimeModel get _value => super._value as _PiClientsOverTimeModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? clients = freezed,
-    Object? activity = freezed,
+    Object? clients = null,
+    Object? activity = null,
   }) {
-    return _then(_PiClientsOverTimeModel(
-      clients: clients == freezed
-          ? _value.clients
+    return _then(_$_PiClientsOverTimeModel(
+      clients: null == clients
+          ? _value._clients
           : clients // ignore: cast_nullable_to_non_nullable
               as List<PiClientNameModel>,
-      activity: activity == freezed
-          ? _value.activity
+      activity: null == activity
+          ? _value._activity
           : activity // ignore: cast_nullable_to_non_nullable
               as Map<String, List<int>>,
     ));
@@ -2106,18 +1966,32 @@ class __$PiClientsOverTimeModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PiClientsOverTimeModel extends _PiClientsOverTimeModel {
   _$_PiClientsOverTimeModel(
-      {required this.clients,
-      @JsonKey(name: 'over_time') required this.activity})
-      : super._();
+      {required final List<PiClientNameModel> clients,
+      @JsonKey(name: 'over_time')
+          required final Map<String, List<int>> activity})
+      : _clients = clients,
+        _activity = activity,
+        super._();
 
   factory _$_PiClientsOverTimeModel.fromJson(Map<String, dynamic> json) =>
       _$$_PiClientsOverTimeModelFromJson(json);
 
+  final List<PiClientNameModel> _clients;
   @override
-  final List<PiClientNameModel> clients;
+  List<PiClientNameModel> get clients {
+    if (_clients is EqualUnmodifiableListView) return _clients;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_clients);
+  }
+
+  final Map<String, List<int>> _activity;
   @override
   @JsonKey(name: 'over_time')
-  final Map<String, List<int>> activity;
+  Map<String, List<int>> get activity {
+    if (_activity is EqualUnmodifiableMapView) return _activity;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_activity);
+  }
 
   @override
   String toString() {
@@ -2128,34 +2002,38 @@ class _$_PiClientsOverTimeModel extends _PiClientsOverTimeModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PiClientsOverTimeModel &&
-            const DeepCollectionEquality().equals(other.clients, clients) &&
-            const DeepCollectionEquality().equals(other.activity, activity));
+            other is _$_PiClientsOverTimeModel &&
+            const DeepCollectionEquality().equals(other._clients, _clients) &&
+            const DeepCollectionEquality().equals(other._activity, _activity));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(clients),
-      const DeepCollectionEquality().hash(activity));
 
   @JsonKey(ignore: true)
   @override
-  _$PiClientsOverTimeModelCopyWith<_PiClientsOverTimeModel> get copyWith =>
-      __$PiClientsOverTimeModelCopyWithImpl<_PiClientsOverTimeModel>(
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_clients),
+      const DeepCollectionEquality().hash(_activity));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PiClientsOverTimeModelCopyWith<_$_PiClientsOverTimeModel> get copyWith =>
+      __$$_PiClientsOverTimeModelCopyWithImpl<_$_PiClientsOverTimeModel>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PiClientsOverTimeModelToJson(this);
+    return _$$_PiClientsOverTimeModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _PiClientsOverTimeModel extends PiClientsOverTimeModel {
   factory _PiClientsOverTimeModel(
-          {required List<PiClientNameModel> clients,
+          {required final List<PiClientNameModel> clients,
           @JsonKey(name: 'over_time')
-              required Map<String, List<int>> activity}) =
+              required final Map<String, List<int>> activity}) =
       _$_PiClientsOverTimeModel;
   _PiClientsOverTimeModel._() : super._();
 
@@ -2169,54 +2047,13 @@ abstract class _PiClientsOverTimeModel extends PiClientsOverTimeModel {
   Map<String, List<int>> get activity;
   @override
   @JsonKey(ignore: true)
-  _$PiClientsOverTimeModelCopyWith<_PiClientsOverTimeModel> get copyWith =>
+  _$$_PiClientsOverTimeModelCopyWith<_$_PiClientsOverTimeModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 PiVersionsModel _$PiVersionsModelFromJson(Map<String, dynamic> json) {
   return _PiVersionsModel.fromJson(json);
 }
-
-/// @nodoc
-class _$PiVersionsModelTearOff {
-  const _$PiVersionsModelTearOff();
-
-  _PiVersionsModel call(
-      {@JsonKey(name: 'core_update') required bool hasCoreUpdate,
-      @JsonKey(name: 'web_update') required bool hasWebUpdate,
-      @JsonKey(name: 'FTL_update') required bool hasFtlUpdate,
-      @JsonKey(name: 'core_current') required String currentCoreVersion,
-      @JsonKey(name: 'web_current') required String currentWebVersion,
-      @JsonKey(name: 'FTL_current') required String currentFtlVersion,
-      @JsonKey(name: 'core_latest') required String latestCoreVersion,
-      @JsonKey(name: 'web_latest') required String latestWebVersion,
-      @JsonKey(name: 'FTL_latest') required String latestFtlVersion,
-      @JsonKey(name: 'core_branch') required String coreBranch,
-      @JsonKey(name: 'web_branch') required String webBranch,
-      @JsonKey(name: 'FTL_branch') required String ftlBranch}) {
-    return _PiVersionsModel(
-      hasCoreUpdate: hasCoreUpdate,
-      hasWebUpdate: hasWebUpdate,
-      hasFtlUpdate: hasFtlUpdate,
-      currentCoreVersion: currentCoreVersion,
-      currentWebVersion: currentWebVersion,
-      currentFtlVersion: currentFtlVersion,
-      latestCoreVersion: latestCoreVersion,
-      latestWebVersion: latestWebVersion,
-      latestFtlVersion: latestFtlVersion,
-      coreBranch: coreBranch,
-      webBranch: webBranch,
-      ftlBranch: ftlBranch,
-    );
-  }
-
-  PiVersionsModel fromJson(Map<String, Object?> json) {
-    return PiVersionsModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PiVersionsModel = _$PiVersionsModelTearOff();
 
 /// @nodoc
 mixin _$PiVersionsModel {
@@ -2255,7 +2092,8 @@ mixin _$PiVersionsModel {
 abstract class $PiVersionsModelCopyWith<$Res> {
   factory $PiVersionsModelCopyWith(
           PiVersionsModel value, $Res Function(PiVersionsModel) then) =
-      _$PiVersionsModelCopyWithImpl<$Res>;
+      _$PiVersionsModelCopyWithImpl<$Res, PiVersionsModel>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'core_update') bool hasCoreUpdate,
       @JsonKey(name: 'web_update') bool hasWebUpdate,
@@ -2272,89 +2110,92 @@ abstract class $PiVersionsModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PiVersionsModelCopyWithImpl<$Res>
+class _$PiVersionsModelCopyWithImpl<$Res, $Val extends PiVersionsModel>
     implements $PiVersionsModelCopyWith<$Res> {
   _$PiVersionsModelCopyWithImpl(this._value, this._then);
 
-  final PiVersionsModel _value;
   // ignore: unused_field
-  final $Res Function(PiVersionsModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? hasCoreUpdate = freezed,
-    Object? hasWebUpdate = freezed,
-    Object? hasFtlUpdate = freezed,
-    Object? currentCoreVersion = freezed,
-    Object? currentWebVersion = freezed,
-    Object? currentFtlVersion = freezed,
-    Object? latestCoreVersion = freezed,
-    Object? latestWebVersion = freezed,
-    Object? latestFtlVersion = freezed,
-    Object? coreBranch = freezed,
-    Object? webBranch = freezed,
-    Object? ftlBranch = freezed,
+    Object? hasCoreUpdate = null,
+    Object? hasWebUpdate = null,
+    Object? hasFtlUpdate = null,
+    Object? currentCoreVersion = null,
+    Object? currentWebVersion = null,
+    Object? currentFtlVersion = null,
+    Object? latestCoreVersion = null,
+    Object? latestWebVersion = null,
+    Object? latestFtlVersion = null,
+    Object? coreBranch = null,
+    Object? webBranch = null,
+    Object? ftlBranch = null,
   }) {
     return _then(_value.copyWith(
-      hasCoreUpdate: hasCoreUpdate == freezed
+      hasCoreUpdate: null == hasCoreUpdate
           ? _value.hasCoreUpdate
           : hasCoreUpdate // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasWebUpdate: hasWebUpdate == freezed
+      hasWebUpdate: null == hasWebUpdate
           ? _value.hasWebUpdate
           : hasWebUpdate // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasFtlUpdate: hasFtlUpdate == freezed
+      hasFtlUpdate: null == hasFtlUpdate
           ? _value.hasFtlUpdate
           : hasFtlUpdate // ignore: cast_nullable_to_non_nullable
               as bool,
-      currentCoreVersion: currentCoreVersion == freezed
+      currentCoreVersion: null == currentCoreVersion
           ? _value.currentCoreVersion
           : currentCoreVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      currentWebVersion: currentWebVersion == freezed
+      currentWebVersion: null == currentWebVersion
           ? _value.currentWebVersion
           : currentWebVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      currentFtlVersion: currentFtlVersion == freezed
+      currentFtlVersion: null == currentFtlVersion
           ? _value.currentFtlVersion
           : currentFtlVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      latestCoreVersion: latestCoreVersion == freezed
+      latestCoreVersion: null == latestCoreVersion
           ? _value.latestCoreVersion
           : latestCoreVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      latestWebVersion: latestWebVersion == freezed
+      latestWebVersion: null == latestWebVersion
           ? _value.latestWebVersion
           : latestWebVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      latestFtlVersion: latestFtlVersion == freezed
+      latestFtlVersion: null == latestFtlVersion
           ? _value.latestFtlVersion
           : latestFtlVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      coreBranch: coreBranch == freezed
+      coreBranch: null == coreBranch
           ? _value.coreBranch
           : coreBranch // ignore: cast_nullable_to_non_nullable
               as String,
-      webBranch: webBranch == freezed
+      webBranch: null == webBranch
           ? _value.webBranch
           : webBranch // ignore: cast_nullable_to_non_nullable
               as String,
-      ftlBranch: ftlBranch == freezed
+      ftlBranch: null == ftlBranch
           ? _value.ftlBranch
           : ftlBranch // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PiVersionsModelCopyWith<$Res>
+abstract class _$$_PiVersionsModelCopyWith<$Res>
     implements $PiVersionsModelCopyWith<$Res> {
-  factory _$PiVersionsModelCopyWith(
-          _PiVersionsModel value, $Res Function(_PiVersionsModel) then) =
-      __$PiVersionsModelCopyWithImpl<$Res>;
+  factory _$$_PiVersionsModelCopyWith(
+          _$_PiVersionsModel value, $Res Function(_$_PiVersionsModel) then) =
+      __$$_PiVersionsModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'core_update') bool hasCoreUpdate,
       @JsonKey(name: 'web_update') bool hasWebUpdate,
@@ -2371,77 +2212,75 @@ abstract class _$PiVersionsModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PiVersionsModelCopyWithImpl<$Res>
-    extends _$PiVersionsModelCopyWithImpl<$Res>
-    implements _$PiVersionsModelCopyWith<$Res> {
-  __$PiVersionsModelCopyWithImpl(
-      _PiVersionsModel _value, $Res Function(_PiVersionsModel) _then)
-      : super(_value, (v) => _then(v as _PiVersionsModel));
+class __$$_PiVersionsModelCopyWithImpl<$Res>
+    extends _$PiVersionsModelCopyWithImpl<$Res, _$_PiVersionsModel>
+    implements _$$_PiVersionsModelCopyWith<$Res> {
+  __$$_PiVersionsModelCopyWithImpl(
+      _$_PiVersionsModel _value, $Res Function(_$_PiVersionsModel) _then)
+      : super(_value, _then);
 
-  @override
-  _PiVersionsModel get _value => super._value as _PiVersionsModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? hasCoreUpdate = freezed,
-    Object? hasWebUpdate = freezed,
-    Object? hasFtlUpdate = freezed,
-    Object? currentCoreVersion = freezed,
-    Object? currentWebVersion = freezed,
-    Object? currentFtlVersion = freezed,
-    Object? latestCoreVersion = freezed,
-    Object? latestWebVersion = freezed,
-    Object? latestFtlVersion = freezed,
-    Object? coreBranch = freezed,
-    Object? webBranch = freezed,
-    Object? ftlBranch = freezed,
+    Object? hasCoreUpdate = null,
+    Object? hasWebUpdate = null,
+    Object? hasFtlUpdate = null,
+    Object? currentCoreVersion = null,
+    Object? currentWebVersion = null,
+    Object? currentFtlVersion = null,
+    Object? latestCoreVersion = null,
+    Object? latestWebVersion = null,
+    Object? latestFtlVersion = null,
+    Object? coreBranch = null,
+    Object? webBranch = null,
+    Object? ftlBranch = null,
   }) {
-    return _then(_PiVersionsModel(
-      hasCoreUpdate: hasCoreUpdate == freezed
+    return _then(_$_PiVersionsModel(
+      hasCoreUpdate: null == hasCoreUpdate
           ? _value.hasCoreUpdate
           : hasCoreUpdate // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasWebUpdate: hasWebUpdate == freezed
+      hasWebUpdate: null == hasWebUpdate
           ? _value.hasWebUpdate
           : hasWebUpdate // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasFtlUpdate: hasFtlUpdate == freezed
+      hasFtlUpdate: null == hasFtlUpdate
           ? _value.hasFtlUpdate
           : hasFtlUpdate // ignore: cast_nullable_to_non_nullable
               as bool,
-      currentCoreVersion: currentCoreVersion == freezed
+      currentCoreVersion: null == currentCoreVersion
           ? _value.currentCoreVersion
           : currentCoreVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      currentWebVersion: currentWebVersion == freezed
+      currentWebVersion: null == currentWebVersion
           ? _value.currentWebVersion
           : currentWebVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      currentFtlVersion: currentFtlVersion == freezed
+      currentFtlVersion: null == currentFtlVersion
           ? _value.currentFtlVersion
           : currentFtlVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      latestCoreVersion: latestCoreVersion == freezed
+      latestCoreVersion: null == latestCoreVersion
           ? _value.latestCoreVersion
           : latestCoreVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      latestWebVersion: latestWebVersion == freezed
+      latestWebVersion: null == latestWebVersion
           ? _value.latestWebVersion
           : latestWebVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      latestFtlVersion: latestFtlVersion == freezed
+      latestFtlVersion: null == latestFtlVersion
           ? _value.latestFtlVersion
           : latestFtlVersion // ignore: cast_nullable_to_non_nullable
               as String,
-      coreBranch: coreBranch == freezed
+      coreBranch: null == coreBranch
           ? _value.coreBranch
           : coreBranch // ignore: cast_nullable_to_non_nullable
               as String,
-      webBranch: webBranch == freezed
+      webBranch: null == webBranch
           ? _value.webBranch
           : webBranch // ignore: cast_nullable_to_non_nullable
               as String,
-      ftlBranch: ftlBranch == freezed
+      ftlBranch: null == ftlBranch
           ? _value.ftlBranch
           : ftlBranch // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2516,73 +2355,90 @@ class _$_PiVersionsModel extends _PiVersionsModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PiVersionsModel &&
-            const DeepCollectionEquality()
-                .equals(other.hasCoreUpdate, hasCoreUpdate) &&
-            const DeepCollectionEquality()
-                .equals(other.hasWebUpdate, hasWebUpdate) &&
-            const DeepCollectionEquality()
-                .equals(other.hasFtlUpdate, hasFtlUpdate) &&
-            const DeepCollectionEquality()
-                .equals(other.currentCoreVersion, currentCoreVersion) &&
-            const DeepCollectionEquality()
-                .equals(other.currentWebVersion, currentWebVersion) &&
-            const DeepCollectionEquality()
-                .equals(other.currentFtlVersion, currentFtlVersion) &&
-            const DeepCollectionEquality()
-                .equals(other.latestCoreVersion, latestCoreVersion) &&
-            const DeepCollectionEquality()
-                .equals(other.latestWebVersion, latestWebVersion) &&
-            const DeepCollectionEquality()
-                .equals(other.latestFtlVersion, latestFtlVersion) &&
-            const DeepCollectionEquality()
-                .equals(other.coreBranch, coreBranch) &&
-            const DeepCollectionEquality().equals(other.webBranch, webBranch) &&
-            const DeepCollectionEquality().equals(other.ftlBranch, ftlBranch));
+            other is _$_PiVersionsModel &&
+            (identical(other.hasCoreUpdate, hasCoreUpdate) ||
+                other.hasCoreUpdate == hasCoreUpdate) &&
+            (identical(other.hasWebUpdate, hasWebUpdate) ||
+                other.hasWebUpdate == hasWebUpdate) &&
+            (identical(other.hasFtlUpdate, hasFtlUpdate) ||
+                other.hasFtlUpdate == hasFtlUpdate) &&
+            (identical(other.currentCoreVersion, currentCoreVersion) ||
+                other.currentCoreVersion == currentCoreVersion) &&
+            (identical(other.currentWebVersion, currentWebVersion) ||
+                other.currentWebVersion == currentWebVersion) &&
+            (identical(other.currentFtlVersion, currentFtlVersion) ||
+                other.currentFtlVersion == currentFtlVersion) &&
+            (identical(other.latestCoreVersion, latestCoreVersion) ||
+                other.latestCoreVersion == latestCoreVersion) &&
+            (identical(other.latestWebVersion, latestWebVersion) ||
+                other.latestWebVersion == latestWebVersion) &&
+            (identical(other.latestFtlVersion, latestFtlVersion) ||
+                other.latestFtlVersion == latestFtlVersion) &&
+            (identical(other.coreBranch, coreBranch) ||
+                other.coreBranch == coreBranch) &&
+            (identical(other.webBranch, webBranch) ||
+                other.webBranch == webBranch) &&
+            (identical(other.ftlBranch, ftlBranch) ||
+                other.ftlBranch == ftlBranch));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(hasCoreUpdate),
-      const DeepCollectionEquality().hash(hasWebUpdate),
-      const DeepCollectionEquality().hash(hasFtlUpdate),
-      const DeepCollectionEquality().hash(currentCoreVersion),
-      const DeepCollectionEquality().hash(currentWebVersion),
-      const DeepCollectionEquality().hash(currentFtlVersion),
-      const DeepCollectionEquality().hash(latestCoreVersion),
-      const DeepCollectionEquality().hash(latestWebVersion),
-      const DeepCollectionEquality().hash(latestFtlVersion),
-      const DeepCollectionEquality().hash(coreBranch),
-      const DeepCollectionEquality().hash(webBranch),
-      const DeepCollectionEquality().hash(ftlBranch));
 
   @JsonKey(ignore: true)
   @override
-  _$PiVersionsModelCopyWith<_PiVersionsModel> get copyWith =>
-      __$PiVersionsModelCopyWithImpl<_PiVersionsModel>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      hasCoreUpdate,
+      hasWebUpdate,
+      hasFtlUpdate,
+      currentCoreVersion,
+      currentWebVersion,
+      currentFtlVersion,
+      latestCoreVersion,
+      latestWebVersion,
+      latestFtlVersion,
+      coreBranch,
+      webBranch,
+      ftlBranch);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PiVersionsModelCopyWith<_$_PiVersionsModel> get copyWith =>
+      __$$_PiVersionsModelCopyWithImpl<_$_PiVersionsModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PiVersionsModelToJson(this);
+    return _$$_PiVersionsModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _PiVersionsModel extends PiVersionsModel {
   factory _PiVersionsModel(
-          {@JsonKey(name: 'core_update') required bool hasCoreUpdate,
-          @JsonKey(name: 'web_update') required bool hasWebUpdate,
-          @JsonKey(name: 'FTL_update') required bool hasFtlUpdate,
-          @JsonKey(name: 'core_current') required String currentCoreVersion,
-          @JsonKey(name: 'web_current') required String currentWebVersion,
-          @JsonKey(name: 'FTL_current') required String currentFtlVersion,
-          @JsonKey(name: 'core_latest') required String latestCoreVersion,
-          @JsonKey(name: 'web_latest') required String latestWebVersion,
-          @JsonKey(name: 'FTL_latest') required String latestFtlVersion,
-          @JsonKey(name: 'core_branch') required String coreBranch,
-          @JsonKey(name: 'web_branch') required String webBranch,
-          @JsonKey(name: 'FTL_branch') required String ftlBranch}) =
-      _$_PiVersionsModel;
+      {@JsonKey(name: 'core_update')
+          required final bool hasCoreUpdate,
+      @JsonKey(name: 'web_update')
+          required final bool hasWebUpdate,
+      @JsonKey(name: 'FTL_update')
+          required final bool hasFtlUpdate,
+      @JsonKey(name: 'core_current')
+          required final String currentCoreVersion,
+      @JsonKey(name: 'web_current')
+          required final String currentWebVersion,
+      @JsonKey(name: 'FTL_current')
+          required final String currentFtlVersion,
+      @JsonKey(name: 'core_latest')
+          required final String latestCoreVersion,
+      @JsonKey(name: 'web_latest')
+          required final String latestWebVersion,
+      @JsonKey(name: 'FTL_latest')
+          required final String latestFtlVersion,
+      @JsonKey(name: 'core_branch')
+          required final String coreBranch,
+      @JsonKey(name: 'web_branch')
+          required final String webBranch,
+      @JsonKey(name: 'FTL_branch')
+          required final String ftlBranch}) = _$_PiVersionsModel;
   _PiVersionsModel._() : super._();
 
   factory _PiVersionsModel.fromJson(Map<String, dynamic> json) =
@@ -2626,6 +2482,6 @@ abstract class _PiVersionsModel extends PiVersionsModel {
   String get ftlBranch;
   @override
   @JsonKey(ignore: true)
-  _$PiVersionsModelCopyWith<_PiVersionsModel> get copyWith =>
+  _$$_PiVersionsModelCopyWith<_$_PiVersionsModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

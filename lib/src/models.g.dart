@@ -137,8 +137,8 @@ Map<String, dynamic> _$$_QueryItemModelToJson(_$_QueryItemModel instance) =>
       'queryType': instance.queryType,
       'domain': instance.domain,
       'clientName': instance.clientName,
-      'queryStatus': _$QueryStatusEnumMap[instance.queryStatus],
-      'dnsSecStatus': _$DnsSecStatusEnumMap[instance.dnsSecStatus],
+      'queryStatus': _$QueryStatusEnumMap[instance.queryStatus]!,
+      'dnsSecStatus': _$DnsSecStatusEnumMap[instance.dnsSecStatus]!,
       'delta': instance.delta,
     };
 
