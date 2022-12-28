@@ -18,9 +18,11 @@ jobs:
         with:
           fetch-depth: 0
       - name: "Install Flutter"
-        run: .github/workflows/scripts/install_flutter.sh stable
+        run: ./.github/workflows/scripts/install_flutter.sh stable
+        shell: bash
       - name: "Install Tools"
-        run: .github/workflows/scripts/install_tools.sh
+        run: ./.github/workflows/scripts/install_tools.sh
+        shell: bash
       - name: "Install Flutter package dependencies"
         run: flutter pub get
       - name: "Show outdated packages"
