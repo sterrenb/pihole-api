@@ -3,6 +3,9 @@ description: Provides models and endpoint wrappers for the Pi-hole API (summary,
 version: 0.3.1
 homepage: https://github.com/sterrenburg/pihole-api
 
+false_secrets:
+  - credentials.json
+
 environment:
   sdk: ">=2.12.0 <3.0.0"
   flutter: ">=2.0.0"
