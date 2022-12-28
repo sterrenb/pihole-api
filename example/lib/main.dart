@@ -23,7 +23,7 @@ class PiholeApiDemo extends StatefulWidget {
 
   static final pihole = PiholeApiDio(
       params: PiholeApiParams(
-    baseUrl: "http://pihole",
+    baseUrl: "http://192.168.2.24",
     apiPath: "/admin/api.php",
     apiTokenRequired: true,
     // Find the API token from your Pi-hole admin dashboard while signed in,
