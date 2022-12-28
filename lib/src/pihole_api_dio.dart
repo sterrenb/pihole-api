@@ -65,6 +65,8 @@ class PiholeApiDio implements PiholeApi {
     if (data is List && data.isEmpty) {
       return const PiholeApiFailure.emptyList();
     }
+
+    return null;
   }
 
   PiholeApiFailure _onDioError(DioError e) {
