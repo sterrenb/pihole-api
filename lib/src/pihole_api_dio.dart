@@ -92,7 +92,7 @@ class PiholeApiDio implements PiholeApi {
   @override
   Future<PiSummary> fetchSummary(CancelToken cancelToken) async {
     try {
-      final data = await _get({'summaryRaw': ''}, cancelToken);
+      final data = await _getSecure({'summaryRaw': ''}, cancelToken);
       final piSummary = PiSummaryModel.fromJson(data);
       return piSummary.entity;
     } on DioError catch (e) {
@@ -210,7 +210,7 @@ class PiholeApiDio implements PiholeApi {
   @override
   Future<PiholeStatus> ping(CancelToken cancelToken) async {
     try {
-      final data = await _get({'status': ''}, cancelToken);
+      final data = await _getSecure({'status': ''}, cancelToken);
 
       final status = PiholeStatusModel.fromJson(data);
       return status.entity;
@@ -292,7 +292,7 @@ class PiholeApiDio implements PiholeApi {
   @override
   Future<PiVersions> fetchVersions(CancelToken cancelToken) async {
     try {
-      final data = await _get({'versions': ''}, cancelToken);
+      final data = await _getSecure({'versions': ''}, cancelToken);
       final versions = PiVersionsModel.fromJson(data);
       return versions.entity;
     } on DioError catch (e) {

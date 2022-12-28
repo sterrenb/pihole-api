@@ -1,3 +1,7 @@
+## 0.3.1 (2022-12-28)
+
+* use authentication for ping and summary
+
 ## 0.3.0 (2022-12-28)
 
 * dependency upgrades
