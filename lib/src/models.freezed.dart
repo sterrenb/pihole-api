@@ -817,7 +817,7 @@ class __$$_PiQueryTypesModelCopyWithImpl<$Res>
   }) {
     return _then(_$_PiQueryTypesModel(
       types: null == types
-          ? _value._types
+          ? _value.types
           : types // ignore: cast_nullable_to_non_nullable
               as Map<String, num>,
     ));
@@ -827,22 +827,15 @@ class __$$_PiQueryTypesModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PiQueryTypesModel extends _PiQueryTypesModel {
-  _$_PiQueryTypesModel(
-      {@JsonKey(name: 'querytypes') required final Map<String, num> types})
-      : _types = types,
-        super._();
+  _$_PiQueryTypesModel({@JsonKey(name: 'querytypes') required this.types})
+      : super._();
 
   factory _$_PiQueryTypesModel.fromJson(Map<String, dynamic> json) =>
       _$$_PiQueryTypesModelFromJson(json);
 
-  final Map<String, num> _types;
   @override
   @JsonKey(name: 'querytypes')
-  Map<String, num> get types {
-    if (_types is EqualUnmodifiableMapView) return _types;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_types);
-  }
+  final Map<String, num> types;
 
   @override
   String toString() {
@@ -854,13 +847,13 @@ class _$_PiQueryTypesModel extends _PiQueryTypesModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PiQueryTypesModel &&
-            const DeepCollectionEquality().equals(other._types, _types));
+            const DeepCollectionEquality().equals(other.types, types));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_types));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(types));
 
   @JsonKey(ignore: true)
   @override

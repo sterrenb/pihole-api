@@ -103,7 +103,7 @@ class PiholeStatusModel with _$PiholeStatusModel {
 }
 
 /// [PiQueryTypes] model.
-@freezed
+@Freezed(makeCollectionsUnmodifiable: false)
 class PiQueryTypesModel with _$PiQueryTypesModel {
   PiQueryTypesModel._();
 
